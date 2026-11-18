@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="apple-touch-icon" href="favicon.svg">
@@ -36,6 +37,16 @@
         <span class="mark">V</span>
         <span><b>VAYORA</b><small>IMMIGRATION & VISA</small></span>
       </a>
+      <!-- Mobile Top Actions (Theme & RTL next to Hamburger) -->
+      <div class="nav-tools-mobile d-flex align-items-center gap-2 d-lg-none ms-auto me-2">
+        <button class="nav-tool theme-toggle-btn" type="button" aria-label="Toggle colour theme" title="Change theme">
+          <i class="bi bi-moon-stars"></i>
+        </button>
+        <button class="nav-tool direction-toggle direction-toggle-btn" type="button" aria-label="Toggle text direction" title="Switch LTR / RTL">
+          <span>LTR</span>
+        </button>
+      </div>
+
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav"
         aria-expanded="false" aria-label="Toggle navigation">
@@ -53,11 +64,44 @@
           <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
         </ul>
 
-        <div class="d-flex align-items-center gap-2 nav-actions">
-          <button class="nav-tool" id="themeToggle" type="button" aria-label="Toggle colour theme" title="Change theme">
+        
+        <!-- Mobile Profile Section (Inside Hamburger) -->
+        <div class="mobile-nav-profile d-lg-none my-3 pt-3 border-top">
+          <div class="mobile-profile-heading mb-2">
+            <span class="text-uppercase small fw-bold text-muted" style="letter-spacing: 1px; font-size: 11px;">Account & Portals</span>
+          </div>
+          <div class="row g-2">
+            <div class="col-6">
+              <a href="login.html" class="btn btn-outline-secondary btn-sm w-100 d-flex align-items-center justify-content-center gap-2 py-2 mobile-portal-btn">
+                <i class="bi bi-box-arrow-in-right"></i> <span>Login</span>
+              </a>
+            </div>
+            <div class="col-6">
+              <a href="register.html" class="btn btn-outline-secondary btn-sm w-100 d-flex align-items-center justify-content-center gap-2 py-2 mobile-portal-btn">
+                <i class="bi bi-person-plus"></i> <span>Register</span>
+              </a>
+            </div>
+            <div class="col-6">
+              <a href="client-dashboard.html" class="btn btn-outline-secondary btn-sm w-100 d-flex align-items-center justify-content-center gap-2 py-2 mobile-portal-btn">
+                <i class="bi bi-grid"></i> <span>Client Portal</span>
+              </a>
+            </div>
+            <div class="col-6">
+              <a href="admin-dashboard.html" class="btn btn-outline-secondary btn-sm w-100 d-flex align-items-center justify-content-center gap-2 py-2 mobile-portal-btn">
+                <i class="bi bi-speedometer2"></i> <span>Admin Panel</span>
+              </a>
+            </div>
+          </div>
+          <a href="contact.html#consultation" class="btn primary w-100 mt-3 py-2 fw-bold d-flex align-items-center justify-content-center gap-2">
+            <span>Book Consultation</span>
+          </a>
+        </div>
+
+        <div class="d-none d-lg-flex align-items-center gap-2 nav-actions">
+          <button class="nav-tool theme-toggle-btn" id="themeToggle" type="button" aria-label="Toggle colour theme" title="Change theme">
             <i class="bi bi-moon-stars"></i>
           </button>
-          <button class="nav-tool direction-toggle" id="directionToggle" type="button"
+          <button class="nav-tool direction-toggle direction-toggle-btn" id="directionToggle" type="button"
             aria-label="Toggle text direction" title="Switch LTR / RTL">
             <span>LTR</span>
           </button>

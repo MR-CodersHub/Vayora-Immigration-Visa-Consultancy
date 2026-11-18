@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="vayoraGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8e5ce6"/>
+      <stop offset="50%" stop-color="#6842c2"/>
+      <stop offset="100%" stop-color="#32105f"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#210a42" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <rect width="56" height="56" x="4" y="4" rx="16" fill="url(#vayoraGrad)" filter="url(#shadow)"/>
+  <path d="M21.5 21 L28 21 L32 37 L36 21 L42.5 21 L35.2 43 L28.8 43 Z" fill="#ffffff"/>
+  <circle cx="45" cy="18" r="3" fill="#cca6ff"/>
+</svg>

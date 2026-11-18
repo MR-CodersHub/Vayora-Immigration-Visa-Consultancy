@@ -1,0 +1,932 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="apple-touch-icon" href="favicon.svg">
+  <title>Service Details | Vayora — Premium Immigration & Visa Consultancy</title>
+  <meta name="description" content="In-depth visa guidance, eligibility requirements, document checklists, and application processing steps with Vayora Immigration.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="topbar">
+    <div class="container d-flex justify-content-between align-items-center">
+      <span>✧ Personalized visa guidance and transparent immigration support</span>
+      <a href="contact.html">Talk to an Advisor</a>
+    </div>
+  </div>
+
+  <!-- Primary Navigation -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand brand" href="index.html">
+        <span class="mark">V</span>
+        <span><b>VAYORA</b><small>IMMIGRATION & VISA</small></span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="home2.html">Home 2</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="d-flex align-items-center gap-2 nav-actions">
+          <button class="nav-tool" id="themeToggle" type="button" aria-label="Toggle colour theme" title="Change theme">
+            <i class="bi bi-moon-stars"></i>
+          </button>
+          <button class="nav-tool direction-toggle" id="directionToggle" type="button" aria-label="Toggle text direction" title="Switch LTR / RTL">
+            <span>LTR</span>
+          </button>
+
+          <!-- Profile / Account Menu -->
+          <div class="dropdown profile-dropdown">
+            <button class="nav-tool profile-trigger" type="button" id="profileMenu" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Open profile menu">
+              <i class="bi bi-person"></i>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end profile-menu" aria-labelledby="profileMenu">
+              <li class="profile-menu-heading">
+                <strong>Welcome to Vayora</strong>
+                <small>Access your client portal</small>
+              </li>
+              <li><a class="dropdown-item" href="login.html"><i class="bi bi-box-arrow-in-right"></i> Login</a></li>
+              <li><a class="dropdown-item" href="register.html"><i class="bi bi-person-plus"></i> Register</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="admin-dashboard.html"><i class="bi bi-speedometer2"></i> Admin Dashboard</a></li>
+              <li><a class="dropdown-item" href="client-dashboard.html"><i class="bi bi-grid"></i> Client Dashboard</a></li>
+            </ul>
+          </div>
+
+          <a href="contact.html#consultation" class="btn primary nav-consult">Book Consultation</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- ========================================================
+         SECTION 1: DYNAMIC HERO SECTION
+         ======================================================== -->
+    <section class="sd-hero" id="sdHero">
+      <div class="container">
+        <div class="sd-breadcrumb" id="sdBreadcrumb">VAYORA / IMMIGRATION SERVICES / STUDENT VISA</div>
+        <h1 id="sdHeroTitle">Turn Your Study Abroad Ambition Into Reality.</h1>
+        <p class="lead-copy" id="sdHeroDesc">Get personalized guidance on student visa requirements, application preparation and documentation for your international education journey.</p>
+        
+        <div class="d-flex flex-wrap gap-2 mb-4" id="sdTrustPills">
+          <span class="sd-trust-pill"><i class="bi bi-shield-check"></i> <span id="pillText1">Student Visa Assistance</span></span>
+          <span class="sd-trust-pill"><i class="bi bi-person-check-fill"></i> <span id="pillText2">Personalized Guidance</span></span>
+          <span class="sd-trust-pill"><i class="bi bi-award-fill"></i> <span>Dual-Tier Legal Audit</span></span>
+        </div>
+
+        <div class="d-flex flex-wrap gap-3">
+          <a href="#requirements" class="btn white btn-lg">Explore Requirements <i class="bi bi-arrow-down ms-1"></i></a>
+          <a href="#enquiry-form" class="btn outline-white btn-lg">Book a Consultation </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content Container with Sticky Sidebar -->
+    <section class="section">
+      <div class="container">
+        <div class="row g-5">
+          <!-- Main Body Column (Sections 2 to 9) -->
+          <div class="col-lg-8">
+
+            <!-- ========================================================
+                 SECTION 2: SERVICE OVERVIEW
+                 ======================================================== -->
+            <div class="mb-5 pb-3">
+              <span class="eyebrow">ABOUT THIS SERVICE</span>
+              <h2 id="sdOverviewTitle">Your Education Journey Starts With the Right Guidance.</h2>
+              <div class="row g-4 align-items-center mt-2">
+                <div class="col-md-7">
+                  <p class="lead-copy" id="sdOverviewP1">
+                    Studying abroad involves important decisions, from choosing a destination to understanding visa requirements. Vayora helps you navigate the preparation process with clear, structured support.
+                  </p>
+                  <p id="sdOverviewP2" style="font-size: 15px; color: var(--muted); line-height: 1.8;">
+                    From credential evaluations and statement of purpose review to financial solvency structuring, our certified case managers provide transparent advisory tailored to your chosen destination nation.
+                  </p>
+                </div>
+                <div class="col-md-5">
+                  <div class="sd-overview-visual">
+                    <img id="sdOverviewImg" src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80" alt="Service overview visual" loading="lazy">
+                    <div class="sd-overview-badge">
+                      <b id="sdOverviewBadgeTitle">Dedicated Pathway</b>
+                      <small id="sdOverviewBadgeSub">Verified Global Standards</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ========================================================
+                 SECTION 3: WHAT OUR SERVICE INCLUDES (4 CARDS)
+                 ======================================================== -->
+            <div class="mb-5 pb-3">
+              <span class="eyebrow">COMPREHENSIVE SUPPORT</span>
+              <h2>Support Designed Around Your Application.</h2>
+              <p class="lead-copy mb-4">Every phase of your immigration journey receives focused, professional attention.</p>
+              
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <div class="sd-include-card">
+                    <div class="sd-include-icon"><i class="bi bi-compass"></i></div>
+                    <h4>Eligibility Guidance</h4>
+                    <p>Understand general visa criteria and suitable pathways based on your background and target destination.</p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="sd-include-card">
+                    <div class="sd-include-icon"><i class="bi bi-file-earmark-text"></i></div>
+                    <h4>Document Preparation</h4>
+                    <p>Understand the supporting documents required for your application, including certified translations and attestations.</p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="sd-include-card">
+                    <div class="sd-include-icon"><i class="bi bi-shield-check"></i></div>
+                    <h4>Application Guidance</h4>
+                    <p>Receive assistance with organizing, verifying, and reviewing application information prior to official submission.</p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="sd-include-card">
+                    <div class="sd-include-icon"><i class="bi bi-headset"></i></div>
+                    <h4>Ongoing Support</h4>
+                    <p>Stay informed at every milestone and get prompt help with application-related questions from your advisor.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ========================================================
+                 SECTION 4: POPULAR DESTINATIONS (6 CARDS)
+                 ======================================================== -->
+            <div class="mb-5 pb-3">
+              <span class="eyebrow">DESTINATIONS</span>
+              <h2 id="sdDestHeading">Popular Destinations — Where Would You Like to Study?</h2>
+              <p class="lead-copy mb-4">Explore established pathways across leading international host nations.</p>
+
+              <div class="row g-3">
+                <!-- Canada -->
+                <div class="col-md-4 col-sm-6">
+                  <a href="country-guides.html?country=canada" class="sd-dest-card">
+                    <img src="https://images.unsplash.com/photo-1503614472-8c93d56e92ce?auto=format&fit=crop&w=700&q=80" alt="Canada" loading="lazy">
+                    <div class="sd-dest-content">
+                      <h4>Canada</h4>
+                      <span id="destHighlightCanada">Top Universities & PGWP</span>
+                    </div>
+                  </a>
+                </div>
+
+                <!-- United Kingdom -->
+                <div class="col-md-4 col-sm-6">
+                  <a href="country-guides.html?country=uk" class="sd-dest-card">
+                    <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=700&q=80" alt="United Kingdom" loading="lazy">
+                    <div class="sd-dest-content">
+                      <h4>United Kingdom</h4>
+                      <span id="destHighlightUK">Russell Group & Graduate Route</span>
+                    </div>
+                  </a>
+                </div>
+
+                <!-- Australia -->
+                <div class="col-md-4 col-sm-6">
+                  <a href="country-guides.html?country=australia" class="sd-dest-card">
+                    <img src="https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?auto=format&fit=crop&w=700&q=80" alt="Australia" loading="lazy">
+                    <div class="sd-dest-content">
+                      <h4>Australia</h4>
+                      <span id="destHighlightAustralia">Subclass 500 & Post-Study Work</span>
+                    </div>
+                  </a>
+                </div>
+
+                <!-- Germany -->
+                <div class="col-md-4 col-sm-6">
+                  <a href="country-guides.html?country=germany" class="sd-dest-card">
+                    <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=700&q=80" alt="Germany" loading="lazy">
+                    <div class="sd-dest-content">
+                      <h4>Germany</h4>
+                      <span id="destHighlightGermany">Tuition-Free Universities</span>
+                    </div>
+                  </a>
+                </div>
+
+                <!-- United States -->
+                <div class="col-md-4 col-sm-6">
+                  <a href="country-guides.html?country=usa" class="sd-dest-card">
+                    <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=700&q=80" alt="United States" loading="lazy">
+                    <div class="sd-dest-content">
+                      <h4>United States</h4>
+                      <span id="destHighlightUSA">F-1 Academic & OPT Work</span>
+                    </div>
+                  </a>
+                </div>
+
+                <!-- New Zealand -->
+                <div class="col-md-4 col-sm-6">
+                  <a href="country-guides.html?country=newzealand" class="sd-dest-card">
+                    <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=700&q=80" alt="New Zealand" loading="lazy">
+                    <div class="sd-dest-content">
+                      <h4>New Zealand</h4>
+                      <span id="destHighlightNZ">Post-Study Pathways</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- ========================================================
+                 SECTION 5: ELIGIBILITY REQUIREMENTS
+                 ======================================================== -->
+            <div class="mb-5 pb-3" id="requirements">
+              <span class="eyebrow">CRITERIA & ELIGIBILITY</span>
+              <h2>Understand the Requirements Before You Apply.</h2>
+              <p class="lead-copy mb-4">Ensure your profile satisfies the foundational parameters established by consular immigration authorities.</p>
+
+              <div class="sd-checklist-grid" id="sdEligibilityList">
+                <!-- Dynamically populated via JS -->
+              </div>
+
+              <div class="sd-notice-box">
+                <i class="bi bi-info-circle-fill"></i>
+                <p>
+                  <strong>Important Information:</strong> Requirements differ by destination and visa category. Meeting general criteria does not guarantee visa approval, which is decided solely by embassy consuls.
+                </p>
+              </div>
+            </div>
+
+            <!-- ========================================================
+                 SECTION 6: REQUIRED DOCUMENTS (CHECKLIST)
+                 ======================================================== -->
+            <div class="mb-5 pb-3">
+              <span class="eyebrow">DOCUMENTATION</span>
+              <h2>Keep Your Documents Organized.</h2>
+              <p class="lead-copy mb-4" id="sdDocSub">Sample document checklist for complete and compliant dossier filing.</p>
+
+              <div class="sd-checklist-grid" id="sdDocumentList">
+                <!-- Dynamically populated via JS -->
+              </div>
+
+              <div class="p-3 rounded-3 mt-3" style="background: var(--lav-subtle); font-size: 12.5px; color: var(--muted); border: 1px dashed #d5c3ec;">
+                <i class="bi bi-shield-lock me-1 text-primary"></i> Final document requirements depend on the destination, visa category, and individual applicant circumstances.
+              </div>
+            </div>
+
+            <!-- ========================================================
+                 SECTION 7: APPLICATION JOURNEY (5 STEPS)
+                 ======================================================== -->
+            <div class="mb-5 pb-3">
+              <span class="eyebrow">APPLICATION JOURNEY</span>
+              <h2>A Clear Path From Planning to Application.</h2>
+              <p class="lead-copy mb-4">We structure the immigration procedure into five straightforward, transparent steps.</p>
+
+              <div class="mt-4">
+                <div class="sd-timeline-step">
+                  <div class="sd-step-num-badge">01</div>
+                  <div class="sd-step-body">
+                    <h4>Initial Consultation</h4>
+                    <p>Understand your education or career goals and evaluate suitable destination countries.</p>
+                  </div>
+                </div>
+
+                <div class="sd-timeline-step">
+                  <div class="sd-step-num-badge">02</div>
+                  <div class="sd-step-body">
+                    <h4>Eligibility Review</h4>
+                    <p>Discuss the applicable visa stream, points matrix, and specific documentary criteria.</p>
+                  </div>
+                </div>
+
+                <div class="sd-timeline-step">
+                  <div class="sd-step-num-badge">03</div>
+                  <div class="sd-step-body">
+                    <h4>Document Preparation</h4>
+                    <p>Organize, translate, and verify all required evidentiary documents with senior legal checks.</p>
+                  </div>
+                </div>
+
+                <div class="sd-timeline-step">
+                  <div class="sd-step-num-badge">04</div>
+                  <div class="sd-step-body">
+                    <h4>Application Submission</h4>
+                    <p>Follow the relevant official government submission procedure and schedule biometric appointments.</p>
+                  </div>
+                </div>
+
+                <div class="sd-timeline-step">
+                  <div class="sd-step-num-badge">05</div>
+                  <div class="sd-step-body">
+                    <h4>Progress Updates</h4>
+                    <p>Stay informed about your application status, consular queries, and subsequent onboarding steps.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ========================================================
+                 SECTION 8: FREQUENTLY ASKED QUESTIONS
+                 ======================================================== -->
+            <div class="mb-5 pb-3" id="faqs">
+              <span class="eyebrow">COMMON QUESTIONS</span>
+              <h2>Frequently Asked Questions.</h2>
+              <p class="lead-copy mb-4">Clear, transparent answers to help you plan your journey with total confidence.</p>
+
+              <div class="accordion services-accordion" id="sdFaqAccordion">
+                <!-- Dynamically populated via JS -->
+              </div>
+            </div>
+
+            <!-- ========================================================
+                 SECTION 9: RELATED SERVICES (3 CARDS)
+                 ======================================================== -->
+            <div class="mb-4">
+              <span class="eyebrow">EXPLORE OTHER PATHWAYS</span>
+              <h2>Explore More Ways to Go Global.</h2>
+              <p class="lead-copy mb-4">Discover complementary immigration pathways suited to your long-term plans.</p>
+
+              <div class="row g-3" id="sdRelatedServices">
+                <!-- Dynamically populated via JS -->
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Sticky Sidebar Column (Enquiry Form & Support) -->
+          <div class="col-lg-4">
+            <div class="sd-sticky-sidebar">
+              <div class="sd-enquiry-card" id="enquiry-form">
+                <span class="eyebrow" style="font-size: 10px; margin-bottom: 8px;">GET IN TOUCH</span>
+                <h4 id="sdSidebarTitle">Enquire About Student Visa</h4>
+                <p id="sdSidebarSub">Speak directly with a licensed advisor to discuss your eligibility and destination.</p>
+
+                <form id="serviceEnquiryForm" onsubmit="event.preventDefault(); alert('Thank you! Your consultation request has been submitted. A senior advisor will contact you within 24 hours.'); this.reset();">
+                  <div>
+                    <label class="sd-form-label" for="eqName">Full Name *</label>
+                    <input type="text" id="eqName" class="sd-form-control" placeholder="e.g. Alexander Vance" required>
+                  </div>
+
+                  <div>
+                    <label class="sd-form-label" for="eqEmail">Email Address *</label>
+                    <input type="email" id="eqEmail" class="sd-form-control" placeholder="name@domain.com" required>
+                  </div>
+
+                  <div>
+                    <label class="sd-form-label" for="eqPhone">Phone / WhatsApp *</label>
+                    <input type="tel" id="eqPhone" class="sd-form-control" placeholder="+1 (555) 000-0000" required>
+                  </div>
+
+                  <div>
+                    <label class="sd-form-label" for="eqDest">Preferred Destination *</label>
+                    <select id="eqDest" class="sd-form-control" required>
+                      <option value="" disabled selected>Select country</option>
+                      <option value="Canada">Canada</option>
+                      <option value="United Kingdom">United Kingdom</option>
+                      <option value="Australia">Australia</option>
+                      <option value="Germany">Germany</option>
+                      <option value="United States">United States</option>
+                      <option value="New Zealand">New Zealand</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label class="sd-form-label" for="eqNotes">Your Goals & Timeline</label>
+                    <textarea id="eqNotes" class="sd-form-control" rows="3" placeholder="Briefly describe your background or target intake..."></textarea>
+                  </div>
+
+                  <button type="submit" class="sd-enquiry-btn">
+                    <span>Request Free Consultation</span>
+                    <i class="bi bi-arrow-right ms-2"></i>
+                  </button>
+                </form>
+
+                <div class="sd-advisor-mini">
+                  <div class="sd-advisor-avatar">EV</div>
+                  <div>
+                    <b class="d-block" style="font-size: 13.5px; color: var(--deep);">Elena Vance</b>
+                    <small style="color: var(--muted); font-size: 11px;">Senior Immigration Case Director</small>
+                  </div>
+                </div>
+
+                <div class="mt-3 pt-3 border-top text-center" style="font-size: 11.5px; color: var(--muted);">
+                  <i class="bi bi-shield-check text-primary me-1"></i> 100% Confidential • PIPEDA & GDPR Compliant
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         SECTION 10: FINAL CONSULTATION CTA BANNER
+         ======================================================== -->
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+        <div class="cta-banner text-center">
+          <div class="position-relative w-100" style="z-index: 2;">
+            <span class="eyebrow" id="sdCtaEyebrow"><i class="bi bi-compass"></i> YOUR NEXT CHAPTER STARTS HERE</span>
+            <h2 class="h1" id="sdCtaHeading">Ready to Take Your Education Beyond Borders?</h2>
+            <p id="sdCtaDesc">Let's discuss your destination, understand your requirements and plan your next steps.</p>
+            <div class="d-flex flex-wrap justify-content-center gap-3 mt-4">
+              <a href="#enquiry-form" class="btn white btn-lg">Book a Consultation <i class="bi bi-arrow-right ms-1"></i></a>
+              <a href="contact.html" class="btn outline-white btn-lg">Contact Our Team</a>
+            </div>
+            <div class="cta-trust-strip">
+              <span><i class="bi bi-shield-check"></i> Licensed Immigration Counsel</span>
+              <span><i class="bi bi-file-earmark-check"></i> 100% Confidential Dossier</span>
+              <span><i class="bi bi-trophy"></i> 98% Client Satisfaction</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Regulatory Separation Disclaimer -->
+        <div class="regulatory-banner">
+          <i class="bi bi-info-circle-fill"></i>
+          <p>
+            <strong>Regulatory Distinction & Integrity:</strong> Vayora provides independent strategic visa counselling, application preparation, and dossier assistance. Official visa approval decisions are granted solely and strictly at the discretion of the relevant sovereign government immigration departments and embassy consuls.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Mobile Floating Consultation CTA Bar -->
+  <div class="sd-mobile-cta">
+    <div class="sd-mobile-cta-info">
+      <b id="mobileCtaService">Student Visa Assistance</b>
+      <small>Free initial profile assessment</small>
+    </div>
+    <a href="#enquiry-form" class="btn primary btn-sm px-3 py-2">Book Consultation</a>
+  </div>
+
+  <!-- ========================================================
+       FOOTER (UNIFIED 5-COLUMN FOOTER)
+       ======================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row g-4 mb-5">
+        <!-- Brand Summary -->
+        <div class="col-lg-3 col-md-6">
+          <a class="navbar-brand brand footerbrand mb-3" href="index.html">
+            <span class="mark">V</span>
+            <span><b>VAYORA</b><small>IMMIGRATION & VISA</small></span>
+          </a>
+          <p class="footer-about">
+            Premium international immigration consultancy committed to transparent pathways, personalized guidance, and dependable support for students, professionals, and global investors worldwide.
+          </p>
+          <div class="d-flex gap-2 mt-3">
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="https://twitter.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links (All Nav Links) -->
+        <div class="col-lg-2 col-6">
+          <h6>Quick Links</h6>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="home2.html">Home 2</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Visa Services -->
+        <div class="col-lg-2 col-6">
+          <h6>Visa Services</h6>
+          <ul class="footer-links">
+            <li><a href="service-details.html?type=student">Student Visa</a></li>
+            <li><a href="service-details.html?type=work">Work Visa</a></li>
+            <li><a href="service-details.html?type=tourist">Tourist Visa</a></li>
+            <li><a href="service-details.html?type=business">Business Visa</a></li>
+            <li><a href="country-guides.html">Destination Guides</a></li>
+            <li><a href="services.html">All Categories</a></li>
+          </ul>
+        </div>
+
+        <!-- Support & Legal -->
+        <div class="col-lg-2 col-6">
+          <h6>Support & Legal</h6>
+          <ul class="footer-links">
+            <li><a href="client-dashboard.html">Client Portal</a></li>
+            <li><a href="login.html">Client Login</a></li>
+            <li><a href="faq.html">FAQ & Help</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="disclaimer.html">Legal Disclaimer</a></li>
+          </ul>
+        </div>
+
+        <!-- Support & Contact Details -->
+        <div class="col-lg-3 col-6">
+          <h6>Support & Contact</h6>
+          <ul class="footer-contact-list">
+            <li class="footer-contact-item">
+              <i class="bi bi-envelope-fill"></i>
+              <div>
+                <small class="d-block text-secondary">Email Support</small>
+                <a href="mailto:hello@vayora.com">hello@vayora.com </a>
+              </div>
+            </li>
+            <li class="footer-contact-item">
+              <i class="bi bi-telephone-fill"></i>
+              <div>
+                <small class="d-block text-secondary">Advisory Hotline</small>
+                <a href="tel:+18005928672">+1 (800) 592-8672</a>
+              </div>
+            </li>
+            <li class="footer-contact-item">
+              <i class="bi bi-clock-fill"></i>
+              <div>
+                <small class="d-block text-secondary">Working Hours</small>
+                <span>Mon – Fri: 9:00 AM – 6:00 PM</span>
+              </div>
+            </li>
+            <li class="footer-contact-item">
+              <i class="bi bi-geo-alt-fill"></i>
+              <div>
+                <small class="d-block text-secondary">Headquarters</small>
+                <span>Financial District, Suite 400</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footerbottom">
+        <span>© 2026 Vayora Immigration & Visa Consultancy. All rights reserved.</span>
+        <div>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms & Conditions</a>
+          <a href="faq.html">FAQ</a>
+          <a href="disclaimer.html">Legal Disclaimer</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="top" aria-label="Back to top" title="Back to top"><i class="bi bi-arrow-up"></i></button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+
+  <!-- ========================================================
+       DYNAMIC SERVICE CONTROLLER SCRIPT
+       ======================================================== -->
+  <script>
+    (function() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const serviceType = (urlParams.get('type') || 'student').toLowerCase();
+
+      // Master Data Structure for the 4 Visa Services
+      const servicesData = {
+        student: {
+          breadcrumb: 'VAYORA / IMMIGRATION SERVICES / STUDENT VISA',
+          heroTitle: 'Turn Your Study Abroad Ambition Into Reality.',
+          heroDesc: 'Get personalized guidance on student visa requirements, application preparation and documentation for your international education journey.',
+          heroImg: 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=2000&q=85',
+          pill1: 'Student Visa Assistance',
+          pill2: 'Personalized Guidance',
+          overviewTitle: 'Your Education Journey Starts With the Right Guidance.',
+          overviewP1: 'Studying abroad involves important decisions, from choosing a destination to understanding visa requirements. Vayora helps you navigate the preparation process with clear, structured support.',
+          overviewP2: 'Whether securing university admissions in Canada, navigating UK Graduate route work rights, or structuring Australian GTE/GST requirements, our education advisors ensure compliant and transparent dossier management.',
+          overviewImg: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80',
+          badgeTitle: 'Academic & Exchange',
+          badgeSub: 'Certified University Pathways',
+          destHeading: 'Popular Destinations — Where Would You Like to Study?',
+          destHighlights: {
+            canada: 'Top Universities & PGWP Work Rights',
+            uk: 'Russell Group & Graduate Route (2 Yrs)',
+            australia: 'Subclass 500 & Post-Study Work Visas',
+            germany: 'Tuition-Free Public Higher Education',
+            usa: 'F-1 Academic & STEM OPT Extensions',
+            nz: 'Post-Study Open Work Entitlements'
+          },
+          eligibility: [
+            { title: 'Valid International Passport', desc: 'Passport with at least 12 months validity beyond expected commencement.' },
+            { title: 'Official Acceptance Letter', desc: 'Valid LOA or CAS from an approved, eligible DLI/accredited university.' },
+            { title: 'Financial Solvency Evidence', desc: 'Documented proof of full tuition deposit plus living expenses (GIC/blocked account).' },
+            { title: 'Academic Qualifications', desc: 'Certified secondary & post-secondary diplomas, mark sheets and certificates.' },
+            { title: 'Language Proficiency', desc: 'Standardized test results meeting institutional cutoff (IELTS, TOEFL, PTE).' },
+            { title: 'Statement of Purpose (SOP)', desc: 'Clear motivation letter establishing academic progression and genuine intent.' }
+          ],
+          documents: [
+            { title: 'Current Valid Passport', desc: 'Color biometric page copy and all existing travel visas.' },
+            { title: 'Letter of Acceptance / CAS', desc: 'Official unconditional admission confirmation document.' },
+            { title: 'Academic Transcripts & Certificates', desc: 'Certified English copies of all past academic achievements.' },
+            { title: 'Proof of Financial Means', desc: '6 months bank statements, sponsor affidavit, or GIC certificate.' },
+            { title: 'Passport-Size Photographs', desc: 'Recent biometric photographs meeting target country embassy specifications.' },
+            { title: 'Medical & Police Clearances', desc: 'Panel physician health exam report and criminal conduct certificate.' }
+          ],
+          faqs: [
+            { q: 'How early should I start preparing for a student visa?', a: 'We strongly recommend starting 4 to 6 months before your intended course commencement date. This provides ample time to obtain university admission, assemble financial records, complete medical exams, and accommodate consular processing timelines.' },
+            { q: 'Do I need an admission letter before applying for a student visa?', a: 'Yes. Immigration authorities require an official unconditional Letter of Acceptance (LOA in Canada, CAS in the UK, or CoE in Australia) from a designated learning institution before you can lodge a student visa application.' },
+            { q: 'Can I apply to multiple countries simultaneously?', a: 'Yes, you can explore admissions across multiple countries at the same time. However, once you finalize your preferred university offer, you will lodge one official visa application corresponding to that institution.' },
+            { q: 'What happens if additional documents are requested by the embassy?', a: 'If a consular officer issues an Additional Information Request (AIR) or Procedural Fairness Letter, Vayora immediately analyzes the query, compiles verified supporting evidence, drafts a formal lawyer-reviewed submission letter, and submits the response well before the deadline.' },
+            { q: 'Can Vayora guarantee visa approval?', a: 'No. Official visa approval decisions are granted solely and strictly at the discretion of the relevant sovereign government immigration departments and embassy consuls. No ethical consultancy can guarantee a visa. What Vayora does guarantee is meticulous documentation, dual-tier compliance audits, and strategic legal presentation to maximize your success probability.' }
+          ],
+          sidebarTitle: 'Enquire About Student Visa',
+          sidebarSub: 'Speak directly with an education visa advisor to evaluate your profile and institution choices.',
+          ctaHeading: 'Ready to Take Your Education Beyond Borders?',
+          ctaDesc: 'Let\'s discuss your destination, understand your requirements and plan your next steps.',
+          mobileText: 'Student Visa Assistance'
+        },
+
+        work: {
+          breadcrumb: 'VAYORA / IMMIGRATION SERVICES / WORK VISA',
+          heroTitle: 'Take Your Professional Journey Across Borders.',
+          heroDesc: 'Strategic guidance on skilled worker pathways, employer sponsorships, points calculation and work permits across leading global economies.',
+          heroImg: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2000&q=85',
+          pill1: 'Skilled Migration Support',
+          pill2: 'Employer Sponsorship Guidance',
+          overviewTitle: 'Your Career Mobility Starts With the Right Direction.',
+          overviewP1: 'International career relocation opens doors to higher earnings, global industry exposure, and permanent residency opportunities for skilled professionals.',
+          overviewP2: 'Navigating occupation in-demand lists, credentials recognition (WES, ACS, Engineers Australia), and labor market impact assessments requires strategic planning. Vayora provides end-to-end guidance from eligibility assessment to work permit lodgement.',
+          overviewImg: 'https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=800&q=80',
+          badgeTitle: 'Skilled Employment',
+          badgeSub: 'Certified Occupation Pathways',
+          destHeading: 'Popular Destinations — Where Would You Like to Work?',
+          destHighlights: {
+            canada: 'Express Entry & Provincial Nominees',
+            uk: 'Skilled Worker & Global Talent Visa',
+            australia: 'Subclass 482 & General Skilled 189/190',
+            germany: 'Opportunity Card (Chancenkarte) & Blue Card',
+            usa: 'H-1B Specialty & L-1 Executive Transfer',
+            nz: 'Accredited Employer Work Visa (AEWV)'
+          },
+          eligibility: [
+            { title: 'Valid Passport & Legal Status', desc: 'Valid international passport with clean immigration and legal history.' },
+            { title: 'Verifiable Work Experience', desc: 'Documented full-time professional experience in an eligible skilled occupation.' },
+            { title: 'Credentials Assessment', desc: 'Official educational credential assessment matching destination standards.' },
+            { title: 'Job Offer or Points Threshold', desc: 'Qualifying points score or verified sponsor job offer where required.' },
+            { title: 'Language Competency', desc: 'Required professional language benchmarks (IELTS General or CELPIP).' },
+            { title: 'Health & Background Vetting', desc: 'Comprehensive medical assessment and clean police certificates.' }
+          ],
+          documents: [
+            { title: 'Current Valid Passport', desc: 'Full bio-data and existing visa stamp documentation.' },
+            { title: 'Employment Reference Letters', desc: 'Detailed job descriptions, employment contracts, and tax receipts.' },
+            { title: 'Educational Credentials Assessment', desc: 'WES, ACS, or relevant authority credential comparability report.' },
+            { title: 'Proof of Funds', desc: 'Liquid settlement fund verification where required by points streams.' },
+            { title: 'Curriculum Vitae (International Format)', desc: 'Tailored resume reflecting standard regional compliance guidelines.' },
+            { title: 'Police Clearance Certificates', desc: 'Official certificates from every jurisdiction lived in for 6+ months.' }
+          ],
+          faqs: [
+            { q: 'Do I need a job offer before applying for a work visa?', a: 'It depends on the country and stream. Programs like Canada Express Entry and Australia Subclass 189 are points-tested and do not mandate a pre-existing job offer. Other pathways, such as the UK Skilled Worker visa or LMIA work permits, require an authorized employer sponsorship.' },
+            { q: 'How is skilled migration points eligibility calculated?', a: 'Points are awarded based on core demographic criteria: age, education level, language proficiency test scores, years of skilled work experience, and adaptability factors like having a spouse with skilled qualifications or prior study in the host nation.' },
+            { q: 'Can my spouse work on my work permit?', a: 'In leading jurisdictions like Canada, the UK, and Australia, dependent spouses of skilled work permit holders are eligible for spousal open work permits, allowing them to seek employment with any employer.' },
+            { q: 'What is the processing time for a skilled worker visa?', a: 'Processing typically ranges from 6 to 16 weeks depending on whether your application is points-based or employer-sponsored, as well as the current caseload at the relevant immigration department.' },
+            { q: 'Can Vayora guarantee visa approval?', a: 'No. Sovereign immigration departments and consular officers make the ultimate determination on every application. Vayora guarantees thorough profile evaluation, dual-lawyer dossier audits, and strategic compliance to maximize approval likelihood.' }
+          ],
+          sidebarTitle: 'Enquire About Work Visa',
+          sidebarSub: 'Evaluate your skilled points score and discover eligible career immigration pathways.',
+          ctaHeading: 'Ready to Take Your Career Beyond Borders?',
+          ctaDesc: 'Let\'s discuss your qualifications, assess your points eligibility and chart your international career roadmap.',
+          mobileText: 'Work Visa Assistance'
+        },
+
+        tourist: {
+          breadcrumb: 'VAYORA / IMMIGRATION SERVICES / TOURIST VISA',
+          heroTitle: 'Discover the World With Confidence.',
+          heroDesc: 'Stress-free visitor visa assistance, tourist itineraries, family sponsorship and consular biometric appointment management.',
+          heroImg: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2000&q=85',
+          pill1: 'Visitor Visa Guidance',
+          pill2: 'Travel Itinerary Support',
+          overviewTitle: 'Your Global Journey Starts With the Right Guidance.',
+          overviewP1: 'Whether visiting family, exploring scenic landmarks, or attending international cultural events, a tourist visa application demands clear demonstration of your temporary intent.',
+          overviewP2: 'Consular officers focus heavily on your ties to your home country, financial solvency, and genuine traveler status. Vayora builds comprehensive visitor dossiers that eliminate common ambiguity and refusal risks.',
+          overviewImg: 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=800&q=80',
+          badgeTitle: 'Travel & Leisure',
+          badgeSub: 'Hassle-Free Processing',
+          destHeading: 'Popular Destinations — Where Would You Like to Visit?',
+          destHighlights: {
+            canada: 'Visitor Visa & eTA Processing',
+            uk: 'Standard Visitor Visa (6 Mo - 10 Yr)',
+            australia: 'Subclass 600 Tourist Stream',
+            germany: 'Schengen Short-Stay Visa (90 Days)',
+            usa: 'B1/B2 Tourism & Visitor Visa',
+            nz: 'NZeTA & Visitor Visa Options'
+          },
+          eligibility: [
+            { title: 'Valid Passport', desc: 'Minimum 6 months validity with blank pages for visa vignettes.' },
+            { title: 'Ties to Home Country', desc: 'Proof of ongoing employment, property ownership, or family commitments.' },
+            { title: 'Financial Solvency', desc: 'Sufficient funds to cover all travel, accommodation, and personal expenses.' },
+            { title: 'Clean Travel History', desc: 'No prior unexplained immigration breaches or overstays.' },
+            { title: 'Genuine Travel Intent', desc: 'Defined purpose of visit supported by travel schedule or host letter.' },
+            { title: 'Health & Travel Cover', desc: 'International travel medical insurance where required by Schengen/consular rules.' }
+          ],
+          documents: [
+            { title: 'Valid Passport & Past Visas', desc: 'Copies of current passport and previous travel history.' },
+            { title: 'Proof of Financial Solvency', desc: '6 months official bank statements and salary slips.' },
+            { title: 'Employment / Leave Letter', desc: 'Employer no-objection certificate (NOC) and approved leave dates.' },
+            { title: 'Travel Itinerary & Hotel Bookings', desc: 'Day-by-day sightseeing plan and verifiable accommodation reserves.' },
+            { title: 'Invitation Letter (if applicable)', desc: 'Host declaration, proof of host legal status and address.' },
+            { title: 'Travel Medical Insurance', desc: 'Minimum â‚¬30,000 cover for Schengen or target nation travel policy.' }
+          ],
+          faqs: [
+            { q: 'How long can I stay on a tourist visa?', a: 'Standard visitor visas typically allow stays of up to 90 or 180 days per visit depending on the country. Multi-entry visas (like the US B1/B2 or Canadian visitor visa) may be valid for up to 10 years.' },
+            { q: 'Can I work while visiting on a tourist visa?', a: 'No. Tourist and visitor visas strictly prohibit taking up paid or unpaid employment in the destination country. Engaging in work is a violation of visa conditions.' },
+            { q: 'Do I need to buy flight tickets before my visa is granted?', a: 'No. Consulates advise applicants NOT to purchase non-refundable flight tickets prior to visa grant. A reserved flight itinerary or booking confirmation is standard and sufficient.' },
+            { q: 'What is the most common reason for tourist visa refusals?', a: 'The single most common reason is failure to convince the consular officer that you have strong ties to your home country (employment, family, assets) ensuring you will leave before your visa expires.' },
+            { q: 'Can Vayora guarantee visa approval?', a: 'No. All final approval decisions rest solely with the consular officers of the destination nation. Vayora ensures your dossier is structured to eliminate gaps and provide clear, undeniable proof of genuine travel intent.' }
+          ],
+          sidebarTitle: 'Enquire About Tourist Visa',
+          sidebarSub: 'Plan your international vacation or family visit with complete documentation guidance.',
+          ctaHeading: 'Ready to Explore the World Beyond Borders?',
+          ctaDesc: 'Let\'s discuss your travel itinerary, verify your supporting documents and prepare your tourist visa dossier.',
+          mobileText: 'Tourist Visa Assistance'
+        },
+
+        business: {
+          breadcrumb: 'VAYORA / IMMIGRATION SERVICES / BUSINESS VISA',
+          heroTitle: 'Take Your Business Beyond Boundaries.',
+          heroDesc: 'Commercial immigration solutions for entrepreneurs, executive intra-company transfers, start-up founders and corporate investors.',
+          heroImg: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=2000&q=85',
+          pill1: 'Commercial Expansion',
+          pill2: 'Investor Visa Pathways',
+          overviewTitle: 'Your Enterprise Growth Starts With the Right Strategy.',
+          overviewP1: 'Expanding an enterprise internationally or investing in foreign markets requires navigating complex corporate regulatory requirements and immigration compliance.',
+          overviewP2: 'Whether transferring key personnel under intra-company programs, securing designated venture capital endorsements, or investing in golden visa streams, Vayora ensures seamless commercial migration support.',
+          overviewImg: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80',
+          badgeTitle: 'Corporate & Investor',
+          badgeSub: 'High-Value Enterprise Streams',
+          destHeading: 'Popular Destinations — Where Would You Like to Expand?',
+          destHighlights: {
+            canada: 'Start-up Visa & Intra-Company Transfer',
+            uk: 'Innovator Founder & Expansion Worker',
+            australia: 'Business Innovation & Investment (188)',
+            germany: 'Self-Employment Visa (Aufenthaltstitel)',
+            usa: 'E-2 Treaty Investor & EB-5 Immigrant',
+            nz: 'Active Investor Plus & Entrepreneur'
+          },
+          eligibility: [
+            { title: 'Qualifying Enterprise / Capital', desc: 'Verifiable business track record or minimum investment capital.' },
+            { title: 'Comprehensive Business Plan', desc: 'Economically viable expansion plan demonstrating local job creation.' },
+            { title: 'Executive Management Role', desc: 'Documented senior leadership position or majority equity holding.' },
+            { title: 'Endorsement / Approval', desc: 'Designated body endorsement (where required for start-up streams).' },
+            { title: 'Legitimate Source of Funds', desc: 'Fully audited trail confirming lawful origin of all invested capital.' },
+            { title: 'Regulatory Compliance', desc: 'Compliance with host country corporate, tax, and licensing legislation.' }
+          ],
+          documents: [
+            { title: 'Valid Passports & Entity Reg', desc: 'Director identification and certified company registration certificates.' },
+            { title: 'Executive Business Plan', desc: '3-to-5 year market viability study, financial projections and hiring roadmap.' },
+            { title: 'Audited Financial Statements', desc: 'Past 3 years balance sheets, profit/loss accounts and tax filings.' },
+            { title: 'Proof of Capital Transfer', desc: 'Bank reference letters, escrow deposits or institutional investment proofs.' },
+            { title: 'Commercial Contracts / Leases', desc: 'Client service agreements, commercial lease agreements, or letters of intent.' },
+            { title: 'Endorsement Letter', desc: 'Approved venture capital, angel group, or incubator endorsement certificate.' }
+          ],
+          faqs: [
+            { q: 'What is the minimum investment required for a business visa?', a: 'Investment thresholds vary greatly by country. For example, the US EB-5 minimum is $800,000, whereas startup founder streams in Canada or the UK do not mandate fixed minimum personal capital if endorsed by an authorized body.' },
+            { q: 'Can my business visa lead to permanent residency?', a: 'Yes. Most innovator, startup, and investor visas provide a direct pathway to Permanent Residency (PR) once specified operational milestones (such as revenue generation or job creation) are met.' },
+            { q: 'What is an Intra-Company Transfer (ICT)?', a: 'ICT programs allow multinational companies to transfer key personnel, executives, or specialized knowledge workers from a foreign branch to an affiliated office in another country with expedited processing.' },
+            { q: 'How does Vayora assist with business immigration?', a: 'We provide end-to-end support including business plan refinement, legal structuring of documents, coordination with designated endorsement organizations, and consular filing.' },
+            { q: 'Can Vayora guarantee visa approval?', a: 'No. Approval decisions are the sole prerogative of sovereign immigration departments and consuls. Vayora guarantees high-level commercial acumen, dual-layer legal scrutiny, and thorough compliance.' }
+          ],
+          sidebarTitle: 'Enquire About Business Visa',
+          sidebarSub: 'Discuss cross-border expansion, start-up endorsements, and corporate migration options.',
+          ctaHeading: 'Ready to Take Your Business Beyond Boundaries?',
+          ctaDesc: 'Let\'s analyze your commercial goals, evaluate investor programs and map your international corporate setup.',
+          mobileText: 'Business Visa Assistance'
+        }
+      };
+
+      const current = servicesData[serviceType] || servicesData.student;
+
+      // Update Page Meta Title
+      document.title = `${current.heroTitle} | Vayora Immigration`;
+
+      // 1. Dynamic Hero
+      document.getElementById('sdBreadcrumb').innerText = current.breadcrumb;
+      document.getElementById('sdHeroTitle').innerText = current.heroTitle;
+      document.getElementById('sdHeroDesc').innerText = current.heroDesc;
+      document.getElementById('pillText1').innerText = current.pill1;
+      document.getElementById('pillText2').innerText = current.pill2;
+      document.getElementById('sdHero').style.backgroundImage = `url('${current.heroImg}')`;
+
+      // 2. Service Overview
+      document.getElementById('sdOverviewTitle').innerText = current.overviewTitle;
+      document.getElementById('sdOverviewP1').innerText = current.overviewP1;
+      document.getElementById('sdOverviewP2').innerText = current.overviewP2;
+      document.getElementById('sdOverviewImg').src = current.overviewImg;
+      document.getElementById('sdOverviewBadgeTitle').innerText = current.badgeTitle;
+      document.getElementById('sdOverviewBadgeSub').innerText = current.badgeSub;
+
+      // 4. Popular Destinations
+      document.getElementById('sdDestHeading').innerText = current.destHeading;
+      document.getElementById('destHighlightCanada').innerText = current.destHighlights.canada;
+      document.getElementById('destHighlightUK').innerText = current.destHighlights.uk;
+      document.getElementById('destHighlightAustralia').innerText = current.destHighlights.australia;
+      document.getElementById('destHighlightGermany').innerText = current.destHighlights.germany;
+      document.getElementById('destHighlightUSA').innerText = current.destHighlights.usa;
+      document.getElementById('destHighlightNZ').innerText = current.destHighlights.nz;
+
+      // 5. Eligibility Checklist
+      const eligContainer = document.getElementById('sdEligibilityList');
+      eligContainer.innerHTML = current.eligibility.map(item => `
+        <div class="sd-check-item">
+          <div class="sd-check-icon"><i class="bi bi-check2"></i></div>
+          <div class="sd-check-text">
+            <b>${item.title}</b>
+            <span>${item.desc}</span>
+          </div>
+        </div>
+      `).join('');
+
+      // 6. Required Documents Checklist
+      const docContainer = document.getElementById('sdDocumentList');
+      docContainer.innerHTML = current.documents.map(item => `
+        <div class="sd-check-item">
+          <div class="sd-check-icon"><i class="bi bi-file-earmark-check-fill"></i></div>
+          <div class="sd-check-text">
+            <b>${item.title}</b>
+            <span>${item.desc}</span>
+          </div>
+        </div>
+      `).join('');
+
+      // 8. FAQ Accordion
+      const faqContainer = document.getElementById('sdFaqAccordion');
+      faqContainer.innerHTML = current.faqs.map((faq, index) => `
+        <div class="accordion-item">
+          <h3 class="accordion-header" id="faqH${index}">
+            <button class="accordion-button ${index > 0 ? 'collapsed' : ''}" type="button" data-bs-toggle="collapse" data-bs-target="#faqC${index}" aria-expanded="${index === 0 ? 'true' : 'false'}" aria-controls="faqC${index}">
+              ${faq.q}
+            </button>
+          </h3>
+          <div id="faqC${index}" class="accordion-collapse collapse ${index === 0 ? 'show' : ''}" aria-labelledby="faqH${index}" data-bs-parent="#sdFaqAccordion">
+            <div class="accordion-body">
+              ${faq.a}
+            </div>
+          </div>
+        </div>
+      `).join('');
+
+      // 9. Related Services (The OTHER 3 services)
+      const allKeys = ['student', 'work', 'tourist', 'business'];
+      const otherKeys = allKeys.filter(k => k !== serviceType);
+      const relatedContainer = document.getElementById('sdRelatedServices');
+      
+      const relatedMeta = {
+        student: { title: 'Student Visa', desc: 'Admissions and study permit assistance for top global universities.', img: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=700&q=80' },
+        work: { title: 'Work Visa', desc: 'Guidance on skilled migration, points assessments and work permits.', img: 'https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=700&q=80' },
+        tourist: { title: 'Tourist Visa', desc: 'Hassle-free visitor visa assistance, itineraries and travel advice.', img: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=700&q=80' },
+        business: { title: 'Business Visa', desc: 'Commercial expansion, startup founder streams and investor files.', img: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=700&q=80' }
+      };
+
+      relatedContainer.innerHTML = otherKeys.map(k => `
+        <div class="col-md-4">
+          <div class="sd-related-card">
+            <a href="service-details.html?type=${k}" class="sd-related-thumb" aria-label="${relatedMeta[k].title}">
+              <img src="${relatedMeta[k].img}" alt="${relatedMeta[k].title}" loading="lazy">
+            </a>
+            <div class="sd-related-body">
+              <h4>${relatedMeta[k].title}</h4>
+              <p>${relatedMeta[k].desc}</p>
+              <a href="service-details.html?type=${k}" class="sd-related-cta">
+                <span>Explore service</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      `).join('');
+
+      // Sidebar & Form Updates
+      document.getElementById('sdSidebarTitle').innerText = current.sidebarTitle;
+      document.getElementById('sdSidebarSub').innerText = current.sidebarSub;
+
+      // Section 10: Final CTA
+      document.getElementById('sdCtaHeading').innerText = current.ctaHeading;
+      document.getElementById('sdCtaDesc').innerText = current.ctaDesc;
+
+      // Mobile Floating CTA
+      document.getElementById('mobileCtaService').innerText = current.mobileText;
+
+    })();
+  </script>
+</body>
+</html>
+

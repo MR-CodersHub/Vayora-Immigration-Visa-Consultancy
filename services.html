@@ -1,0 +1,818 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="apple-touch-icon" href="favicon.svg">
+  <title>Services | Vayora — Premium Immigration & Visa Consultancy</title>
+  <meta name="description" content="Explore Vayora's bespoke immigration and visa pathways: Student Visas, Skilled Work Permits, Tourist Visas, and Business Relocation across Canada, UK, Australia, and Germany.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="topbar">
+    <div class="container d-flex justify-content-between align-items-center">
+      <span>✧ Personalized visa guidance and transparent immigration support</span>
+      <a href="contact.html">Talk to an Advisor</a>
+    </div>
+  </div>
+
+  <!-- Primary Navigation -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand brand" href="index.html">
+        <span class="mark">V</span>
+        <span><b>VAYORA</b><small>IMMIGRATION & VISA</small></span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="home2.html">Home 2</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="d-flex align-items-center gap-2 nav-actions">
+          <button class="nav-tool" id="themeToggle" type="button" aria-label="Toggle colour theme" title="Change theme">
+            <i class="bi bi-moon-stars"></i>
+          </button>
+          <button class="nav-tool direction-toggle" id="directionToggle" type="button" aria-label="Toggle text direction" title="Switch LTR / RTL">
+            <span>LTR</span>
+          </button>
+
+          <!-- Profile / Account Menu -->
+          <div class="dropdown profile-dropdown">
+            <button class="nav-tool profile-trigger" type="button" id="profileMenu" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Open profile menu">
+              <i class="bi bi-person"></i>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end profile-menu" aria-labelledby="profileMenu">
+              <li class="profile-menu-heading">
+                <strong>Welcome to Vayora</strong>
+                <small>Access your client portal</small>
+              </li>
+              <li><a class="dropdown-item" href="login.html"><i class="bi bi-box-arrow-in-right"></i> Login</a></li>
+              <li><a class="dropdown-item" href="register.html"><i class="bi bi-person-plus"></i> Register</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="admin-dashboard.html"><i class="bi bi-speedometer2"></i> Admin Dashboard</a></li>
+              <li><a class="dropdown-item" href="client-dashboard.html"><i class="bi bi-grid"></i> Client Dashboard</a></li>
+            </ul>
+          </div>
+
+          <a href="contact.html#consultation" class="btn primary nav-consult">Book Consultation</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- ========================================================
+         SECTION 1: SERVICES HERO & FLOATING VISA FINDER
+         ======================================================== -->
+    <section class="services-hero">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-7">
+            <span class="eyebrow" style="color: #cca6ff; letter-spacing: 2px;">GLOBAL IMMIGRATION & VISA SOLUTIONS</span>
+            <h1>Wherever Life Takes You, We'll Help You <em>Find the Way.</em></h1>
+            <p class="lead-copy">From university campuses to international career opportunities, discover a visa pathway that brings your ambitions closer to reality with structured guidance and compliance transparency.</p>
+            <div class="d-flex flex-wrap gap-3 mt-4">
+              <a href="#visa-discovery" class="btn primary btn-lg">Explore Visa Services <i class="bi bi-arrow-down ms-1"></i></a>
+              <a href="contact.html" class="btn outline btn-lg">Talk to an Advisor</a>
+            </div>
+            <div class="d-flex align-items-center gap-4 mt-5 pt-3 text-white-50" style="font-size: 13px;">
+              <div><strong class="text-white d-block" style="font-size: 18px; font-weight: 800;">25+</strong> Destination Nations</div>
+              <div style="width: 1px; height: 30px; background: rgba(255,255,255,0.2);"></div>
+              <div><strong class="text-white d-block" style="font-size: 18px; font-weight: 800;">12,000+</strong> Dossiers Guided</div>
+              <div style="width: 1px; height: 30px; background: rgba(255,255,255,0.2);"></div>
+              <div><strong class="text-white d-block" style="font-size: 18px; font-weight: 800;">98%</strong> Satisfaction</div>
+            </div>
+          </div>
+
+          <!-- Floating Glassmorphism Destination Panel -->
+          <div class="col-lg-5">
+            <div class="visa-finder-glass">
+              <h3>Find Your Visa Path</h3>
+              <p>Explore personalized immigration and visa options based on your goals.</p>
+
+              <form id="visaFinderForm" onsubmit="event.preventDefault(); navigateVisaPath();">
+                <div class="vf-field">
+                  <label for="finderDestination">Where would you like to go?</label>
+                  <select id="finderDestination" class="form-select" required>
+                    <option value="" disabled selected>Choose your destination</option>
+                    <option value="canada">Canada (Express Entry & PNP)</option>
+                    <option value="uk">United Kingdom (Skilled & Student)</option>
+                    <option value="australia">Australia (General Skilled Migration)</option>
+                    <option value="germany">Germany (Chancenkarte & EU Blue Card)</option>
+                    <option value="usa">United States (H-1B, F-1 & EB-2)</option>
+                    <option value="newzealand">New Zealand (Skilled Resident)</option>
+                  </select>
+                </div>
+
+                <div class="vf-field">
+                  <label for="finderPurpose">What is your purpose?</label>
+                  <select id="finderPurpose" class="form-select" required>
+                    <option value="" disabled selected>Select visa category</option>
+                    <option value="student">Higher Education / Student Visa</option>
+                    <option value="work">Skilled Career / Work Permit</option>
+                    <option value="tourist">Tourism & Cultural Exploration</option>
+                    <option value="business">Business Establishment & Investment</option>
+                  </select>
+                </div>
+
+                <button type="submit" class="vf-btn">
+                  <span>Discover Your Options</span>
+                  <i class="bi bi-arrow-right"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         SECTION 2: VISA DISCOVERY (FOUR LARGE EDITORIAL CATEGORIES)
+         ======================================================== -->
+    <section class="section" id="visa-discovery">
+      <div class="container">
+        <div class="heading text-center">
+          <span class="eyebrow">WHAT BRINGS YOU ACROSS BORDERS?</span>
+          <h2>Every Journey Has Its <em>Own Purpose.</em></h2>
+          <p class="lead-copy">Select a dedicated immigration stream designed around your personal ambitions, educational background, and long-term career roadmap.</p>
+        </div>
+
+        <div class="row g-4">
+          <!-- 01. Education -->
+          <div class="col-lg-6 col-md-6">
+            <div class="visa-cat-card">
+              <a href="service-details.html?type=student" class="visa-cat-thumb" aria-label="Discover Student Visa">
+                <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1000&q=80" alt="Students studying together on an international university campus" loading="lazy">
+                <span class="visa-cat-badge">Academic & Exchange</span>
+              </a>
+              <div class="visa-cat-body">
+                <span class="visa-cat-num">01. Education</span>
+                <h3>Dream Bigger. Study Further.</h3>
+                <p>Turn your international education aspirations into reality with university admissions support, scholarship guidance, visa compliance checks, and post-graduation work rights.</p>
+                <div>
+                  <a href="service-details.html?type=student" class="visa-cat-cta">
+                    <span>Discover Student Visa</span>
+                    <i class="bi bi-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 02. Career -->
+          <div class="col-lg-6 col-md-6">
+            <div class="visa-cat-card">
+              <a href="service-details.html?type=work" class="visa-cat-thumb" aria-label="Discover Work Visa">
+                <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1000&q=80" alt="Professional in modern corporate office working internationally" loading="lazy">
+                <span class="visa-cat-badge">Skilled Employment</span>
+              </a>
+              <div class="visa-cat-body">
+                <span class="visa-cat-num">02. Career</span>
+                <h3>Take Your Career Global.</h3>
+                <p>Comprehensive pathways for overseas employment, skilled migration points calculations, employer sponsorship compliance, and seamless work permit filing.</p>
+                <div>
+                  <a href="service-details.html?type=work" class="visa-cat-cta">
+                    <span>Discover Work Visa</span>
+                    <i class="bi bi-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 03. Exploration -->
+          <div class="col-lg-6 col-md-6">
+            <div class="visa-cat-card">
+              <a href="service-details.html?type=tourist" class="visa-cat-thumb" aria-label="Discover Tourist Visa">
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=80" alt="Traveler exploring scenic coastal destination" loading="lazy">
+                <span class="visa-cat-badge">Travel & Leisure</span>
+              </a>
+              <div class="visa-cat-body">
+                <span class="visa-cat-num">03. Exploration</span>
+                <h3>See More of the World.</h3>
+                <p>Stress-free tourist, visitor, and family sponsorship visas with personalized itinerary structuring, financial dossier verification, and biometric appointment booking.</p>
+                <div>
+                  <a href="service-details.html?type=tourist" class="visa-cat-cta">
+                    <span>Discover Tourist Visa</span>
+                    <i class="bi bi-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 04. Business -->
+          <div class="col-lg-6 col-md-6">
+            <div class="visa-cat-card">
+              <a href="service-details.html?type=business" class="visa-cat-thumb" aria-label="Discover Business Visa">
+                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1000&q=80" alt="Modern international business skyline and financial headquarters" loading="lazy">
+                <span class="visa-cat-badge">Corporate & Investor</span>
+              </a>
+              <div class="visa-cat-body">
+                <span class="visa-cat-num">04. Business</span>
+                <h3>Expand Beyond Borders.</h3>
+                <p>Investor visas, intra-company executive transfers, innovator founder streams, and multi-jurisdiction commercial expansion with complete regulatory integrity.</p>
+                <div>
+                  <a href="service-details.html?type=business" class="visa-cat-cta">
+                    <span>Discover Business Visa</span>
+                    <i class="bi bi-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         SECTION 3: FEATURED SERVICE SPOTLIGHT (STUDY ABROAD)
+         ======================================================== -->
+    <section class="section alt-lavender">
+      <div class="container">
+        <div class="featured-service-card">
+          <div class="row g-0 align-items-stretch">
+            <div class="col-lg-6">
+              <div class="featured-service-img">
+                <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1200&q=80" alt="International university library and global scholars" loading="lazy">
+                <div class="fs-badge-overlay">
+                  <b>Top Academic Destinations</b>
+                  <small>Canada • UK • Australia • Germany • USA</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="featured-service-body">
+                <span class="eyebrow">FEATURED IMMIGRATION SERVICE</span>
+                <h2>Study at World-Class Universities with <em>Total Confidence.</em></h2>
+                <p class="lead-copy">Studying abroad is one of the most transformative decisions you will ever make. Vayora simplifies university admissions, document attestation, and study permit dossiers with meticulous accuracy.</p>
+
+                <div class="fs-checklist">
+                  <div class="fs-check-item">
+                    <i class="bi bi-check2"></i>
+                    <span>Personalized course & university shortlisting matching your academic profile</span>
+                  </div>
+                  <div class="fs-check-item">
+                    <i class="bi bi-check2"></i>
+                    <span>Statement of Purpose (SOP) & Letter of Explanation (LOE) expert refinement</span>
+                  </div>
+                  <div class="fs-check-item">
+                    <i class="bi bi-check2"></i>
+                    <span>Financial solvency structuring & verified scholarship application guidance</span>
+                  </div>
+                  <div class="fs-check-item">
+                    <i class="bi bi-check2"></i>
+                    <span>Mock visa interview simulations & pre-departure cultural orientation</span>
+                  </div>
+                </div>
+
+                <div class="d-flex flex-wrap gap-3">
+                  <a href="service-details.html?type=student" class="btn primary btn-lg">Explore Student Visa Pathways </a>
+                  <a href="contact.html#consultation" class="btn outline btn-lg">Book Student Assessment</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         SECTION 4: GLOBAL DESTINATIONS SHOWCASE
+         ======================================================== -->
+    <section class="section">
+      <div class="container">
+        <div class="d-flex flex-wrap justify-content-between align-items-end mb-5">
+          <div>
+            <span class="eyebrow">GLOBAL DESTINATIONS</span>
+            <h2 class="mb-2">Explore Where Your Ambitions <em>Can Take You.</em></h2>
+            <p class="lead-copy mb-0">Established visa and relocation pathways across the world's most sought-after economies.</p>
+          </div>
+          <a href="country-guides.html" class="textlink mt-3 mt-md-0">View All Country Guides </a>
+        </div>
+
+        <div class="row g-4">
+          <!-- Canada -->
+          <div class="col-lg-3 col-md-6">
+            <a href="country-guides.html?country=canada" class="dest-horiz-card">
+              <img src="https://images.unsplash.com/photo-1503614472-8c93d56e92ce?auto=format&fit=crop&w=800&q=80" alt="Canada mountain landscape and Toronto skyline" loading="lazy">
+              <div class="dest-horiz-content">
+                <h3>Canada</h3>
+                <p>Express Entry, PGWP, PNP & Startup Visa Pathways</p>
+              </div>
+            </a>
+          </div>
+
+          <!-- United Kingdom -->
+          <div class="col-lg-3 col-md-6">
+            <a href="country-guides.html?country=uk" class="dest-horiz-card">
+              <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=800&q=80" alt="London skyline and Big Ben" loading="lazy">
+              <div class="dest-horiz-content">
+                <h3>United Kingdom</h3>
+                <p>Skilled Worker, Graduate Route & Global Talent</p>
+              </div>
+            </a>
+          </div>
+
+          <!-- Australia -->
+          <div class="col-lg-3 col-md-6">
+            <a href="country-guides.html?country=australia" class="dest-horiz-card">
+              <img src="https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?auto=format&fit=crop&w=800&q=80" alt="Sydney Opera House and harbour bridge" loading="lazy">
+              <div class="dest-horiz-content">
+                <h3>Australia</h3>
+                <p>Subclass 500, TSS 482 & General Skilled 189/190</p>
+              </div>
+            </a>
+          </div>
+
+          <!-- Germany -->
+          <div class="col-lg-3 col-md-6">
+            <a href="country-guides.html?country=germany" class="dest-horiz-card">
+              <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=800&q=80" alt="Berlin architecture and historic landmarks" loading="lazy">
+              <div class="dest-horiz-content">
+                <h3>Germany</h3>
+                <p>Chancenkarte Opportunity Card & EU Blue Card</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         SECTION 5: THE VAYORA ADVANTAGE (ASYMMETRIC SPLIT)
+         ======================================================== -->
+    <section class="section alt-subtle">
+      <div class="container">
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-5">
+            <span class="eyebrow">THE VAYORA ADVANTAGE</span>
+            <h2>Why Thousands of Global Travelers & Professionals <em>Choose Vayora.</em></h2>
+            <p class="lead-copy">Immigration rules and consular quotas change frequently. Our strategic methodology pairs deep regulatory insight with an unwavering commitment to client clarity and ethical diligence.</p>
+
+            <div class="p-4 rounded-4 mt-4" style="background: rgba(142,92,230,0.08); border: 1px solid rgba(142,92,230,0.2);">
+              <div class="d-flex align-items-center gap-3">
+                <i class="bi bi-shield-check" style="font-size: 32px; color: var(--purple);"></i>
+                <div>
+                  <b class="d-block" style="color: var(--deep); font-size: 15px;">Dual-Layer Dossier Quality Control</b>
+                  <span style="font-size: 13px; color: var(--muted);">Zero submission without secondary senior legal review.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <div class="advantage-list-item">
+              <div class="advantage-num">01</div>
+              <div class="advantage-text">
+                <b>Dual-Audited Documentation</b>
+                <p>Every statement, financial summary, and application form undergoes a rigorous dual-tier audit against latest embassy guidelines before lodging.</p>
+              </div>
+            </div>
+
+            <div class="advantage-list-item">
+              <div class="advantage-num">02</div>
+              <div class="advantage-text">
+                <b>Real-Time IRCC & Consular Sync</b>
+                <p>Track processing milestones live via your Vayora dashboard with automated notifications for biometrics, medicals, and decision releases.</p>
+              </div>
+            </div>
+
+            <div class="advantage-list-item">
+              <div class="advantage-num">03</div>
+              <div class="advantage-text">
+                <b>100% Transparent Fee Structure</b>
+                <p>No hidden charges or retroactive surcharges. All government filing fees and consultancy milestones are clearly itemized before engagement.</p>
+              </div>
+            </div>
+
+            <div class="advantage-list-item">
+              <div class="advantage-num">04</div>
+              <div class="advantage-text">
+                <b>Dedicated Senior Case Manager</b>
+                <p>Direct communication with an experienced immigration advisor who understands your file intimately and responds within 24 business hours.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         SECTION 6: YOUR JOURNEY VISUALIZED (4-STEP ROUTE)
+         ======================================================== -->
+    <section class="section">
+      <div class="container">
+        <div class="heading text-center">
+          <span class="eyebrow">PROCESS & METHODOLOGY</span>
+          <h2>Four Clear Steps to Your <em>Global Destination.</em></h2>
+          <p class="lead-copy">We deconstruct complex immigration procedures into four predictable, stress-free stages.</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-3 col-md-6 d-flex">
+            <div class="process-step">
+              <span class="step-num">01</span>
+              <h4>Profile & Feasibility Discovery</h4>
+              <p>Thorough evaluation of your academic qualifications, work experience, points matrix, and destination eligibility.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex">
+            <div class="process-step">
+              <span class="step-num">02</span>
+              <h4>Strategic Dossier Compilation</h4>
+              <p>Meticulous collection of certified translations, police clearances, financial solvency proofs, and motivational letters.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex">
+            <div class="process-step">
+              <span class="step-num">03</span>
+              <h4>Official Submission & Biometrics</h4>
+              <p>Lodgement through official sovereign government portals accompanied by consular biometric appointment scheduling.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex">
+            <div class="process-step">
+              <span class="step-num">04</span>
+              <h4>Grant Issuance & Pre-Landing</h4>
+              <p>Official visa grant celebration followed by pre-departure checklist assistance, port-of-entry prep, and settlement guidance.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         SECTION 7: INTERACTIVE CLIENT EXPERIENCE (DASHBOARD PREVIEW)
+         ======================================================== -->
+    <section class="section dashboard-section" style="background: linear-gradient(135deg, #1f0b3e 0%, #3a1568 50%, #541d8e 100%); color: #fff;">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <span class="eyebrow" style="color: #cca6ff;">SMART CLIENT PORTAL</span>
+            <h2 class="text-white">Your Visa Journey. One <em>Smart Dashboard.</em></h2>
+            <p class="lead-copy" style="color: #ecdfff; font-size: 18px; line-height: 1.8; margin-bottom: 28px;">Your application journey shouldn't leave you wondering what's next. Access your personal dashboard to stay organized and informed at every milestone.</p>
+
+            <ul class="list-unstyled mb-4" style="color: #f2e8ff; font-size: 14.5px;">
+              <li class="d-flex align-items-center gap-3 mb-3">
+                <i class="bi bi-check-circle-fill" style="color: #cca6ff; font-size: 18px;"></i>
+                <span>Track your application status in real-time from any device.</span>
+              </li>
+              <li class="d-flex align-items-center gap-3 mb-3">
+                <i class="bi bi-check-circle-fill" style="color: #cca6ff; font-size: 18px;"></i>
+                <span>Upload and manage sensitive verification documents securely.</span>
+              </li>
+              <li class="d-flex align-items-center gap-3 mb-3">
+                <i class="bi bi-check-circle-fill" style="color: #cca6ff; font-size: 18px;"></i>
+                <span>Schedule consultation appointments with your dedicated advisor.</span>
+              </li>
+              <li class="d-flex align-items-center gap-3">
+                <i class="bi bi-check-circle-fill" style="color: #cca6ff; font-size: 18px;"></i>
+                <span>Receive instant checklist alerts, deadline reminders, and embassy updates.</span>
+              </li>
+            </ul>
+
+            <div class="d-flex flex-wrap gap-3 mt-4">
+              <a href="client-dashboard.html" class="btn white">Access Your Dashboard </a>
+              <a href="login.html" class="btn outline-white">Sign In to Account</a>
+            </div>
+          </div>
+
+          <!-- Dashboard Mockup Card -->
+          <div class="col-lg-6">
+            <div class="dashboard-card" style="background: rgba(22, 10, 42, 0.88); border: 1px solid rgba(255,255,255,0.18); border-radius: 24px; padding: 32px; box-shadow: 0 30px 70px rgba(0,0,0,0.5); backdrop-filter: blur(12px);">
+              <div class="d-flex justify-content-between align-items-center pb-3 mb-4" style="border-bottom: 1px solid rgba(255,255,255,0.12);">
+                <div>
+                  <small style="color: #cca6ff; font-weight: 700; letter-spacing: 1px;">FILE #VY-2026-9042</small>
+                  <h4 class="text-white mb-0" style="font-size: 18px; font-weight: 700;">Canada Post-Graduation Work Permit</h4>
+                </div>
+                <span class="badge" style="background: rgba(46, 204, 113, 0.2); color: #2ecc71; border: 1px solid rgba(46, 204, 113, 0.4); font-size: 11px; padding: 6px 12px; border-radius: 20px;">
+                  <i class="bi bi-clock-history me-1"></i> Stage 3 Active
+                </span>
+              </div>
+
+              <!-- Progress Bar -->
+              <div class="mb-4">
+                <div class="d-flex justify-content-between align-items-center mb-2" style="font-size: 12.5px;">
+                  <span style="color: #ded1f3;">Overall Dossier Progress</span>
+                  <strong class="text-white">75% Completed</strong>
+                </div>
+                <div class="progress" style="height: 8px; background: rgba(255,255,255,0.14); border-radius: 10px;">
+                  <div class="progress-bar" role="progressbar" style="width: 75%; background: linear-gradient(90deg, #9b5cf6, #38ef7d); border-radius: 10px;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+
+              <!-- Milestones Row -->
+              <div class="row g-2 mb-4 text-center" style="font-size: 11.5px;">
+                <div class="col-3">
+                  <div class="p-2 rounded-3" style="background: rgba(255,255,255,0.08); color: #2ecc71;">
+                    <i class="bi bi-check2 d-block mb-1" style="font-size: 14px;"></i> Consultation
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="p-2 rounded-3" style="background: rgba(255,255,255,0.08); color: #2ecc71;">
+                    <i class="bi bi-check2 d-block mb-1" style="font-size: 14px;"></i> Docs Verified
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="p-2 rounded-3" style="background: rgba(142,92,230,0.3); border: 1px solid #cca6ff; color: #fff; font-weight: 700;">
+                    <i class="bi bi-circle-fill d-block mb-1" style="font-size: 8px; color: #cca6ff;"></i> Filing
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="p-2 rounded-3" style="background: rgba(255,255,255,0.04); color: #8f7f9e;">
+                    <i class="bi bi-dash d-block mb-1" style="font-size: 14px;"></i> Decision
+                  </div>
+                </div>
+              </div>
+
+              <!-- Case Manager Info Card -->
+              <div class="d-flex align-items-center justify-content-between p-3 rounded-3" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);">
+                <div class="d-flex align-items-center gap-3">
+                  <div style="width: 42px; height: 42px; border-radius: 50%; background: linear-gradient(135deg, #a165f4, #501d94); display: grid; place-items: center; color: #fff; font-weight: 700; font-size: 14px;">
+                    EV
+                  </div>
+                  <div>
+                    <strong class="d-block text-white" style="font-size: 13.5px;">Elena Vance</strong>
+                    <small style="color: #ded1f3; font-size: 11px;">Assigned Senior Immigration Advisor</small>
+                  </div>
+                </div>
+                <a href="contact.html" class="btn btn-sm" style="background: rgba(255,255,255,0.12); color: #fff; border-radius: 8px; font-size: 12px; font-weight: 600;">Message</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         SECTION 8: COMMON QUESTIONS (FAQ ACCORDION)
+         ======================================================== -->
+    <section class="section" id="faqs">
+      <div class="container">
+        <div class="heading text-center">
+          <span class="eyebrow">COMMON QUESTIONS</span>
+          <h2>Everything You Need to Know <em>About Visa Services.</em></h2>
+          <p class="lead-copy">Clear, straightforward answers regarding processing times, eligibility assessments, and application procedures.</p>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-9">
+            <div class="accordion services-accordion" id="servicesFaqAccordion">
+              <!-- Item 1 -->
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="headingOne">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    How long does the visa application process typically take?
+                  </button>
+                </h3>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#servicesFaqAccordion">
+                  <div class="accordion-body">
+                    Timelines vary significantly depending on the destination nation, visa category, and seasonal embassy volume. For example, Canadian study permits typically take 4–8 weeks, UK Skilled Worker visas 3–6 weeks, and Australian skilled migration streams 3–9 months. During your initial strategy session, we provide an accurate, country-specific processing timeline forecast.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 2 -->
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="headingTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    What is the difference between a work permit and permanent residency?
+                  </button>
+                </h3>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#servicesFaqAccordion">
+                  <div class="accordion-body">
+                    A work permit (such as an LMIA-supported Canadian work permit or UK Skilled Worker visa) grants you temporary status tied to a specific employer or authorized employment period. Permanent Residency (PR), such as Canada Express Entry or Australia Subclass 189, grants you the permanent right to live, work, and access state healthcare anywhere in the host nation without sponsorship ties.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 3 -->
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="headingThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Can I include my spouse and dependent children in my visa file?
+                  </button>
+                </h3>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#servicesFaqAccordion">
+                  <div class="accordion-body">
+                    Yes. Most skilled migration, postgraduate study, and business immigration pathways allow principal applicants to include their spouse/civil partner and dependent children under 22 years of age. Spouses frequently qualify for open work permits in jurisdictions like Canada and the UK, and children can enroll in local public schooling.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 4 -->
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="headingFour">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    What happens if my visa application receives an Additional Information Request (AIR)?
+                  </button>
+                </h3>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#servicesFaqAccordion">
+                  <div class="accordion-body">
+                    Our advisors handle procedural fairness letters and additional document requests immediately. We analyze the consular officer's query, compile the necessary evidentiary addenda, draft an attorney-reviewed submission letter, and submit the response well within the statutory deadline.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 5 -->
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="headingFive">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                    How does Vayora protect the security and privacy of my personal documentation?
+                  </button>
+                </h3>
+                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#servicesFaqAccordion">
+                  <div class="accordion-body">
+                    Vayora adheres strictly to global data protection standards (including GDPR and PIPEDA compliance). All identification documents, bank statements, and credentials uploaded to your client portal are encrypted at rest using AES-256 and in transit via TLS 1.3. We never sell or share client data with unauthorized third parties.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         SECTION 9: FINAL CTA BANNER (CINEMATIC PURPLE BANNER)
+         ======================================================== -->
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+        <div class="cta-banner text-center">
+          <div class="position-relative w-100" style="z-index: 2;">
+            <span class="eyebrow"><i class="bi bi-compass"></i> YOUR NEXT CHAPTER AWAITS</span>
+            <h2>The World Is Your Next Opportunity. <em>Let's Find the Right Path for Your Future.</em></h2>
+            <p>Start an exploratory consultation with Vayora and take your first structured step towards an international education, career, or lifestyle opportunity.</p>
+            <div class="d-flex flex-wrap justify-content-center gap-3 mt-4">
+              <a href="contact.html#consultation" class="btn white btn-lg">Book a Consultation <i class="bi bi-arrow-right ms-1"></i></a>
+              <a href="contact.html" class="btn outline-white btn-lg">Contact Our Team</a>
+            </div>
+            <div class="cta-trust-strip">
+              <span><i class="bi bi-shield-check"></i> Licensed Immigration Counsel</span>
+              <span><i class="bi bi-file-earmark-check"></i> 100% Confidential Dossier</span>
+              <span><i class="bi bi-trophy"></i> 98% Client Satisfaction</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Regulatory Separation Disclaimer -->
+        <div class="regulatory-banner">
+          <i class="bi bi-info-circle-fill"></i>
+          <p>
+            <strong>Regulatory Distinction & Integrity:</strong> Vayora provides independent strategic visa counselling, application preparation, and dossier assistance. Official visa approval decisions are granted solely and strictly at the discretion of the relevant sovereign government immigration departments and embassy consuls.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================
+       FOOTER (UNIFIED 5-COLUMN FOOTER)
+       ======================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row g-4 mb-5">
+        <!-- Brand Summary -->
+        <div class="col-lg-3 col-md-6">
+          <a class="navbar-brand brand footerbrand mb-3" href="index.html">
+            <span class="mark">V</span>
+            <span><b>VAYORA</b><small>IMMIGRATION & VISA</small></span>
+          </a>
+          <p class="footer-about">
+            Premium international immigration consultancy committed to transparent pathways, personalized guidance, and dependable support for students, professionals, and global investors worldwide.
+          </p>
+          <div class="d-flex gap-2 mt-3">
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="https://twitter.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links (All Nav Links) -->
+        <div class="col-lg-2 col-6">
+          <h6>Quick Links</h6>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="home2.html">Home 2</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Visa Services -->
+        <div class="col-lg-2 col-6">
+          <h6>Visa Services</h6>
+          <ul class="footer-links">
+            <li><a href="service-details.html?type=student">Student Visa</a></li>
+            <li><a href="service-details.html?type=work">Work Visa</a></li>
+            <li><a href="service-details.html?type=tourist">Tourist Visa</a></li>
+            <li><a href="service-details.html?type=business">Business Visa</a></li>
+            <li><a href="country-guides.html">Destination Guides</a></li>
+            <li><a href="services.html">All Categories</a></li>
+          </ul>
+        </div>
+
+        <!-- Support & Legal -->
+        <div class="col-lg-2 col-6">
+          <h6>Support & Legal</h6>
+          <ul class="footer-links">
+            <li><a href="client-dashboard.html">Client Portal</a></li>
+            <li><a href="login.html">Client Login</a></li>
+            <li><a href="faq.html">FAQ & Help</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="disclaimer.html">Legal Disclaimer</a></li>
+          </ul>
+        </div>
+
+        <!-- Support & Contact Details -->
+        <div class="col-lg-3 col-6">
+          <h6>Support & Contact</h6>
+          <ul class="footer-contact-list">
+            <li class="footer-contact-item">
+              <i class="bi bi-envelope-fill"></i>
+              <div>
+                <small class="d-block text-secondary">Email Support</small>
+                <a href="mailto:hello@vayora.com">hello@vayora.com </a>
+              </div>
+            </li>
+            <li class="footer-contact-item">
+              <i class="bi bi-telephone-fill"></i>
+              <div>
+                <small class="d-block text-secondary">Advisory Hotline</small>
+                <a href="tel:+18005928672">+1 (800) 592-8672</a>
+              </div>
+            </li>
+            <li class="footer-contact-item">
+              <i class="bi bi-clock-fill"></i>
+              <div>
+                <small class="d-block text-secondary">Working Hours</small>
+                <span>Mon – Fri: 9:00 AM – 6:00 PM</span>
+              </div>
+            </li>
+            <li class="footer-contact-item">
+              <i class="bi bi-geo-alt-fill"></i>
+              <div>
+                <small class="d-block text-secondary">Headquarters</small>
+                <span>Financial District, Suite 400</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footerbottom">
+        <span>© 2026 Vayora Immigration & Visa Consultancy. All rights reserved.</span>
+        <div>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms & Conditions</a>
+          <a href="faq.html">FAQ</a>
+          <a href="disclaimer.html">Legal Disclaimer</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="top" aria-label="Back to top" title="Back to top"><i class="bi bi-arrow-up"></i></button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+  <script>
+    function navigateVisaPath() {
+      const dest = document.getElementById('finderDestination').value;
+      const purpose = document.getElementById('finderPurpose').value || 'student';
+      window.location.href = `service-details.html?type=${encodeURIComponent(purpose)}&country=${encodeURIComponent(dest)}`;
+    }
+  </script>
+</body>
+</html>
+

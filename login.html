@@ -1,0 +1,331 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="apple-touch-icon" href="favicon.svg">
+  <title>Sign In | Vayora — Immigration & Visa Portal</title>
+  <meta name="description" content="Sign in to your Vayora client or administrative portal to track visa milestones, upload verified documents, and access immigration advisors.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/auth.css">
+</head>
+<body class="auth-body">
+
+  <!-- Floating Corner Utility Tools -->
+  <div class="auth-top-controls">
+    <a href="index.html" class="auth-tool-btn" title="Back to Homepage" aria-label="Back to Homepage">
+      <i class="bi bi-house"></i>
+    </a>
+    <button class="auth-tool-btn" id="themeToggle" type="button" aria-label="Toggle theme" title="Toggle theme">
+      <i class="bi bi-moon-stars"></i>
+    </button>
+    <button class="auth-tool-btn direction-toggle" id="directionToggle" type="button" aria-label="Switch Direction" title="Switch text direction">
+      <span style="font-size: 11px; font-weight: 800;">LTR</span>
+    </button>
+  </div>
+
+  <!-- Main Auth Card Container (2-Column Split) -->
+  <div class="auth-card-container">
+    
+    <!-- Left Section: Visual Panel -->
+    <div class="auth-visual-panel login-bg">
+      <div class="auth-visual-overlay"></div>
+      
+      <!-- Top Back Link -->
+      <div>
+        <a href="index.html" class="auth-back-link">
+          <i class="bi bi-arrow-left"></i>
+          <span>Back to Website</span>
+        </a>
+      </div>
+
+      <!-- Center Text Content -->
+      <div class="auth-visual-content">
+        <span class="auth-visual-tag">Client & Admin Portal</span>
+        <h1 class="auth-visual-heading">Your Global Journey Starts Here.</h1>
+        <p class="auth-visual-desc">
+          Sign in to manage your applications, track your visa progress, and stay connected with your immigration advisor.
+        </p>
+      </div>
+
+      <!-- Trust Indicators -->
+      <div class="auth-trust-badges">
+        <div class="auth-trust-card">
+          <strong>10,000+</strong>
+          <small>Successful Journeys</small>
+        </div>
+        <div class="auth-trust-card">
+          <strong>25+</strong>
+          <small>Destination Nations</small>
+        </div>
+        <div class="auth-trust-card">
+          <strong>98.4%</strong>
+          <small>Approval Guidance</small>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Section: Login Form Panel -->
+    <div class="auth-form-panel">
+      <!-- Vayora Logo (Links to Home) -->
+      <div class="auth-brand-header">
+        <a href="index.html" class="auth-brand-link" title="Vayora Homepage">
+          <span class="auth-brand-mark">V</span>
+          <div class="auth-brand-text">
+            <b>VAYORA</b>
+            <small>IMMIGRATION & VISA</small>
+          </div>
+        </a>
+      </div>
+
+      <h2 class="auth-form-title">Welcome Back!</h2>
+      <p class="auth-form-subtitle">Sign in to continue your international immigration journey.</p>
+
+      <!-- Alert Notification Banner -->
+      <div class="auth-alert-banner" id="authAlertBanner"></div>
+
+      <!-- Login Form -->
+      <form id="loginForm" novalidate onsubmit="handleLoginSubmit(event)">
+        <!-- Email Input -->
+        <div class="auth-form-group">
+          <label class="auth-label" for="loginEmail">Email Address</label>
+          <div class="auth-input-wrapper">
+            <i class="bi bi-envelope auth-input-icon"></i>
+            <input type="email" id="loginEmail" class="auth-input" placeholder="name@example.com" required autocomplete="email">
+          </div>
+          <div class="auth-error-msg" id="loginEmailError">Please enter a valid email address.</div>
+        </div>
+
+        <!-- Password Input with Show/Hide Toggle -->
+        <div class="auth-form-group">
+          <label class="auth-label" for="loginPassword">Password</label>
+          <div class="auth-input-wrapper">
+            <i class="bi bi-lock auth-input-icon"></i>
+            <input type="password" id="loginPassword" class="auth-input" placeholder="Enter your account password" required autocomplete="current-password">
+            <button type="button" class="auth-toggle-pwd" onclick="togglePasswordVisibility('loginPassword', this)" aria-label="Toggle password visibility">
+              <i class="bi bi-eye"></i>
+            </button>
+          </div>
+          <div class="auth-error-msg" id="loginPasswordError">Password is required.</div>
+        </div>
+
+        <!-- Remember Me & Forgot Password -->
+        <div class="auth-flex-row">
+          <label class="auth-checkbox-label">
+            <input type="checkbox" id="rememberMe" checked>
+            <span>Remember me</span>
+          </label>
+          <a href="#" class="auth-forgot-link" data-bs-toggle="modal" data-bs-target="#forgotPasswordModal">Forgot Password?</a>
+        </div>
+
+        <!-- Sign In Submit Button -->
+        <button type="submit" class="auth-btn-primary" id="loginSubmitBtn">
+          <span class="btn-text">Sign In</span>
+          <i class="bi bi-arrow-right btn-icon"></i>
+        </button>
+
+        <!-- Divider -->
+        <div class="auth-divider">
+          <span>Or continue with</span>
+        </div>
+
+        <!-- Google Sign-in Button -->
+        <button type="button" class="auth-btn-social" onclick="simulateGoogleAuth('client')">
+          <svg viewBox="0 0 24 24">
+            <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+            <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+            <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+            <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+          </svg>
+          <span>Continue with Google</span>
+        </button>
+
+        <!-- Quick Demo Accounts -->
+        <div class="auth-demo-pill-box">
+          <span class="auth-demo-pill-title">Demo Fast-Track Login</span>
+          <div class="auth-demo-pills">
+            <button type="button" class="auth-demo-btn" onclick="fillDemoCredentials('alex.vance@gmail.com', 'clientPass2026', 'client')">
+              <i class="bi bi-person me-1"></i> Client Portal (Alex)
+            </button>
+            <button type="button" class="auth-demo-btn" onclick="fillDemoCredentials('alistair.wright@vayora.com', 'adminPass2026', 'admin')">
+              <i class="bi bi-shield-check me-1"></i> Admin Portal (Dr. Alistair)
+            </button>
+          </div>
+        </div>
+
+        <!-- Switch to Register -->
+        <p class="auth-switch-text">
+          Don't have an account?
+          <a href="register.html" class="auth-switch-link">Create Account</a>
+        </p>
+      </form>
+    </div>
+
+  </div>
+
+  <!-- ========================================================
+       FORGOT PASSWORD MODAL
+       ======================================================== -->
+  <div class="modal fade" id="forgotPasswordModal" tabindex="-1" aria-labelledby="forgotPasswordModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0 shadow-lg" style="border-radius: 22px; overflow: hidden;">
+        <div class="modal-header text-white" style="background: linear-gradient(135deg, #2b0b55, #6842C2);">
+          <h5 class="modal-title fw-bold" id="forgotPasswordModalLabel"><i class="bi bi-key me-2"></i> Reset Your Password</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <p class="small text-muted mb-3">
+            Enter your registered account email. We will send a secure verification link to reset your account credentials.
+          </p>
+          <div class="auth-alert-banner" id="modalAlertBanner"></div>
+          <form onsubmit="handleForgotSubmit(event)">
+            <div class="mb-3">
+              <label class="auth-label" for="resetEmail">Email Address</label>
+              <div class="auth-input-wrapper">
+                <i class="bi bi-envelope auth-input-icon"></i>
+                <input type="email" id="resetEmail" class="auth-input" placeholder="name@example.com" required>
+              </div>
+            </div>
+            <button type="submit" class="auth-btn-primary" id="resetSubmitBtn">Send Password Reset Link</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+
+  <!-- Login Logic & Form Validation Script -->
+  <script>
+    // Password visibility toggle
+    function togglePasswordVisibility(inputId, btn) {
+      const input = document.getElementById(inputId);
+      const icon = btn.querySelector('i');
+      if (input.type === 'password') {
+        input.type = 'text';
+        icon.classList.remove('bi-eye');
+        icon.classList.add('bi-eye-slash');
+      } else {
+        input.type = 'password';
+        icon.classList.remove('bi-eye-slash');
+        icon.classList.add('bi-eye');
+      }
+    }
+
+    // Auto-fill demo credentials
+    function fillDemoCredentials(email, pwd, targetPortal) {
+      document.getElementById('loginEmail').value = email;
+      document.getElementById('loginPassword').value = pwd;
+      document.getElementById('loginEmail').classList.remove('is-invalid');
+      document.getElementById('loginPassword').classList.remove('is-invalid');
+      
+      const banner = document.getElementById('authAlertBanner');
+      banner.className = 'auth-alert-banner success';
+      banner.innerHTML = `<i class="bi bi-check-circle me-1"></i> Demo credentials loaded for <strong>${targetPortal === 'admin' ? 'Super Admin' : 'Client Alex Vance'}</strong>. Click 'Sign In' to proceed.`;
+    }
+
+    // Handle Login submission
+    function handleLoginSubmit(e) {
+      e.preventDefault();
+      const emailInput = document.getElementById('loginEmail');
+      const passwordInput = document.getElementById('loginPassword');
+      const banner = document.getElementById('authAlertBanner');
+      const submitBtn = document.getElementById('loginSubmitBtn');
+
+      let isValid = true;
+      const emailVal = emailInput.value.trim();
+      const pwdVal = passwordInput.value;
+
+      // Validate Email
+      if (!emailVal || !emailVal.includes('@') || !emailVal.includes('.')) {
+        emailInput.classList.add('is-invalid');
+        isValid = false;
+      } else {
+        emailInput.classList.remove('is-invalid');
+      }
+
+      // Validate Password
+      if (!pwdVal || pwdVal.length < 4) {
+        passwordInput.classList.add('is-invalid');
+        isValid = false;
+      } else {
+        passwordInput.classList.remove('is-invalid');
+      }
+
+      if (!isValid) {
+        banner.className = 'auth-alert-banner error';
+        banner.innerHTML = '<i class="bi bi-exclamation-triangle me-1"></i> Please correct the highlighted errors above.';
+        return;
+      }
+
+      // Simulate Authentication Loading State
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span> Authenticating...';
+
+      setTimeout(() => {
+        // Detect if admin or client email
+        const isAdmin = emailVal.toLowerCase().includes('admin') || emailVal.toLowerCase().includes('alistair');
+        
+        banner.className = 'auth-alert-banner success';
+        banner.innerHTML = `<i class="bi bi-check-circle-fill me-1"></i> Authentication successful! Redirecting to ${isAdmin ? 'Admin Portal' : 'Client Portal'}...`;
+
+        // Store active session in localStorage
+        const activeUser = {
+          name: isAdmin ? 'Dr. Alistair Wright' : 'Alex Vance',
+          email: emailVal,
+          role: isAdmin ? 'admin' : 'client'
+        };
+        localStorage.setItem('vayora_active_client', JSON.stringify(activeUser));
+
+        setTimeout(() => {
+          window.location.href = isAdmin ? 'admin-dashboard.html' : 'client-dashboard.html';
+        }, 800);
+      }, 1000);
+    }
+
+    // Google Sign-in simulation
+    function simulateGoogleAuth(portal) {
+      const banner = document.getElementById('authAlertBanner');
+      banner.className = 'auth-alert-banner success';
+      banner.innerHTML = '<i class="bi bi-google me-1"></i> Connected via Google OAuth. Loading portal session...';
+      
+      const activeUser = {
+        name: 'Alex Vance',
+        email: 'alex.vance@gmail.com',
+        role: 'client'
+      };
+      localStorage.setItem('vayora_active_client', JSON.stringify(activeUser));
+
+      setTimeout(() => {
+        window.location.href = 'client-dashboard.html';
+      }, 900);
+    }
+
+    // Forgot password modal submission
+    function handleForgotSubmit(e) {
+      e.preventDefault();
+      const email = document.getElementById('resetEmail').value;
+      const banner = document.getElementById('modalAlertBanner');
+      const btn = document.getElementById('resetSubmitBtn');
+
+      btn.disabled = true;
+      btn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span> Dispatching Link...';
+
+      setTimeout(() => {
+        btn.disabled = false;
+        btn.innerHTML = 'Send Password Reset Link';
+        banner.className = 'auth-alert-banner success';
+        banner.innerHTML = `<i class="bi bi-check-circle me-1"></i> Verification link dispatched to <strong>${email}</strong>! Check your inbox.`;
+      }, 1000);
+    }
+  </script>
+</body>
+</html>
+

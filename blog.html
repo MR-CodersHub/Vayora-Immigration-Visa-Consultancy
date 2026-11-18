@@ -1,0 +1,652 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="apple-touch-icon" href="favicon.svg">
+  <title>The Global Journal | Vayora — Immigration & Travel Insights</title>
+  <meta name="description" content="Explore practical immigration insights, international education updates, travel guidance and career relocation stories from Vayora's Global Journal.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="topbar">
+    <div class="container d-flex justify-content-between align-items-center">
+      <span>✧ Personalized visa guidance and transparent immigration support</span>
+      <a href="contact.html">Talk to an Advisor</a>
+    </div>
+  </div>
+
+  <!-- Primary Navigation -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand brand" href="index.html">
+        <span class="mark">V</span>
+        <span><b>VAYORA</b><small>IMMIGRATION & VISA</small></span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="home2.html">Home 2</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="d-flex align-items-center gap-2 nav-actions">
+          <button class="nav-tool" id="themeToggle" type="button" aria-label="Toggle colour theme" title="Change theme">
+            <i class="bi bi-moon-stars"></i>
+          </button>
+          <button class="nav-tool direction-toggle" id="directionToggle" type="button" aria-label="Toggle text direction" title="Switch LTR / RTL">
+            <span>LTR</span>
+          </button>
+
+          <!-- Profile / Account Menu -->
+          <div class="dropdown profile-dropdown">
+            <button class="nav-tool profile-trigger" type="button" id="profileMenu" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Open profile menu">
+              <i class="bi bi-person"></i>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end profile-menu" aria-labelledby="profileMenu">
+              <li class="profile-menu-heading">
+                <strong>Welcome to Vayora</strong>
+                <small>Access your client portal</small>
+              </li>
+              <li><a class="dropdown-item" href="login.html"><i class="bi bi-box-arrow-in-right"></i> Login</a></li>
+              <li><a class="dropdown-item" href="register.html"><i class="bi bi-person-plus"></i> Register</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="admin-dashboard.html"><i class="bi bi-speedometer2"></i> Admin Dashboard</a></li>
+              <li><a class="dropdown-item" href="client-dashboard.html"><i class="bi bi-grid"></i> Client Dashboard</a></li>
+            </ul>
+          </div>
+
+          <a href="contact.html#consultation" class="btn primary nav-consult">Book Consultation</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- ========================================================
+         SECTION 1: UNIQUE HERO — THE GLOBAL JOURNAL
+         ======================================================== -->
+    <section class="blog-hero">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <!-- Left Column: Journal Mission, Headlines & Reading Metrics -->
+          <div class="col-lg-6">
+            <div class="blog-hero-content">
+              <div class="blog-breadcrumb mb-3">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <span>Vayora Journal</span>
+              </div>
+              <span class="eyebrow" style="color: #cca6ff; letter-spacing: 2px;"><i class="bi bi-journal-text me-1"></i> VAYORA JOURNAL · IDEAS WITHOUT BORDERS</span>
+              <h1>Knowledge That Takes You <em>Places.</em></h1>
+              <p class="lead-copy">Explore practical immigration insights, international education updates, travel guidance and career opportunities from around the world.</p>
+              
+              <div class="d-flex flex-wrap gap-3 mt-4">
+                <a href="#latest-articles" class="btn white btn-lg">Explore Latest Articles <i class="bi bi-arrow-down ms-1"></i></a>
+                <a href="#destination-spotlight" class="btn outline-white btn-lg"><i class="bi bi-compass me-1"></i> Discover Travel Guides</a>
+              </div>
+
+              <!-- Editorial Metrics Strip -->
+              <div class="blog-hero-stats-row">
+                <div class="blog-hero-stat-card">
+                  <b>140+</b>
+                  <span>Relocation Guides</span>
+                </div>
+                <div class="blog-hero-stat-card">
+                  <b>35+</b>
+                  <span>Countries Profiled</span>
+                </div>
+                <div class="blog-hero-stat-card">
+                  <b>Weekly</b>
+                  <span>Policy Updates</span>
+                </div>
+              </div>
+              <small class="blog-hero-stat-note">*Curated weekly by registered RCIC counsel and foreign education specialists.</small>
+            </div>
+          </div>
+
+          <!-- Right Column: Location Spotlight Card in Hero -->
+          <div class="col-lg-6">
+            <div class="blog-hero-visual">
+              <!-- Location Card Badge -->
+              <div class="blog-location-badge">
+                <i class="bi bi-geo-alt-fill text-danger"></i>
+                <span>London, United Kingdom</span>
+                <span class="badge bg-primary-subtle text-primary ms-1" style="font-size: 10px;">Top Destination Hub</span>
+              </div>
+
+              <!-- Location Image -->
+              <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=1200&q=85" alt="London skyline and Westminster Bridge location card" loading="lazy">
+              
+              <!-- Floating Card 1: Study Hub -->
+              <div class="float-card one">
+                <span class="text-purple">✧</span>
+                <div>
+                  <strong>Destination Spotlight</strong>
+                  <small>Russell Group & Graduate Visa</small>
+                </div>
+              </div>
+
+              <!-- Floating Card 2: Knowledge Hub -->
+              <div class="float-card two">
+                <span class="text-warning">★</span>
+                <div>
+                  <strong>140+ Editorial Guides</strong>
+                  <small>Vetted by Licensed Counsel</small>
+                </div>
+              </div>
+
+              <!-- Photo Caption -->
+              <div class="blog-hero-photo-caption">
+                <span>â—</span> Featured Location Report • 2026 Sovereign Migration Outlook
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         SECTION 2: FEATURED ARTICLE — EDITOR'S PICK
+         ======================================================== -->
+    <section class="section" style="padding-top: 70px;">
+      <div class="container">
+        <a href="blog-details.html?post=student-guide" class="featured-article-card">
+          <div class="row g-0 align-items-stretch">
+            <div class="col-lg-6">
+              <div class="featured-article-img">
+                <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80" alt="Students studying together in international library" loading="lazy">
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="featured-article-body">
+                <div class="d-flex align-items-center gap-3 mb-2">
+                  <span class="badge" style="background: rgba(142,92,230,0.14); color: var(--purple); font-size: 11px; padding: 6px 14px; border-radius: 20px; font-weight: 800; letter-spacing: 1px;">EDITOR'S PICK</span>
+                  <small style="color: var(--muted); font-weight: 700; font-size: 12px;"><i class="bi bi-clock me-1"></i> 8 MIN READ</small>
+                </div>
+                <h2>Your Complete Guide to Planning Your Study Abroad Journey</h2>
+                <p>Understand how to research destinations, prepare your documents and approach your international education plans with confidence. Learn key timelines, financial proof strategies, and admission compliance.</p>
+                <div class="featured-article-meta">
+                  <span>STUDENT VISA · 18 NOV 2026</span>
+                  <b class="d-inline-flex align-items-center gap-1">Read Full Article <i class="bi bi-arrow-right"></i></b>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         SECTION 3: EXPLORE CATEGORIES (INTERACTIVE PILLS)
+         ======================================================== -->
+    <section class="section" id="latest-articles" style="padding-top: 20px;">
+      <div class="container">
+        <div class="heading text-center">
+          <span class="eyebrow">CURATED TOPICS</span>
+          <h2>Find Insights for Your <em>Next Move.</em></h2>
+          <p class="lead-copy">Browse our comprehensive archive of destination analyses, regulatory policy breakdowns, and relocation guides.</p>
+        </div>
+
+        <!-- Horizontal Pill Filters -->
+        <div class="category-filter-bar">
+          <button class="cat-pill active" onclick="filterBlogCategory('all', this)">All Articles</button>
+          <button class="cat-pill" onclick="filterBlogCategory('student', this)">Student Visa</button>
+          <button class="cat-pill" onclick="filterBlogCategory('work', this)">Work Abroad</button>
+          <button class="cat-pill" onclick="filterBlogCategory('travel', this)">Travel Guides</button>
+          <button class="cat-pill" onclick="filterBlogCategory('tips', this)">Immigration Tips</button>
+          <button class="cat-pill" onclick="filterBlogCategory('country', this)">Country Updates</button>
+        </div>
+
+        <!-- ========================================================
+             SECTION 4: LATEST ARTICLES (3-COLUMN EDITORIAL GRID)
+             ======================================================== -->
+        <div class="row g-4" id="articlesGrid">
+          <!-- Article 1: Student Visa Prep -->
+          <div class="col-lg-4 col-md-6 article-item" data-category="student">
+            <a href="blog-details.html?post=student-visa-prep" class="editorial-card">
+              <div class="editorial-thumb">
+                <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80" alt="Student preparing notes" loading="lazy">
+                <span class="editorial-tag">Student Visa</span>
+              </div>
+              <div class="editorial-body">
+                <h3>7 Things to Know Before Applying for a Student Visa</h3>
+                <p>Crucial checklist items covering academic transcripts, proof of financial stability, health insurance, and English proficiency test validity.</p>
+                <div class="editorial-footer">
+                  <span>6 min read · Visa preparation</span>
+                  <span class="editorial-read-cta">Read Article <i class="bi bi-arrow-right"></i></span>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Article 2: International Career -->
+          <div class="col-lg-4 col-md-6 article-item" data-category="work">
+            <a href="blog-details.html?post=career-guide" class="editorial-card">
+              <div class="editorial-thumb">
+                <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=800&q=80" alt="Corporate office team" loading="lazy">
+                <span class="editorial-tag">Work Abroad</span>
+              </div>
+              <div class="editorial-body">
+                <h3>How to Prepare for Your International Career Move</h3>
+                <p>Strategic steps for skilled professionals: credential evaluations, in-demand occupation lists, and employer sponsorships in top economies.</p>
+                <div class="editorial-footer">
+                  <span>5 min read · Career guidance</span>
+                  <span class="editorial-read-cta">Read Article <i class="bi bi-arrow-right"></i></span>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Article 3: Travel Documents -->
+          <div class="col-lg-4 col-md-6 article-item" data-category="travel">
+            <a href="blog-details.html?post=travel-documents" class="editorial-card">
+              <div class="editorial-thumb">
+                <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=800&q=80" alt="Travel documents and map" loading="lazy">
+                <span class="editorial-tag">Travel Guides</span>
+              </div>
+              <div class="editorial-body">
+                <h3>A Practical Guide to Organizing Your Travel Documents</h3>
+                <p>How to organize passport validity, visa stamps, hotel bookings, and Schengen travel medical insurance for frictionless entry.</p>
+                <div class="editorial-footer">
+                  <span>4 min read · Travel planning</span>
+                  <span class="editorial-read-cta">Read Article <i class="bi bi-arrow-right"></i></span>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Article 4: UK Opportunities -->
+          <div class="col-lg-4 col-md-6 article-item" data-category="country">
+            <a href="blog-details.html?post=uk-guide" class="editorial-card">
+              <div class="editorial-thumb">
+                <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=800&q=80" alt="London Big Ben and Westminster" loading="lazy">
+                <span class="editorial-tag">Country Updates</span>
+              </div>
+              <div class="editorial-body">
+                <h3>Exploring International Opportunities in the UK</h3>
+                <p>An in-depth breakdown of the Graduate Route work visa, Skilled Worker shortage occupations, and living costs across British cities.</p>
+                <div class="editorial-footer">
+                  <span>7 min read · Destination insights</span>
+                  <span class="editorial-read-cta">Read Article <i class="bi bi-arrow-right"></i></span>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Article 5: Document Mistakes -->
+          <div class="col-lg-4 col-md-6 article-item" data-category="tips">
+            <a href="blog-details.html?post=document-mistakes" class="editorial-card">
+              <div class="editorial-thumb">
+                <img src="https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=800&q=80" alt="Signing documents with pen" loading="lazy">
+                <span class="editorial-tag">Immigration Tips</span>
+              </div>
+              <div class="editorial-body">
+                <h3>Common Document Preparation Mistakes to Avoid</h3>
+                <p>Learn the top administrative pitfalls leading to consular delays: uncertified translations, inconsistent dates, and unclear bank statements.</p>
+                <div class="editorial-footer">
+                  <span>5 min read · Application tips</span>
+                  <span class="editorial-read-cta">Read Article <i class="bi bi-arrow-right"></i></span>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Article 6: Australia Spotlight -->
+          <div class="col-lg-4 col-md-6 article-item" data-category="country">
+            <a href="blog-details.html?post=australia-guide" class="editorial-card">
+              <div class="editorial-thumb">
+                <img src="https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?auto=format&fit=crop&w=800&q=80" alt="Sydney Australia harbor" loading="lazy">
+                <span class="editorial-tag">Country Updates</span>
+              </div>
+              <div class="editorial-body">
+                <h3>What Makes Australia an Attractive Study Destination?</h3>
+                <p>Discover post-study work rights, world-ranked Group of Eight universities, regional visa incentives, and exceptional quality of life.</p>
+                <div class="editorial-footer">
+                  <span>6 min read · Education abroad</span>
+                  <span class="editorial-read-cta">Read Article <i class="bi bi-arrow-right"></i></span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         SECTION 5: DESTINATION SPOTLIGHT — DISCOVER THE WORLD
+         ======================================================== -->
+    <section class="section alt-lavender" id="destination-spotlight">
+      <div class="container">
+        <div class="d-flex flex-wrap justify-content-between align-items-end mb-5">
+          <div>
+            <span class="eyebrow">DESTINATION SPOTLIGHT</span>
+            <h2>A Closer Look at the World's <em>Opportunities.</em></h2>
+            <p class="lead-copy mb-0">Deep dive into key immigrant destinations with verified immigration pathways and quality of life metrics.</p>
+          </div>
+          <a href="country-guides.html" class="textlink mt-3 mt-md-0">View All Country Guides </a>
+        </div>
+
+        <div class="row g-4">
+          <!-- Spotlight Canada -->
+          <div class="col-lg-4 col-md-6">
+            <div class="dest-spotlight-card">
+              <div class="dest-spotlight-thumb">
+                <img src="https://images.unsplash.com/photo-1503614472-8c93d56e92ce?auto=format&fit=crop&w=800&q=80" alt="Canada landscape" loading="lazy">
+              </div>
+              <div class="dest-spotlight-body">
+                <h3>Canada</h3>
+                <p>Consistently ranked among the top global relocation hubs offering straightforward permanent residency pathways.</p>
+                <ul class="dest-spotlight-points">
+                  <li><i class="bi bi-check2-circle"></i> <b>Express Entry:</b> Federal Skilled Worker & Canadian Experience Class</li>
+                  <li><i class="bi bi-check2-circle"></i> <b>Education:</b> PGWP 3-year post-graduation work permit</li>
+                  <li><i class="bi bi-check2-circle"></i> <b>Settlement:</b> Universal healthcare & high living standards</li>
+                </ul>
+                <a href="country-guides.html?country=canada" class="textlink mt-auto">Read Canada Guide </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Spotlight UK -->
+          <div class="col-lg-4 col-md-6">
+            <div class="dest-spotlight-card">
+              <div class="dest-spotlight-thumb">
+                <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=800&q=80" alt="United Kingdom London" loading="lazy">
+              </div>
+              <div class="dest-spotlight-body">
+                <h3>United Kingdom</h3>
+                <p>A global financial and academic powerhouse connecting international professionals with top-tier global enterprise.</p>
+                <ul class="dest-spotlight-points">
+                  <li><i class="bi bi-check2-circle"></i> <b>Skilled Worker:</b> Points-based employer sponsorship stream</li>
+                  <li><i class="bi bi-check2-circle"></i> <b>Graduate Route:</b> 2 to 3 years unsponsored work rights</li>
+                  <li><i class="bi bi-check2-circle"></i> <b>Academic:</b> Home to world-leading Russell Group institutions</li>
+                </ul>
+                <a href="country-guides.html?country=uk" class="textlink mt-auto">Read UK Guide </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Spotlight Australia -->
+          <div class="col-lg-4 col-md-6">
+            <div class="dest-spotlight-card">
+              <div class="dest-spotlight-thumb">
+                <img src="https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?auto=format&fit=crop&w=800&q=80" alt="Australia Sydney" loading="lazy">
+              </div>
+              <div class="dest-spotlight-body">
+                <h3>Australia</h3>
+                <p>Sunny lifestyle, competitive salaries, and welcoming multicultural communities across major metropolitan centers.</p>
+                <ul class="dest-spotlight-points">
+                  <li><i class="bi bi-check2-circle"></i> <b>General Skilled:</b> Subclass 189 & 190 state nominated visas</li>
+                  <li><i class="bi bi-check2-circle"></i> <b>Study Abroad:</b> Subclass 500 with post-study regional extensions</li>
+                  <li><i class="bi bi-check2-circle"></i> <b>Economy:</b> High minimum wage & robust worker protections</li>
+                </ul>
+                <a href="country-guides.html?country=australia" class="textlink mt-auto">Read Australia Guide </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         SECTION 6: IMMIGRATION KNOWLEDGE — QUICK READS
+         ======================================================== -->
+    <section class="section">
+      <div class="container">
+        <div class="quick-reads-panel">
+          <div class="heading text-center mb-5">
+            <span class="eyebrow">ESSENTIAL IMMIGRATION KNOWLEDGE</span>
+            <h2>Good to Know <em>Before You Go.</em></h2>
+            <p class="lead-copy">Quick, bite-sized answers to critical administrative questions every applicant should know.</p>
+          </div>
+
+          <div class="row g-4">
+            <!-- Question 1 -->
+            <div class="col-lg-3 col-md-6">
+              <div class="quick-read-card">
+                <div class="quick-read-icon"><i class="bi bi-arrow-left-right"></i></div>
+                <h4>What is the difference between a visitor visa and a work visa?</h4>
+                <p>A visitor visa grants temporary recreational or family visitation rights with a strict ban on employment. A work permit explicitly authorizes paid employment with specific employer sponsorship.</p>
+              </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="col-lg-3 col-md-6">
+              <div class="quick-read-card">
+                <div class="quick-read-icon"><i class="bi bi-cash-stack"></i></div>
+                <h4>Why is financial documentation so strictly audited?</h4>
+                <p>Embassies need verified assurance that applicants can sustain living expenses and tuition without illegally accessing public welfare funds or unauthorized employment.</p>
+              </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="col-lg-3 col-md-6">
+              <div class="quick-read-card">
+                <div class="quick-read-icon"><i class="bi bi-chat-dots"></i></div>
+                <h4>How should you prepare for a consular visa interview?</h4>
+                <p>Be concise, honest, and consistent with your submitted dossier. Clearly articulate your academic or career goals and establish ties that guarantee departure.</p>
+              </div>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="col-lg-3 col-md-6">
+              <div class="quick-read-card">
+                <div class="quick-read-icon"><i class="bi bi-link-45deg"></i></div>
+                <h4>Where can you find official, up-to-date visa requirements?</h4>
+                <p>Always cross-check official sovereign portals (e.g. Canada.ca, Gov.uk, Homeaffairs.gov.au). Vayora monitors these ministerial gazettes in real-time.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         SECTION 7: NEWSLETTER — STAY AHEAD OF YOUR JOURNEY
+         ======================================================== -->
+    <section class="blog-newsletter-section">
+      <div class="container">
+        <div class="blog-newsletter-box">
+          <span class="eyebrow" style="color: #cca6ff; letter-spacing: 2px;">THE VAYORA NEWSLETTER</span>
+          <h2>A Little Inspiration for Your <em>Next Big Move.</em></h2>
+          <p>Get useful immigration insights, travel guides and international opportunity updates delivered directly to your inbox every Thursday.</p>
+
+          <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing to The Vayora Journal! Check your inbox shortly for your first briefing.'); this.reset();">
+            <input type="email" class="newsletter-input" placeholder="Enter your email to subscribe" required>
+            <button type="submit" class="newsletter-submit">Subscribe Now <i class="bi bi-arrow-right ms-1"></i></button>
+          </form>
+
+          <small class="d-block mt-3 text-white-50" style="font-size: 12px;">
+            <i class="bi bi-shield-lock me-1"></i> Zero spam. Strictly curated global immigration and travel intelligence. Unsubscribe at any time.
+          </small>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         SECTION 8: FINAL CTA — HAVE QUESTIONS?
+         ======================================================== -->
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+        <div class="cta-banner text-center" style="margin-top: 60px;">
+          <div class="position-relative w-100" style="z-index: 2;">
+            <span class="eyebrow"><i class="bi bi-compass"></i> PERSONALIZED VISA SUPPORT</span>
+            <h2>Need More Than <em>an Article?</em></h2>
+            <p>Our team of licensed immigration advisors can help you evaluate your options, assemble compliant documentation, and plan your next steps with complete confidence.</p>
+            <div class="d-flex flex-wrap justify-content-center gap-3 mt-4">
+              <a href="contact.html#consultation" class="btn white btn-lg">Talk to Our Advisors <i class="bi bi-arrow-right ms-1"></i></a>
+              <a href="services.html" class="btn outline-white btn-lg">Explore All Visa Services</a>
+            </div>
+            <div class="cta-trust-strip">
+              <span><i class="bi bi-shield-check"></i> Licensed Immigration Counsel</span>
+              <span><i class="bi bi-file-earmark-check"></i> 100% Confidential Dossier</span>
+              <span><i class="bi bi-trophy"></i> 98% Client Satisfaction</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Regulatory Separation Disclaimer -->
+        <div class="regulatory-banner">
+          <i class="bi bi-info-circle-fill"></i>
+          <p>
+            <strong>Regulatory Distinction & Integrity:</strong> Vayora provides independent strategic visa counselling, application preparation, and dossier assistance. Official visa approval decisions are granted solely and strictly at the discretion of the relevant sovereign government immigration departments and embassy consuls.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================
+       FOOTER (UNIFIED 5-COLUMN FOOTER)
+       ======================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row g-4 mb-5">
+        <!-- Brand Summary -->
+        <div class="col-lg-3 col-md-6">
+          <a class="navbar-brand brand footerbrand mb-3" href="index.html">
+            <span class="mark">V</span>
+            <span><b>VAYORA</b><small>IMMIGRATION & VISA</small></span>
+          </a>
+          <p class="footer-about">
+            Premium international immigration consultancy committed to transparent pathways, personalized guidance, and dependable support for students, professionals, and global investors worldwide.
+          </p>
+          <div class="d-flex gap-2 mt-3">
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="https://twitter.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links (All Nav Links) -->
+        <div class="col-lg-2 col-6">
+          <h6>Quick Links</h6>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="home2.html">Home 2</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Visa Services -->
+        <div class="col-lg-2 col-6">
+          <h6>Visa Services</h6>
+          <ul class="footer-links">
+            <li><a href="service-details.html?type=student">Student Visa</a></li>
+            <li><a href="service-details.html?type=work">Work Visa</a></li>
+            <li><a href="service-details.html?type=tourist">Tourist Visa</a></li>
+            <li><a href="service-details.html?type=business">Business Visa</a></li>
+            <li><a href="country-guides.html">Destination Guides</a></li>
+            <li><a href="services.html">All Categories</a></li>
+          </ul>
+        </div>
+
+        <!-- Support & Legal -->
+        <div class="col-lg-2 col-6">
+          <h6>Support & Legal</h6>
+          <ul class="footer-links">
+            <li><a href="client-dashboard.html">Client Portal</a></li>
+            <li><a href="login.html">Client Login</a></li>
+            <li><a href="faq.html">FAQ & Help</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="disclaimer.html">Legal Disclaimer</a></li>
+          </ul>
+        </div>
+
+        <!-- Support & Contact Details -->
+        <div class="col-lg-3 col-6">
+          <h6>Support & Contact</h6>
+          <ul class="footer-contact-list">
+            <li class="footer-contact-item">
+              <i class="bi bi-envelope-fill"></i>
+              <div>
+                <small class="d-block text-secondary">Email Support</small>
+                <a href="mailto:hello@vayora.com">hello@vayora.com </a>
+              </div>
+            </li>
+            <li class="footer-contact-item">
+              <i class="bi bi-telephone-fill"></i>
+              <div>
+                <small class="d-block text-secondary">Advisory Hotline</small>
+                <a href="tel:+18005928672">+1 (800) 592-8672</a>
+              </div>
+            </li>
+            <li class="footer-contact-item">
+              <i class="bi bi-clock-fill"></i>
+              <div>
+                <small class="d-block text-secondary">Working Hours</small>
+                <span>Mon – Fri: 9:00 AM – 6:00 PM</span>
+              </div>
+            </li>
+            <li class="footer-contact-item">
+              <i class="bi bi-geo-alt-fill"></i>
+              <div>
+                <small class="d-block text-secondary">Headquarters</small>
+                <span>Financial District, Suite 400</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footerbottom">
+        <span>© 2026 Vayora Immigration & Visa Consultancy. All rights reserved.</span>
+        <div>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms & Conditions</a>
+          <a href="faq.html">FAQ</a>
+          <a href="disclaimer.html">Legal Disclaimer</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="top" aria-label="Back to top" title="Back to top"><i class="bi bi-arrow-up"></i></button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+
+  <!-- Interactive Category Filtering Script -->
+  <script>
+    function filterBlogCategory(category, buttonEl) {
+      // Update active button state
+      document.querySelectorAll('.cat-pill').forEach(btn => btn.classList.remove('active'));
+      buttonEl.classList.add('active');
+
+      const articles = document.querySelectorAll('.article-item');
+      articles.forEach(article => {
+        if (category === 'all' || article.getAttribute('data-category') === category) {
+          article.style.display = 'block';
+        } else {
+          article.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>
+

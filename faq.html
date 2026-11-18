@@ -1,0 +1,585 @@
+<!doctype html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Frequently Asked Questions (FAQ) | Vayora — Immigration & Visa Consultancy</title>
+  <meta name="description" content="Find answers to common questions about global visa categories, eligibility requirements, processing timelines, and advisory retainers with Vayora.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="apple-touch-icon" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .faq-hero {
+      background: linear-gradient(135deg, rgba(34, 10, 64, 0.95) 0%, rgba(55, 18, 97, 0.88) 55%, rgba(104, 66, 194, 0.75) 100%),
+                  url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=2000&q=80') center/cover no-repeat;
+      padding: 95px 0 80px;
+      color: #ffffff;
+      position: relative;
+    }
+    .faq-search-box {
+      max-width: 620px;
+      margin: 28px auto 0;
+      position: relative;
+    }
+    .faq-search-box input {
+      height: 58px;
+      border-radius: 30px;
+      padding-left: 54px;
+      padding-right: 24px;
+      font-size: 16px;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      background: rgba(255, 255, 255, 0.96);
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+      transition: all 0.25s ease;
+      color: #210a42;
+    }
+    .faq-search-box input:focus {
+      background: #ffffff;
+      border-color: #cca6ff;
+      box-shadow: 0 16px 45px rgba(104, 66, 194, 0.35);
+      outline: none;
+    }
+    .faq-search-box i {
+      position: absolute;
+      left: 22px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 20px;
+      color: var(--purple);
+    }
+    .faq-categories {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin: 40px 0 30px;
+    }
+    .faq-cat-pill {
+      border: 1.5px solid #ebdff8;
+      background: #ffffff;
+      color: var(--deep);
+      padding: 10px 22px;
+      border-radius: 30px;
+      font-size: 14.5px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.22s ease;
+      text-decoration: none;
+    }
+    .faq-cat-pill:hover,
+    .faq-cat-pill.active {
+      background: var(--purple);
+      color: #ffffff;
+      border-color: var(--purple);
+      box-shadow: 0 8px 20px rgba(104, 66, 194, 0.25);
+    }
+    .faq-accordion .accordion-item {
+      background: #ffffff;
+      border: 1.5px solid #ebdff8;
+      border-radius: 18px !important;
+      margin-bottom: 16px;
+      overflow: hidden;
+      box-shadow: 0 6px 20px rgba(50, 16, 95, 0.04);
+      transition: all 0.25s ease;
+    }
+    .faq-accordion .accordion-item:hover {
+      border-color: #cca6ff;
+      box-shadow: 0 10px 30px rgba(104, 66, 194, 0.09);
+    }
+    .faq-accordion .accordion-button {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--deep);
+      padding: 22px 28px;
+      background: #ffffff;
+      border: none;
+      box-shadow: none;
+    }
+    .faq-accordion .accordion-button:not(.collapsed) {
+      color: var(--purple);
+      background: #fbf9ff;
+      border-bottom: 1px solid #ebdff8;
+    }
+    .faq-accordion .accordion-body {
+      padding: 24px 28px;
+      font-size: 15.5px;
+      line-height: 1.8;
+      color: #4e3d65;
+    }
+    .faq-help-box {
+      background: linear-gradient(135deg, #2d0e57, #531c96);
+      border-radius: 24px;
+      padding: 50px 40px;
+      color: #ffffff;
+      margin-top: 60px;
+      box-shadow: 0 20px 50px rgba(45, 14, 87, 0.22);
+    }
+    html[data-theme="dark"] .faq-accordion .accordion-item {
+      background: #1e1131 !important;
+      border-color: #3b235b !important;
+    }
+    html[data-theme="dark"] .faq-accordion .accordion-button {
+      background: #1e1131 !important;
+      color: #ffffff !important;
+    }
+    html[data-theme="dark"] .faq-accordion .accordion-button:not(.collapsed) {
+      background: #281444 !important;
+      color: #cca6ff !important;
+      border-bottom-color: #402367 !important;
+    }
+    html[data-theme="dark"] .faq-accordion .accordion-body {
+      color: #d6c7eb !important;
+    }
+    html[data-theme="dark"] .faq-cat-pill {
+      background: #1b0d2d;
+      border-color: #3f2563;
+      color: #dfcbff;
+    }
+    html[data-theme="dark"] .faq-cat-pill.active {
+      background: var(--purple);
+      color: #ffffff;
+      border-color: var(--purple);
+    }
+    html[dir="rtl"] .faq-search-box input {
+      padding-left: 24px;
+      padding-right: 54px;
+    }
+    html[dir="rtl"] .faq-search-box i {
+      left: auto;
+      right: 22px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========================================================
+       TOP NAVIGATION BAR
+       ======================================================== -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand brand" href="index.html">
+        <span class="mark">V</span>
+        <span><b>VAYORA</b><small>IMMIGRATION & VISA</small></span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="home2.html">Home 2</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="d-flex align-items-center gap-2 nav-actions">
+          <button class="nav-tool" id="themeToggle" type="button" aria-label="Toggle colour theme" title="Change theme">
+            <i class="bi bi-moon-stars"></i>
+          </button>
+          <button class="nav-tool direction-toggle" id="directionToggle" type="button" aria-label="Toggle text direction" title="Switch LTR / RTL">
+            <span>LTR</span>
+          </button>
+
+          <!-- Profile / Account Menu -->
+          <div class="dropdown">
+            <button class="nav-tool" type="button" id="accountDropdown" data-bs-toggle="dropdown" aria-expanded="false" aria-label="User Account">
+              <i class="bi bi-person"></i>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end shadow-sm" aria-labelledby="accountDropdown">
+              <li><h6 class="dropdown-header">Access Portals</h6></li>
+              <li><a class="dropdown-item" href="login.html"><i class="bi bi-box-arrow-in-right me-2 text-primary"></i> Login</a></li>
+              <li><a class="dropdown-item" href="register.html"><i class="bi bi-person-plus me-2 text-primary"></i> Register</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="client-dashboard.html"><i class="bi bi-grid me-2 text-primary"></i> Client Portal</a></li>
+              <li><a class="dropdown-item" href="admin-dashboard.html"><i class="bi bi-speedometer2 me-2 text-primary"></i> Admin Dashboard</a></li>
+            </ul>
+          </div>
+
+          <a href="contact.html#consultation" class="btn primary ms-1">Book Consultation</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========================================================
+       HERO HEADER WITH SEARCH
+       ======================================================== -->
+  <header class="faq-hero">
+    <div class="container text-center">
+      <span class="badge px-3 py-2 rounded-pill mb-3" style="background: rgba(255,255,255,0.18); font-size: 13px; letter-spacing: 1px; font-weight: 700;">
+        KNOWLEDGE BASE & IMMIGRATION FAQ
+      </span>
+      <h1 class="display-5 fw-bold mb-3" style="font-family: 'Plus Jakarta Sans', sans-serif;">Frequently Asked Questions</h1>
+      <p class="lead max-w-600 mx-auto" style="color: #ecdffc; font-size: 17px; max-width: 680px;">
+        Everything you need to know about international study, skilled migration, permanent residency streams, documentation standards, and advisory retainers.
+      </p>
+
+      <div class="faq-search-box">
+        <i class="bi bi-search"></i>
+        <input type="text" id="faqSearchInput" class="form-control" placeholder="Search questions, visa types, requirements...">
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================
+       MAIN FAQ SECTION
+       ======================================================== -->
+  <main class="container my-5 py-3">
+
+    <!-- Category Filter Pills -->
+    <div class="faq-categories">
+      <button class="faq-cat-pill active" data-category="all">All Questions</button>
+      <button class="faq-cat-pill" data-category="general">General & Feasibility</button>
+      <button class="faq-cat-pill" data-category="student">Study Visas</button>
+      <button class="faq-cat-pill" data-category="skilled">Work & PR</button>
+      <button class="faq-cat-pill" data-category="docs">Documents & Compliance</button>
+      <button class="faq-cat-pill" data-category="pricing">Fees & Retainers</button>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-9">
+        <div class="accordion faq-accordion" id="faqAccordion">
+
+          <!-- Item 1: General -->
+          <div class="accordion-item" data-category="general">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                How does Vayora assist me throughout my visa application?
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Vayora delivers full-cycle immigration advisory from eligibility profiling and destination selection to legal document compilation, certified translations, sovereign portal lodgement, biometric appointment scheduling, and pre-departure preparation. You are assigned a dedicated Senior Migration Specialist who monitors each milestone on your private Client Portal.
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2: General -->
+          <div class="accordion-item" data-category="general">
+            <h2 class="accordion-header" id="headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Can Vayora guarantee my visa approval?
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                No consultancy, attorney, or advisor can ethically guarantee visa issuance. Sovereign governments (such as IRCC Canada, Home Affairs Australia, UK Home Office, and US Dept of State) hold sole constitutional authority to adjudicate applications. However, Vayora ensures an industry-leading 98% dossier compliance standard by mitigating common refusal triggers such as financial ambiguity, incomplete documentation, or profile misalignments.
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3: Student -->
+          <div class="accordion-item" data-category="student">
+            <h2 class="accordion-header" id="headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Can I work part-time while studying overseas?
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Yes, most top educational destinations permit international students to work part-time during active academic terms and full-time during scheduled vacations. For example:
+                <ul class="mt-2 mb-0">
+                  <li><strong>Canada:</strong> Up to 20-24 hours per week off-campus during terms.</li>
+                  <li><strong>Australia:</strong> Up to 48 hours per fortnight.</li>
+                  <li><strong>United Kingdom:</strong> Up to 20 hours per week for degree-level studies.</li>
+                  <li><strong>Germany:</strong> Up to 140 full days or 280 half days per calendar year.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 4: Student -->
+          <div class="accordion-item" data-category="student">
+            <h2 class="accordion-header" id="headingFour">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                What post-study work rights (PGWP / PSW) are available after graduation?
+              </button>
+            </h2>
+            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Graduating from an accredited Designated Learning Institution provides lucrative post-graduation work opportunities:
+                <ul class="mt-2 mb-0">
+                  <li><strong>Canada:</strong> Post-Graduation Work Permit (PGWP) valid for up to 3 years.</li>
+                  <li><strong>Australia:</strong> Subclass 485 Temporary Graduate Visa granting 2 to 4 years.</li>
+                  <li><strong>United Kingdom:</strong> Graduate Route Visa offering 2 years (3 years for PhDs).</li>
+                  <li><strong>Germany:</strong> 18-Month Jobseeker Visa with right to convert to EU Blue Card.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 5: Skilled -->
+          <div class="accordion-item" data-category="skilled">
+            <h2 class="accordion-header" id="headingFive">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                Which countries offer direct Permanent Residency points-based pathways?
+              </button>
+            </h2>
+            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                <strong>Canada</strong> operates Express Entry (Federal Skilled Worker, Canadian Experience Class, and Provincial Nominee Programs - PNP). <strong>Australia</strong> manages General Skilled Migration (Subclass 189 Skilled Independent, Subclass 190 Skilled Nominated, and Subclass 491 Regional). <strong>New Zealand</strong> utilizes the Skilled Migrant Category. Our consultants run comprehensive points calculations based on your age, education, English proficiency, and work credentials.
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 6: Skilled -->
+          <div class="accordion-item" data-category="skilled">
+            <h2 class="accordion-header" id="headingSix">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                What is Germany's Opportunity Card (Chancenkarte) and EU Blue Card?
+              </button>
+            </h2>
+            <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                The <strong>Chancenkarte (Opportunity Card)</strong> is Germany's modernized points-based 1-year residence permit allowing non-EU skilled professionals to search for employment locally while permitted to work up to 20 hours/week. Once you obtain an eligible employment contract, you can directly transition into an <strong>EU Blue Card</strong>, leading to permanent residency in as fast as 21 to 27 months.
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 7: Docs -->
+          <div class="accordion-item" data-category="docs">
+            <h2 class="accordion-header" id="headingSeven">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                What is Proof of Funds (POF) and how much money do I need to demonstrate?
+              </button>
+            </h2>
+            <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Proof of Funds demonstrates that you possess sufficient liquid, unencumbered finances to cover living expenses, tuition fees, or initial settlement without relying on public assistance. Required amounts vary by destination:
+                <ul class="mt-2 mb-0">
+                  <li><strong>Canada:</strong> ~$20,635 CAD for single students or ~$14,690 CAD for Express Entry single applicants.</li>
+                  <li><strong>Germany:</strong> €11,904 in a mandatory blocked account (Sperrkonto).</li>
+                  <li><strong>UK:</strong> Living maintenance funds of £1,023/month (or £1,334/month in London).</li>
+                </ul>
+                Vayora assists in structuring legally compliant bank audit certificates and source-of-wealth declarations.
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 8: Docs -->
+          <div class="accordion-item" data-category="docs">
+            <h2 class="accordion-header" id="headingEight">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                Which English proficiency exams are accepted: IELTS, PTE, or TOEFL?
+              </button>
+            </h2>
+            <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Most sovereign authorities accept <strong>IELTS Academic or General Training</strong>, <strong>PTE Academic / PTE Core</strong>, and <strong>TOEFL iBT</strong>. Canada now accepts PTE Core for Express Entry economic streams, while the UK requires UKVI-approved SELT tests for specific visas. Vayora conducts pre-tests and advises on target band requirements for maximum CRS/points generation.
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 9: Pricing -->
+          <div class="accordion-item" data-category="pricing">
+            <h2 class="accordion-header" id="headingNine">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                What are the differences between Vayora advisory fees and government visa fees?
+              </button>
+            </h2>
+            <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                <strong>Vayora Advisory Retainers</strong> cover profile evaluation, document auditing, dossier collation, legal statement drafting, portal lodgement, and dedicated advisor support. <br>
+                <strong>Statutory Government Fees</strong> are non-negotiable fees charged directly by sovereign governments (e.g., IRCC fee of $850 CAD, Australia Home Affairs fee of $4,765 AUD) and third-party biometric centers (VFS Global / TLScontact).
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 10: Pricing -->
+          <div class="accordion-item" data-category="pricing">
+            <h2 class="accordion-header" id="headingTen">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                Can I pay Vayora fees in milestone installments?
+              </button>
+            </h2>
+            <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Yes! All comprehensive advisory packages (Express Entry, General Skilled Migration, Study Abroad) are structured across clear milestone stages (Enrollment, Dossier Audit & Drafting, and Pre-Lodgement). You only pay each subsequent phase upon successful completion and verification of the prior stage.
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Help & Consultation Callout Box -->
+        <div class="faq-help-box text-center">
+          <h3 class="fw-bold mb-2">Still Have Questions About Your Situation?</h3>
+          <p class="mb-4" style="color: #ecdffc; font-size: 16px;">
+            Every immigration journey is distinct. Schedule a one-on-one session with our licensed casework specialists to review your CV, qualification points, and optimal visa streams.
+          </p>
+          <div class="d-flex flex-wrap justify-content-center gap-3">
+            <a href="contact.html#consultation" class="btn btn-light btn-lg px-4 fw-bold" style="color: var(--purple);">
+              Book Free Feasibility Assessment <i class="bi bi-arrow-up-right"></i>
+            </a>
+            <a href="support.html" class="btn btn-outline-light btn-lg px-4">
+              Visit Client Support Desk
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ========================================================
+       FOOTER
+       ======================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-4 col-md-6">
+          <a class="navbar-brand brand footerbrand" href="index.html">
+            <span class="mark">V</span>
+            <span><b>VAYORA</b><small>IMMIGRATION & VISA</small></span>
+          </a>
+          <p class="footersubtext">
+            Premier immigration & visa advisory dedicated to empowering ambitious individuals, students, and professionals to seamlessly establish their futures worldwide.
+          </p>
+          <div class="social-links">
+            <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 col-6">
+          <h5 class="footertitle">Quick Links</h5>
+          <ul class="footerlinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="home2.html">Home 2</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-3 col-6">
+          <h5 class="footertitle">Immigration Portals</h5>
+          <ul class="footerlinks">
+            <li><a href="country-guides.html">Destination Guides</a></li>
+            <li><a href="services.html">All Categories</a></li>
+            <li><a href="client-dashboard.html">Client Portal</a></li>
+            <li><a href="login.html">Client Login</a></li>
+            <li><a href="faq.html">FAQ & Help</a></li>
+            <li><a href="support.html">Support Desk</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="disclaimer.html">Legal Disclaimer</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h5 class="footertitle">Get In Touch</h5>
+          <ul class="footercontact">
+            <li class="footer-contact-item">
+              <i class="bi bi-telephone-fill"></i>
+              <div>
+                <small class="d-block text-secondary">General Advisory</small>
+                <a href="tel:+919840012345">+91 98400 12345</a>
+              </div>
+            </li>
+            <li class="footer-contact-item">
+              <i class="bi bi-envelope-fill"></i>
+              <div>
+                <small class="d-block text-secondary">Email Support</small>
+                <a href="mailto:hello@vayora.com">hello@vayora.com</a>
+              </div>
+            </li>
+            <li class="footer-contact-item">
+              <i class="bi bi-clock-fill"></i>
+              <div>
+                <small class="d-block text-secondary">Working Hours</small>
+                <span>Mon – Sat: 9:00 AM – 6:00 PM</span>
+              </div>
+            </li>
+            <li class="footer-contact-item">
+              <i class="bi bi-geo-alt-fill"></i>
+              <div>
+                <small class="d-block text-secondary">Headquarters</small>
+                <span>Financial District, Suite 402</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footerbottom">
+        <div class="row align-items-center">
+          <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+            <p class="mb-0">© 2026 Vayora Immigration & Visa Consultancy. All Rights Reserved.</p>
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            <div class="footer-legal-links">
+              <a href="privacy.html">Privacy Policy</a>
+              <a href="terms.html">Terms of Service</a>
+              <a href="faq.html">FAQ</a>
+              <a href="support.html">Support</a>
+              <a href="disclaimer.html">Legal Disclaimer</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // Live Search & Category Filtering for FAQ
+    document.addEventListener('DOMContentLoaded', function() {
+      const searchInput = document.getElementById('faqSearchInput');
+      const catPills = document.querySelectorAll('.faq-cat-pill');
+      const items = document.querySelectorAll('.faq-accordion .accordion-item');
+
+      let currentCategory = 'all';
+      let currentQuery = '';
+
+      function filterFAQ() {
+        items.forEach(item => {
+          const cat = item.getAttribute('data-category');
+          const text = item.innerText.toLowerCase();
+          const matchesCat = (currentCategory === 'all' || cat === currentCategory);
+          const matchesSearch = !currentQuery || text.includes(currentQuery);
+
+          if (matchesCat && matchesSearch) {
+            item.style.display = '';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      }
+
+      if (searchInput) {
+        searchInput.addEventListener('input', function(e) {
+          currentQuery = e.target.value.toLowerCase().trim();
+          filterFAQ();
+        });
+      }
+
+      catPills.forEach(pill => {
+        pill.addEventListener('click', function() {
+          catPills.forEach(p => p.classList.remove('active'));
+          this.classList.add('active');
+          currentCategory = this.getAttribute('data-category');
+          filterFAQ();
+        });
+      });
+    });
+  </script>
+</body>
+</html>

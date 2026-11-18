@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="apple-touch-icon" href="favicon.svg">
+  <title>Create Your Account | Vayora — Immigration & Visa Portal</title>
+  <meta name="description" content="Register for a new Vayora account. Start your visa journey, manage certified document filings, and access registered immigration counsel.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/auth.css">
+</head>
+<body class="auth-body">
+
+  <!-- Floating Corner Utility Tools -->
+  <div class="auth-top-controls">
+    <a href="index.html" class="auth-tool-btn" title="Back to Homepage" aria-label="Back to Homepage">
+      <i class="bi bi-house"></i>
+    </a>
+    <button class="auth-tool-btn" id="themeToggle" type="button" aria-label="Toggle theme" title="Toggle theme">
+      <i class="bi bi-moon-stars"></i>
+    </button>
+    <button class="auth-tool-btn direction-toggle" id="directionToggle" type="button" aria-label="Switch Direction" title="Switch text direction">
+      <span style="font-size: 11px; font-weight: 800;">LTR</span>
+    </button>
+  </div>
+
+  <!-- Main Auth Card Container (2-Column Split) -->
+  <div class="auth-card-container">
+    
+    <!-- Left Section: Visual Panel -->
+    <div class="auth-visual-panel register-bg">
+      <div class="auth-visual-overlay"></div>
+      
+      <!-- Top Back Link -->
+      <div>
+        <a href="index.html" class="auth-back-link">
+          <i class="bi bi-arrow-left"></i>
+          <span>Back to Website</span>
+        </a>
+      </div>
+
+      <!-- Center Text Content -->
+      <div class="auth-visual-content">
+        <span class="auth-visual-tag">Global Client Onboarding</span>
+        <h1 class="auth-visual-heading">Make Your Dreams a Destination.</h1>
+        <p class="auth-visual-desc">
+          Create your account and take the first step toward your international study, career, and permanent settlement future.
+        </p>
+      </div>
+
+      <!-- Trust Indicators & Benefits -->
+      <div class="auth-trust-badges">
+        <div class="auth-trust-card">
+          <strong>Free Audit</strong>
+          <small>Eligibility Review</small>
+        </div>
+        <div class="auth-trust-card">
+          <strong>Licensed</strong>
+          <small>RCIC & MARA Legal Team</small>
+        </div>
+        <div class="auth-trust-card">
+          <strong>Encrypted</strong>
+          <small>Vault Document Security</small>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Section: Register Form Panel -->
+    <div class="auth-form-panel">
+      <!-- Vayora Logo (Links to Home) -->
+      <div class="auth-brand-header">
+        <a href="index.html" class="auth-brand-link" title="Vayora Homepage">
+          <span class="auth-brand-mark">V</span>
+          <div class="auth-brand-text">
+            <b>VAYORA</b>
+            <small>IMMIGRATION & VISA</small>
+          </div>
+        </a>
+      </div>
+
+      <h2 class="auth-form-title">Create Your Account</h2>
+      <p class="auth-form-subtitle">Join Vayora and begin your immigration journey.</p>
+
+      <!-- Alert Notification Banner -->
+      <div class="auth-alert-banner" id="registerAlertBanner"></div>
+
+      <!-- Registration Form -->
+      <form id="registerForm" novalidate onsubmit="handleRegisterSubmit(event)">
+        <!-- Full Legal Name -->
+        <div class="auth-form-group">
+          <label class="auth-label" for="regFullName">Full Legal Name</label>
+          <div class="auth-input-wrapper">
+            <i class="bi bi-person auth-input-icon"></i>
+            <input type="text" id="regFullName" class="auth-input" placeholder="e.g. Rachel Adams" required autocomplete="name">
+          </div>
+          <div class="auth-error-msg" id="regNameError">Please enter your full legal name.</div>
+        </div>
+
+        <!-- Email Address -->
+        <div class="auth-form-group">
+          <label class="auth-label" for="regEmail">Email Address</label>
+          <div class="auth-input-wrapper">
+            <i class="bi bi-envelope auth-input-icon"></i>
+            <input type="email" id="regEmail" class="auth-input" placeholder="name@example.com" required autocomplete="email">
+          </div>
+          <div class="auth-error-msg" id="regEmailError">Please enter a valid email address.</div>
+        </div>
+
+        <!-- Phone Number with Country Code Selector -->
+        <div class="auth-form-group">
+          <label class="auth-label" for="regPhone">Phone Number</label>
+          <div class="auth-phone-group">
+            <select class="auth-country-code" id="regCountryCode" aria-label="Country Code">
+              <option value="+1">ðŸ‡ºðŸ‡¸ +1</option>
+              <option value="+44">ðŸ‡¬ðŸ‡§ +44</option>
+              <option value="+91" selected>ðŸ‡®ðŸ‡³ +91</option>
+              <option value="+61">ðŸ‡¦ðŸ‡º +61</option>
+              <option value="+49">ðŸ‡©ðŸ‡ª +49</option>
+              <option value="+971">ðŸ‡¦ðŸ‡ª +971</option>
+            </select>
+            <div class="auth-input-wrapper flex-grow-1">
+              <i class="bi bi-telephone auth-input-icon"></i>
+              <input type="tel" id="regPhone" class="auth-input" placeholder="98765 43210" required autocomplete="tel">
+            </div>
+          </div>
+          <div class="auth-error-msg" id="regPhoneError">Please enter a valid contact phone number.</div>
+        </div>
+
+        <!-- Password with Strength Meter -->
+        <div class="auth-form-group">
+          <label class="auth-label" for="regPassword">Password</label>
+          <div class="auth-input-wrapper">
+            <i class="bi bi-lock auth-input-icon"></i>
+            <input type="password" id="regPassword" class="auth-input" placeholder="Create a strong password" required autocomplete="new-password" oninput="checkPasswordStrength(this.value)">
+            <button type="button" class="auth-toggle-pwd" onclick="togglePasswordVisibility('regPassword', this)" aria-label="Toggle password visibility">
+              <i class="bi bi-eye"></i>
+            </button>
+          </div>
+          <!-- Strength Indicator -->
+          <div class="auth-strength-meter">
+            <div class="auth-strength-bars">
+              <div class="auth-strength-bar" id="strBar1"></div>
+              <div class="auth-strength-bar" id="strBar2"></div>
+              <div class="auth-strength-bar" id="strBar3"></div>
+              <div class="auth-strength-bar" id="strBar4"></div>
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="auth-strength-text" id="strText">Password strength: Empty</span>
+              <small class="text-muted" style="font-size: 11px;">Min 8 chars, 1 number & 1 symbol</small>
+            </div>
+          </div>
+          <div class="auth-error-msg" id="regPasswordError">Password must be at least 8 characters long.</div>
+        </div>
+
+        <!-- Confirm Password -->
+        <div class="auth-form-group">
+          <label class="auth-label" for="regConfirmPassword">Confirm Password</label>
+          <div class="auth-input-wrapper">
+            <i class="bi bi-shield-check auth-input-icon"></i>
+            <input type="password" id="regConfirmPassword" class="auth-input" placeholder="Re-enter your password" required autocomplete="new-password">
+            <button type="button" class="auth-toggle-pwd" onclick="togglePasswordVisibility('regConfirmPassword', this)" aria-label="Toggle password visibility">
+              <i class="bi bi-eye"></i>
+            </button>
+          </div>
+          <div class="auth-error-msg" id="regConfirmError">Passwords do not match.</div>
+        </div>
+
+        <!-- Terms and Conditions Checkbox -->
+        <div class="mb-3">
+          <label class="auth-checkbox-label" style="align-items: flex-start;">
+            <input type="checkbox" id="termsAgree" required style="margin-top: 3px;">
+            <span style="font-size: 12.5px; line-height: 1.4;">
+              I agree to the <a href="terms.html" class="auth-forgot-link" target="_blank">Terms of Service</a>, 
+              <a href="privacy.html" class="auth-forgot-link" target="_blank">Privacy Policy</a>, and consent to receiving consultation communications.
+            </span>
+          </label>
+          <div class="auth-error-msg" id="regTermsError" style="margin-left: 24px;">You must agree to the Terms and Conditions to proceed.</div>
+        </div>
+
+        <!-- Create Account Submit Button -->
+        <button type="submit" class="auth-btn-primary" id="registerSubmitBtn">
+          <span class="btn-text">Create Account</span>
+          <i class="bi bi-arrow-right btn-icon"></i>
+        </button>
+
+        <!-- Divider -->
+        <div class="auth-divider">
+          <span>Or sign up with</span>
+        </div>
+
+        <!-- Google Sign-up Button -->
+        <button type="button" class="auth-btn-social" onclick="simulateGoogleSignUp()">
+          <svg viewBox="0 0 24 24">
+            <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+            <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+            <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+            <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+          </svg>
+          <span>Sign up with Google</span>
+        </button>
+
+        <!-- Switch to Login -->
+        <p class="auth-switch-text">
+          Already have an account?
+          <a href="login.html" class="auth-switch-link">Sign In</a>
+        </p>
+      </form>
+    </div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+
+  <!-- Register Logic & Real-time Validation Script -->
+  <script>
+    // Password visibility toggle
+    function togglePasswordVisibility(inputId, btn) {
+      const input = document.getElementById(inputId);
+      const icon = btn.querySelector('i');
+      if (input.type === 'password') {
+        input.type = 'text';
+        icon.classList.remove('bi-eye');
+        icon.classList.add('bi-eye-slash');
+      } else {
+        input.type = 'password';
+        icon.classList.remove('bi-eye-slash');
+        icon.classList.add('bi-eye');
+      }
+    }
+
+    // Dynamic Real-time Password Strength Meter
+    function checkPasswordStrength(password) {
+      const b1 = document.getElementById('strBar1');
+      const b2 = document.getElementById('strBar2');
+      const b3 = document.getElementById('strBar3');
+      const b4 = document.getElementById('strBar4');
+      const text = document.getElementById('strText');
+
+      // Reset bars
+      [b1, b2, b3, b4].forEach(b => {
+        b.style.background = '#e6def2';
+      });
+
+      if (!password) {
+        text.textContent = 'Password strength: Empty';
+        text.style.color = 'var(--auth-muted)';
+        return;
+      }
+
+      let score = 0;
+      if (password.length >= 8) score++;
+      if (/[A-Z]/.test(password)) score++;
+      if (/[0-9]/.test(password)) score++;
+      if (/[^A-Za-z0-9]/.test(password)) score++;
+
+      if (score === 1) {
+        b1.style.background = '#ef4444';
+        text.textContent = 'Password strength: Weak';
+        text.style.color = '#ef4444';
+      } else if (score === 2) {
+        b1.style.background = '#f59e0b';
+        b2.style.background = '#f59e0b';
+        text.textContent = 'Password strength: Fair';
+        text.style.color = '#f59e0b';
+      } else if (score === 3) {
+        b1.style.background = '#3b82f6';
+        b2.style.background = '#3b82f6';
+        b3.style.background = '#3b82f6';
+        text.textContent = 'Password strength: Good';
+        text.style.color = '#3b82f6';
+      } else if (score >= 4) {
+        b1.style.background = '#10b981';
+        b2.style.background = '#10b981';
+        b3.style.background = '#10b981';
+        b4.style.background = '#10b981';
+        text.textContent = 'Password strength: Excellent & Secure';
+        text.style.color = '#10b981';
+      }
+    }
+
+    // Handle Registration Submission
+    function handleRegisterSubmit(e) {
+      e.preventDefault();
+      const nameInput = document.getElementById('regFullName');
+      const emailInput = document.getElementById('regEmail');
+      const phoneInput = document.getElementById('regPhone');
+      const pwdInput = document.getElementById('regPassword');
+      const confirmInput = document.getElementById('regConfirmPassword');
+      const termsCheck = document.getElementById('termsAgree');
+      const banner = document.getElementById('registerAlertBanner');
+      const submitBtn = document.getElementById('registerSubmitBtn');
+
+      let isValid = true;
+      const nameVal = nameInput.value.trim();
+      const emailVal = emailInput.value.trim();
+      const phoneVal = phoneInput.value.trim();
+      const pwdVal = pwdInput.value;
+      const confirmVal = confirmInput.value;
+
+      // Validate Name
+      if (!nameVal || nameVal.length < 2) {
+        nameInput.classList.add('is-invalid');
+        isValid = false;
+      } else {
+        nameInput.classList.remove('is-invalid');
+      }
+
+      // Validate Email
+      if (!emailVal || !emailVal.includes('@') || !emailVal.includes('.')) {
+        emailInput.classList.add('is-invalid');
+        isValid = false;
+      } else {
+        emailInput.classList.remove('is-invalid');
+      }
+
+      // Validate Phone
+      if (!phoneVal || phoneVal.length < 7) {
+        phoneInput.classList.add('is-invalid');
+        isValid = false;
+      } else {
+        phoneInput.classList.remove('is-invalid');
+      }
+
+      // Validate Password
+      if (!pwdVal || pwdVal.length < 8) {
+        pwdInput.classList.add('is-invalid');
+        isValid = false;
+      } else {
+        pwdInput.classList.remove('is-invalid');
+      }
+
+      // Validate Confirm Password
+      if (confirmVal !== pwdVal || !confirmVal) {
+        confirmInput.classList.add('is-invalid');
+        isValid = false;
+      } else {
+        confirmInput.classList.remove('is-invalid');
+      }
+
+      // Validate Terms Checkbox
+      if (!termsCheck.checked) {
+        document.getElementById('regTermsError').style.display = 'block';
+        isValid = false;
+      } else {
+        document.getElementById('regTermsError').style.display = 'none';
+      }
+
+      if (!isValid) {
+        banner.className = 'auth-alert-banner error';
+        banner.innerHTML = '<i class="bi bi-exclamation-triangle me-1"></i> Please correct the highlighted fields above.';
+        return;
+      }
+
+      // Simulate Loading State
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span> Provisioning Your Account...';
+
+      setTimeout(() => {
+        banner.className = 'auth-alert-banner success';
+        banner.innerHTML = `<i class="bi bi-check-circle-fill me-1"></i> Welcome to Vayora, <strong>${nameVal}</strong>! Launching your client portal...`;
+
+        // Store new client in localStorage
+        const newClient = {
+          name: nameVal,
+          email: emailVal,
+          phone: document.getElementById('regCountryCode').value + ' ' + phoneVal,
+          role: 'client'
+        };
+        localStorage.setItem('vayora_active_client', JSON.stringify(newClient));
+
+        setTimeout(() => {
+          window.location.href = 'client-dashboard.html';
+        }, 900);
+      }, 1000);
+    }
+
+    // Google Sign-up simulation
+    function simulateGoogleSignUp() {
+      const banner = document.getElementById('registerAlertBanner');
+      banner.className = 'auth-alert-banner success';
+      banner.innerHTML = '<i class="bi bi-google me-1"></i> Account created via Google OAuth. Opening portal...';
+      
+      const newClient = {
+        name: 'Alex Vance',
+        email: 'alex.vance@gmail.com',
+        role: 'client'
+      };
+      localStorage.setItem('vayora_active_client', JSON.stringify(newClient));
+
+      setTimeout(() => {
+        window.location.href = 'client-dashboard.html';
+      }, 900);
+    }
+  </script>
+</body>
+</html>
+

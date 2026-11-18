@@ -1,0 +1,1355 @@
+<!doctype html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="apple-touch-icon" href="favicon.svg">
+  <title>Country Guides & Global Destinations | Vayora — Immigration & Visa Consultancy</title>
+  <meta name="description" content="Discover study, work, and migration opportunities across Canada, Australia, the UK, the US, Germany, and New Zealand. Compare visa pathways with Vayora.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/countries.css">
+</head>
+<body class="country-guide-page">
+
+  <!-- ========================================================
+       TOP NAVIGATION BAR (Unified Brand Navbar)
+       ======================================================== -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand brand" href="index.html">
+        <span class="mark">V</span>
+        <span><b>VAYORA</b><small>IMMIGRATION & VISA</small></span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="home2.html">Home 2</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="d-flex align-items-center gap-2 nav-actions">
+          <button class="nav-tool" id="themeToggle" type="button" aria-label="Toggle colour theme" title="Change theme">
+            <i class="bi bi-moon-stars"></i>
+          </button>
+          <button class="nav-tool direction-toggle" id="directionToggle" type="button" aria-label="Toggle text direction" title="Switch LTR / RTL">
+            <span>LTR</span>
+          </button>
+
+          <!-- Profile / Account Menu -->
+          <div class="dropdown profile-dropdown">
+            <button class="nav-tool profile-trigger" type="button" id="profileMenu" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Open profile menu">
+              <i class="bi bi-person"></i>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end profile-menu" aria-labelledby="profileMenu">
+              <li class="profile-menu-heading">
+                <strong>Welcome to Vayora</strong>
+                <small>Access your client portal</small>
+              </li>
+              <li><a class="dropdown-item" href="login.html"><i class="bi bi-box-arrow-in-right"></i> Login</a></li>
+              <li><a class="dropdown-item" href="register.html"><i class="bi bi-person-plus"></i> Register</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="admin-dashboard.html"><i class="bi bi-speedometer2"></i> Admin Dashboard</a></li>
+              <li><a class="dropdown-item" href="client-dashboard.html"><i class="bi bi-grid"></i> Client Dashboard</a></li>
+            </ul>
+          </div>
+
+          <a href="contact.html#consultation" class="btn primary nav-consult">Book Consultation</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- ========================================================
+         SECTION 1: HERO — EXPLORE YOUR FUTURE DESTINATION
+         ======================================================== -->
+    <header class="cg-hero text-center">
+      <div class="container">
+        <span class="cg-hero-badge">
+          <i class="bi bi-globe-americas"></i> EXPLORE THE WORLD
+        </span>
+        <h1 class="cg-hero-title">Find the Right Country for <em>Your Future.</em></h1>
+        <p class="cg-hero-desc">Discover study, work, and migration opportunities across the world's most popular destinations with personalized legal counsel and verified pathways.</p>
+
+        <!-- Country Search Bar -->
+        <div class="cg-search-box-wrap">
+          <form class="cg-search-inner" id="countrySearchForm" onsubmit="event.preventDefault(); executeCountrySearch();">
+            <div class="cg-search-icon-wrap">
+              <i class="bi bi-search"></i>
+            </div>
+            <input 
+              type="text" 
+              class="cg-search-input" 
+              id="countrySearchInput" 
+              placeholder="Search by country name, visa type, or city (e.g., Canada, Express Entry, Australia)..." 
+              autocomplete="off"
+            >
+            <button type="submit" class="cg-search-btn" id="btnSearchCountry">
+              <span>Search Destinations</span>
+              <i class="bi bi-arrow-right"></i>
+            </button>
+          </form>
+        </div>
+
+        <!-- Quick Filter Pills -->
+        <div class="cg-hero-pills" id="goalFilterPills">
+          <button class="cg-hero-pill active" data-filter="all">All Destinations (25+)</button>
+          <button class="cg-hero-pill" data-filter="study">Study Abroad</button>
+          <button class="cg-hero-pill" data-filter="work">Skilled Work</button>
+          <button class="cg-hero-pill" data-filter="pr">Permanent Residency</button>
+          <button class="cg-hero-pill" data-filter="family">Family Migration</button>
+        </div>
+
+        <div class="cg-hero-note">
+          <i class="bi bi-shield-check text-warning"></i>
+          <span>Explore opportunities across 25+ sovereign destinations with licensed RCIC, MARA, and OISC counsel.</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- ========================================================
+         SECTION 2: EXPLORE BY IMMIGRATION GOAL (4 CATEGORY CARDS)
+         ======================================================== -->
+    <section class="cg-goals-section">
+      <div class="container">
+        <div class="heading text-center">
+          <span class="eyebrow">TAILORED RELOCATION PATHWAYS</span>
+          <h2>Explore by <em>Immigration Goal.</em></h2>
+          <p class="lead-copy">Whether advancing your academic credentials, stepping into global corporate roles, or settling permanently with family, choose your primary migration objective.</p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Goal 1: Study Abroad -->
+          <div class="col-lg-3 col-md-6">
+            <div class="cg-goal-card" onclick="filterByGoal('study')" style="cursor: pointer;">
+              <div class="cg-goal-icon-box">
+                <i class="bi bi-mortarboard-fill"></i>
+              </div>
+              <h3 class="cg-goal-title">Study Abroad</h3>
+              <p class="cg-goal-desc">Access world-ranking universities, verified student visas, scholarship opportunities, and post-study work permits (PGWP/PSW).</p>
+              <span class="cg-goal-link">Explore Opportunities <i class="bi bi-arrow-right"></i></span>
+            </div>
+          </div>
+
+          <!-- Goal 2: Work Abroad -->
+          <div class="col-lg-3 col-md-6">
+            <div class="cg-goal-card" onclick="filterByGoal('work')" style="cursor: pointer;">
+              <div class="cg-goal-icon-box">
+                <i class="bi bi-briefcase-fill"></i>
+              </div>
+              <h3 class="cg-goal-title">Work Abroad</h3>
+              <p class="cg-goal-desc">Navigate sovereign employer sponsorships, skilled worker visas, national skill shortage lists, and international corporate intra-company transfers.</p>
+              <span class="cg-goal-link">Explore Opportunities <i class="bi bi-arrow-right"></i></span>
+            </div>
+          </div>
+
+          <!-- Goal 3: Permanent Residency -->
+          <div class="col-lg-3 col-md-6">
+            <div class="cg-goal-card" onclick="filterByGoal('pr')" style="cursor: pointer;">
+              <div class="cg-goal-icon-box">
+                <i class="bi bi-pass-fill"></i>
+              </div>
+              <h3 class="cg-goal-title">Permanent Residency</h3>
+              <p class="cg-goal-desc">Secure permanent status through points-tested frameworks, state nominations, Express Entry CRS optimization, and talent migration streams.</p>
+              <span class="cg-goal-link">Explore Opportunities <i class="bi bi-arrow-right"></i></span>
+            </div>
+          </div>
+
+          <!-- Goal 4: Family Migration -->
+          <div class="col-lg-3 col-md-6">
+            <div class="cg-goal-card" onclick="filterByGoal('family')" style="cursor: pointer;">
+              <div class="cg-goal-icon-box">
+                <i class="bi bi-people-fill"></i>
+              </div>
+              <h3 class="cg-goal-title">Family Migration</h3>
+              <p class="cg-goal-desc">Reunite with spouses, common-law partners, dependent children, and parents through certified legal sponsorship and family settlement routes.</p>
+              <span class="cg-goal-link">Explore Opportunities <i class="bi bi-arrow-right"></i></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         SECTION 3: FEATURED DESTINATIONS (6 COUNTRIES GRID)
+         ======================================================== -->
+    <section class="cg-destinations-section" id="destinationsGridSection">
+      <div class="container">
+        <div class="heading text-center">
+          <span class="eyebrow">PREMIER DESTINATIONS</span>
+          <h2>Featured <em>Global Destinations.</em></h2>
+          <p class="lead-copy">In-depth destination profiles curated by licensed immigration attorneys, detailing sovereign policy updates, living expenses, and fast-tracked pathways.</p>
+        </div>
+
+        <div class="row g-4" id="destinationsContainer">
+          <!-- 1. Canada -->
+          <div class="col-lg-4 col-md-6 dest-grid-col" data-country="canada" data-goals="study work pr family">
+            <div class="cg-dest-card">
+              <div class="cg-dest-thumb-wrap">
+                <img src="https://images.unsplash.com/photo-1503614472-8c93d56e92ce?auto=format&fit=crop&w=800&q=80" alt="Canada Rocky Mountains & Toronto" class="cg-dest-thumb">
+                <div class="cg-dest-gradient"></div>
+                <div class="cg-dest-flag-badge">
+                  <span class="flag-emoji">ðŸ‡¨ðŸ‡¦</span>
+                  <span>Canada</span>
+                </div>
+                <span class="cg-dest-region-tag">North America • Express Entry & PNP</span>
+              </div>
+              <div class="cg-dest-body">
+                <div class="cg-dest-name-row">
+                  <h3 class="cg-dest-name">Canada</h3>
+                  <span class="cg-dest-rank">#1 for PR Pathways</span>
+                </div>
+                <p class="cg-dest-intro">World-class universities, universal healthcare, and progressive permanent residency streams for skilled professionals and families.</p>
+                
+                <div class="cg-dest-metrics">
+                  <div class="cg-metric-item">
+                    <small>Processing</small>
+                    <strong>4–6 Mos</strong>
+                  </div>
+                  <div class="cg-metric-item">
+                    <small>Post-Study</small>
+                    <strong>Up to 3 Yrs</strong>
+                  </div>
+                  <div class="cg-metric-item">
+                    <small>PR Route</small>
+                    <strong class="text-success">Direct Points</strong>
+                  </div>
+                </div>
+
+                <div class="cg-dest-visas">
+                  <span class="cg-visa-pill">Express Entry (FSW/CEC)</span>
+                  <span class="cg-visa-pill">Study Permit (PGWP)</span>
+                  <span class="cg-visa-pill">Provincial Nominees (PNP)</span>
+                  <span class="cg-visa-pill">Start-Up Visa</span>
+                </div>
+
+                <button type="button" class="cg-dest-btn" onclick="openCountrySnapshot('canada')">
+                  <span>Explore Canada</span>
+                  <i class="bi bi-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Australia -->
+          <div class="col-lg-4 col-md-6 dest-grid-col" data-country="australia" data-goals="study work pr family">
+            <div class="cg-dest-card">
+              <div class="cg-dest-thumb-wrap">
+                <img src="https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?auto=format&fit=crop&w=800&q=80" alt="Australia Sydney Opera House & Harbour" class="cg-dest-thumb">
+                <div class="cg-dest-gradient"></div>
+                <div class="cg-dest-flag-badge">
+                  <span class="flag-emoji">ðŸ‡¦ðŸ‡º</span>
+                  <span>Australia</span>
+                </div>
+                <span class="cg-dest-region-tag">Oceania • Subclass 189/190/491</span>
+              </div>
+              <div class="cg-dest-body">
+                <div class="cg-dest-name-row">
+                  <h3 class="cg-dest-name">Australia</h3>
+                  <span class="cg-dest-rank">High Minimum Wage</span>
+                </div>
+                <p class="cg-dest-intro">Coastal lifestyle, high standard of living, attractive minimum wages, and transparent points-tested general skilled migration pathways.</p>
+                
+                <div class="cg-dest-metrics">
+                  <div class="cg-metric-item">
+                    <small>Processing</small>
+                    <strong>5–8 Mos</strong>
+                  </div>
+                  <div class="cg-metric-item">
+                    <small>Post-Study</small>
+                    <strong>2–4 Yrs</strong>
+                  </div>
+                  <div class="cg-metric-item">
+                    <small>PR Route</small>
+                    <strong class="text-success">Points-Based</strong>
+                  </div>
+                </div>
+
+                <div class="cg-dest-visas">
+                  <span class="cg-visa-pill">Subclass 189 / 190 Skilled</span>
+                  <span class="cg-visa-pill">Subclass 500 Student</span>
+                  <span class="cg-visa-pill">TSS 482 Work Visa</span>
+                  <span class="cg-visa-pill">Global Talent (GTI)</span>
+                </div>
+
+                <button type="button" class="cg-dest-btn" onclick="openCountrySnapshot('australia')">
+                  <span>Explore Australia</span>
+                  <i class="bi bi-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. United Kingdom -->
+          <div class="col-lg-4 col-md-6 dest-grid-col" data-country="uk" data-goals="study work pr family">
+            <div class="cg-dest-card">
+              <div class="cg-dest-thumb-wrap">
+                <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=800&q=80" alt="United Kingdom London Tower Bridge" class="cg-dest-thumb">
+                <div class="cg-dest-gradient"></div>
+                <div class="cg-dest-flag-badge">
+                  <span class="flag-emoji">ðŸ‡¬ðŸ‡§</span>
+                  <span>United Kingdom</span>
+                </div>
+                <span class="cg-dest-region-tag">Europe • Points-Based Home Office</span>
+              </div>
+              <div class="cg-dest-body">
+                <div class="cg-dest-name-row">
+                  <h3 class="cg-dest-name">United Kingdom</h3>
+                  <span class="cg-dest-rank">Global Financial Hub</span>
+                </div>
+                <p class="cg-dest-intro">Historic cultural capitals, prestigious Russell Group universities, and vibrant multinational finance, legal, and engineering sectors.</p>
+                
+                <div class="cg-dest-metrics">
+                  <div class="cg-metric-item">
+                    <small>Processing</small>
+                    <strong>3–8 Wks</strong>
+                  </div>
+                  <div class="cg-metric-item">
+                    <small>Post-Study</small>
+                    <strong>2–3 Yrs</strong>
+                  </div>
+                  <div class="cg-metric-item">
+                    <small>PR Route</small>
+                    <strong class="text-success">5-Yr ILR Track</strong>
+                  </div>
+                </div>
+
+                <div class="cg-dest-visas">
+                  <span class="cg-visa-pill">Skilled Worker (CoS)</span>
+                  <span class="cg-visa-pill">Student Visa (Tier 4)</span>
+                  <span class="cg-visa-pill">Graduate Route (PSW)</span>
+                  <span class="cg-visa-pill">Innovator Founder</span>
+                </div>
+
+                <button type="button" class="cg-dest-btn" onclick="openCountrySnapshot('uk')">
+                  <span>Explore United Kingdom</span>
+                  <i class="bi bi-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. United States -->
+          <div class="col-lg-4 col-md-6 dest-grid-col" data-country="usa" data-goals="study work pr">
+            <div class="cg-dest-card">
+              <div class="cg-dest-thumb-wrap">
+                <img src="https://images.unsplash.com/photo-1485738422979-f5c462d49f74?auto=format&fit=crop&w=800&q=80" alt="United States New York Skyline" class="cg-dest-thumb">
+                <div class="cg-dest-gradient"></div>
+                <div class="cg-dest-flag-badge">
+                  <span class="flag-emoji">ðŸ‡ºðŸ‡¸</span>
+                  <span>United States</span>
+                </div>
+                <span class="cg-dest-region-tag">North America • STEM OPT, H-1B, L-1</span>
+              </div>
+              <div class="cg-dest-body">
+                <div class="cg-dest-name-row">
+                  <h3 class="cg-dest-name">United States</h3>
+                  <span class="cg-dest-rank">Tech & Innovation Giant</span>
+                </div>
+                <p class="cg-dest-intro">The world's leading economic center offering unmatched corporate opportunities, Ivy League research, and venture capital ecosystem.</p>
+                
+                <div class="cg-dest-metrics">
+                  <div class="cg-metric-item">
+                    <small>Processing</small>
+                    <strong>2–6 Mos</strong>
+                  </div>
+                  <div class="cg-metric-item">
+                    <small>Post-Study</small>
+                    <strong>3 Yrs (STEM)</strong>
+                  </div>
+                  <div class="cg-metric-item">
+                    <small>PR Route</small>
+                    <strong class="text-success">EB-2/NIW Green Card</strong>
+                  </div>
+                </div>
+
+                <div class="cg-dest-visas">
+                  <span class="cg-visa-pill">F-1 Student & STEM OPT</span>
+                  <span class="cg-visa-pill">H-1B Specialty Work</span>
+                  <span class="cg-visa-pill">L-1 Intra-Company</span>
+                  <span class="cg-visa-pill">EB-2 / NIW Green Card</span>
+                </div>
+
+                <button type="button" class="cg-dest-btn" onclick="openCountrySnapshot('usa')">
+                  <span>Explore United States</span>
+                  <i class="bi bi-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. Germany -->
+          <div class="col-lg-4 col-md-6 dest-grid-col" data-country="germany" data-goals="study work pr">
+            <div class="cg-dest-card">
+              <div class="cg-dest-thumb-wrap">
+                <img src="https://images.unsplash.com/photo-1560969184-10fe8719e047?auto=format&fit=crop&w=800&q=80" alt="Germany Berlin Brandenburg Gate" class="cg-dest-thumb">
+                <div class="cg-dest-gradient"></div>
+                <div class="cg-dest-flag-badge">
+                  <span class="flag-emoji">ðŸ‡©ðŸ‡ª</span>
+                  <span>Germany</span>
+                </div>
+                <span class="cg-dest-region-tag">Europe • Opportunity Card & Blue Card</span>
+              </div>
+              <div class="cg-dest-body">
+                <div class="cg-dest-name-row">
+                  <h3 class="cg-dest-name">Germany</h3>
+                  <span class="cg-dest-rank">Tuition-Free Universities</span>
+                </div>
+                <p class="cg-dest-intro">Europe's economic powerhouse featuring zero-tuition public universities, robust engineering sectors, and newly modernized migration laws.</p>
+                
+                <div class="cg-dest-metrics">
+                  <div class="cg-metric-item">
+                    <small>Processing</small>
+                    <strong>4–10 Wks</strong>
+                  </div>
+                  <div class="cg-metric-item">
+                    <small>Post-Study</small>
+                    <strong>18 Months</strong>
+                  </div>
+                  <div class="cg-metric-item">
+                    <small>PR Route</small>
+                    <strong class="text-success">Fast-Track 21 Mos</strong>
+                  </div>
+                </div>
+
+                <div class="cg-dest-visas">
+                  <span class="cg-visa-pill">EU Blue Card (Blue Card)</span>
+                  <span class="cg-visa-pill">Chancenkarte (Opportunity)</span>
+                  <span class="cg-visa-pill">Public University Student</span>
+                  <span class="cg-visa-pill">Skilled Worker Fast-Track</span>
+                </div>
+
+                <button type="button" class="cg-dest-btn" onclick="openCountrySnapshot('germany')">
+                  <span>Explore Germany</span>
+                  <i class="bi bi-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. New Zealand -->
+          <div class="col-lg-4 col-md-6 dest-grid-col" data-country="newzealand" data-goals="study work pr family">
+            <div class="cg-dest-card">
+              <div class="cg-dest-thumb-wrap">
+                <img src="https://images.unsplash.com/photo-1507699622108-4be3abd695ad?auto=format&fit=crop&w=800&q=80" alt="New Zealand Auckland Skyline" class="cg-dest-thumb">
+                <div class="cg-dest-gradient"></div>
+                <div class="cg-dest-flag-badge">
+                  <span class="flag-emoji">ðŸ‡³ðŸ‡¿</span>
+                  <span>New Zealand</span>
+                </div>
+                <span class="cg-dest-region-tag">Oceania • Green List Fast-Track PR</span>
+              </div>
+              <div class="cg-dest-body">
+                <div class="cg-dest-name-row">
+                  <h3 class="cg-dest-name">New Zealand</h3>
+                  <span class="cg-dest-rank">#1 Work-Life Balance</span>
+                </div>
+                <p class="cg-dest-intro">Pristine natural environment, exceptional work-life harmony, welcoming safe communities, and direct permanent residence pathways.</p>
+                
+                <div class="cg-dest-metrics">
+                  <div class="cg-metric-item">
+                    <small>Processing</small>
+                    <strong>3–6 Mos</strong>
+                  </div>
+                  <div class="cg-metric-item">
+                    <small>Post-Study</small>
+                    <strong>Up to 3 Yrs</strong>
+                  </div>
+                  <div class="cg-metric-item">
+                    <small>PR Route</small>
+                    <strong class="text-success">Green List Straight</strong>
+                  </div>
+                </div>
+
+                <div class="cg-dest-visas">
+                  <span class="cg-visa-pill">Skilled Migrant (SMC)</span>
+                  <span class="cg-visa-pill">Green List Straight to PR</span>
+                  <span class="cg-visa-pill">Accredited Employer Work</span>
+                  <span class="cg-visa-pill">Fee-Paying Student Visa</span>
+                </div>
+
+                <button type="button" class="cg-dest-btn" onclick="openCountrySnapshot('newzealand')">
+                  <span>Explore New Zealand</span>
+                  <i class="bi bi-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- No Results Fallback -->
+        <div id="noDestinationsAlert" class="text-center py-5 d-none">
+          <i class="bi bi-geo-alt-fill text-muted" style="font-size: 48px;"></i>
+          <h4 class="mt-3 fw-bold">No destinations match your search criteria</h4>
+          <p class="text-muted">Try searching with a broader country name or clear your filters.</p>
+          <button class="btn btn-sm btn-outline-primary" onclick="resetFilters()">Reset All Filters</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         SECTION 4: COUNTRY COMPARISON SECTION ("Compare Your Dream Destinations")
+         ======================================================== -->
+    <section class="cg-compare-section" id="compareSection">
+      <div class="container">
+        <div class="heading text-center">
+          <span class="eyebrow">STRATEGIC MULTI-COUNTRY EVALUATION</span>
+          <h2>Compare Your <em>Dream Destinations.</em></h2>
+          <p class="lead-copy">Select any three countries below to evaluate visa pathways, general eligibility criteria, estimated processing timelines, and financial benchmarks side by side.</p>
+        </div>
+
+        <div class="cg-compare-card">
+          <!-- Comparison Dropdown Controls -->
+          <div class="cg-compare-controls">
+            <div class="cg-compare-label">
+              <i class="bi bi-arrow-left-right text-primary me-2"></i> Select Countries to Compare:
+            </div>
+            <div>
+              <select class="cg-compare-select" id="selectCountry1" onchange="updateComparisonTable()">
+                <option value="canada" selected>ðŸ‡¨ðŸ‡¦ Canada</option>
+                <option value="australia">ðŸ‡¦ðŸ‡º Australia</option>
+                <option value="uk">ðŸ‡¬ðŸ‡§ United Kingdom</option>
+                <option value="usa">ðŸ‡ºðŸ‡¸ United States</option>
+                <option value="germany">ðŸ‡©ðŸ‡ª Germany</option>
+                <option value="newzealand">ðŸ‡³ðŸ‡¿ New Zealand</option>
+              </select>
+            </div>
+            <div>
+              <select class="cg-compare-select" id="selectCountry2" onchange="updateComparisonTable()">
+                <option value="canada">ðŸ‡¨ðŸ‡¦ Canada</option>
+                <option value="australia" selected>ðŸ‡¦ðŸ‡º Australia</option>
+                <option value="uk">ðŸ‡¬ðŸ‡§ United Kingdom</option>
+                <option value="usa">ðŸ‡ºðŸ‡¸ United States</option>
+                <option value="germany">ðŸ‡©ðŸ‡ª Germany</option>
+                <option value="newzealand">ðŸ‡³ðŸ‡¿ New Zealand</option>
+              </select>
+            </div>
+            <div>
+              <select class="cg-compare-select" id="selectCountry3" onchange="updateComparisonTable()">
+                <option value="canada">ðŸ‡¨ðŸ‡¦ Canada</option>
+                <option value="australia">ðŸ‡¦ðŸ‡º Australia</option>
+                <option value="uk" selected>ðŸ‡¬ðŸ‡§ United Kingdom</option>
+                <option value="usa">ðŸ‡ºðŸ‡¸ United States</option>
+                <option value="germany">ðŸ‡©ðŸ‡ª Germany</option>
+                <option value="newzealand">ðŸ‡³ðŸ‡¿ New Zealand</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Comparison Table -->
+          <div class="cg-compare-table-responsive">
+            <table class="cg-compare-table" id="comparisonTable">
+              <thead>
+                <tr>
+                  <th class="col-feature">Key Parameter</th>
+                  <th class="country-col text-center" id="thCountry1"><span class="fs-5">ðŸ‡¨ðŸ‡¦</span> <strong class="d-block fs-6">Canada</strong></th>
+                  <th class="country-col text-center" id="thCountry2"><span class="fs-5">ðŸ‡¦ðŸ‡º</span> <strong class="d-block fs-6">Australia</strong></th>
+                  <th class="country-col text-center" id="thCountry3"><span class="fs-5">ðŸ‡¬ðŸ‡§</span> <strong class="d-block fs-6">United Kingdom</strong></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th class="col-feature"><i class="bi bi-pass me-2 text-primary"></i> Flagship Visa Route</th>
+                  <td class="country-col" id="cmp_visa_1">Express Entry (FSW / CEC) & PNP</td>
+                  <td class="country-col" id="cmp_visa_2">Subclass 189 / 190 General Skilled</td>
+                  <td class="country-col" id="cmp_visa_3">Skilled Worker Visa (CoS Sponsorship)</td>
+                </tr>
+                <tr>
+                  <th class="col-feature"><i class="bi bi-clock-history me-2 text-primary"></i> Est. Processing Time</th>
+                  <td class="country-col" id="cmp_time_1"><span class="badge bg-light text-dark border">4 to 6 Months</span></td>
+                  <td class="country-col" id="cmp_time_2"><span class="badge bg-light text-dark border">5 to 8 Months</span></td>
+                  <td class="country-col" id="cmp_time_3"><span class="badge bg-light text-dark border">3 to 8 Weeks</span></td>
+                </tr>
+                <tr>
+                  <th class="col-feature"><i class="bi bi-mortarboard me-2 text-primary"></i> Post-Study Work Rights</th>
+                  <td class="country-col" id="cmp_psw_1">Up to 3 Years (PGWP Open Work)</td>
+                  <td class="country-col" id="cmp_psw_2">2 to 4 Years (Subclass 485)</td>
+                  <td class="country-col" id="cmp_psw_3">2 Years (3 Years for PhD)</td>
+                </tr>
+                <tr>
+                  <th class="col-feature"><i class="bi bi-cash-coin me-2 text-primary"></i> Est. Monthly Living Cost</th>
+                  <td class="country-col" id="cmp_cost_1">$1,200 – $1,800 CAD / mo</td>
+                  <td class="country-col" id="cmp_cost_2">$1,500 – $2,200 AUD / mo</td>
+                  <td class="country-col" id="cmp_cost_3">Â£1,100 – Â£1,700 GBP / mo</td>
+                </tr>
+                <tr>
+                  <th class="col-feature"><i class="bi bi-translate me-2 text-primary"></i> Language Benchmarks</th>
+                  <td class="country-col" id="cmp_lang_1">IELTS CLB 7+ / CELPIP 7+</td>
+                  <td class="country-col" id="cmp_lang_2">IELTS 6.0–7.0 / PTE 50–65</td>
+                  <td class="country-col" id="cmp_lang_3">IELTS B2 Level (5.5+ each) / SELT</td>
+                </tr>
+                <tr>
+                  <th class="col-feature"><i class="bi bi-trophy me-2 text-primary"></i> Permanent Residency Path</th>
+                  <td class="country-col" id="cmp_pr_1"><span class="status-pill status-high"><i class="bi bi-check-circle-fill me-1"></i> Direct Points Selection</span></td>
+                  <td class="country-col" id="cmp_pr_2"><span class="status-pill status-high"><i class="bi bi-check-circle-fill me-1"></i> Transparent EOI Grid</span></td>
+                  <td class="country-col" id="cmp_pr_3"><span class="status-pill status-med"><i class="bi bi-clock me-1"></i> 5-Year Continuous ILR</span></td>
+                </tr>
+                <tr>
+                  <th class="col-feature"><i class="bi bi-heart-pulse me-2 text-primary"></i> Healthcare & Dependents</th>
+                  <td class="country-col" id="cmp_health_1">Universal Medicare & Open Spousal Work</td>
+                  <td class="country-col" id="cmp_health_2">Medicare Access & Full Spousal Work</td>
+                  <td class="country-col" id="cmp_health_3">NHS Access (via IHS) & Dependent Visas</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Indicative Disclaimer -->
+          <div class="cg-compare-disclaimer">
+            <i class="bi bi-info-circle-fill text-primary fs-5"></i>
+            <div>
+              <strong>Indicative Planning Disclaimer:</strong> Processing timelines, statutory fees, points thresholds, and post-study durations are subject to sovereign government policy announcements and official consular gazettes. Schedule an exploratory consultation with Vayora counsel for real-time eligibility audits.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         SECTION 5: WHAT YOU NEED TO KNOW BEFORE MOVING (4 HIGHLIGHTS)
+         ======================================================== -->
+    <section class="cg-info-section">
+      <div class="container">
+        <div class="heading text-center">
+          <span class="eyebrow">ESSENTIAL RELOCATION PILLARS</span>
+          <h2>What You Need to Know <em>Before Moving.</em></h2>
+          <p class="lead-copy">Migrating internationally is a transformative milestone. We break down the four critical legal and lifestyle factors you must prepare before lodging your file.</p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Pillar 1: Visa Requirements -->
+          <div class="col-lg-3 col-md-6">
+            <div class="cg-info-card">
+              <div class="cg-info-icon">
+                <i class="bi bi-file-earmark-lock2-fill"></i>
+              </div>
+              <h3>Visa Requirements</h3>
+              <p>Understanding statutory point calculations, certified police clearances, biometric scheduling, and multi-tier eligibility documentation.</p>
+              <a href="services.html" class="cg-info-link">Learn Requirements <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <!-- Pillar 2: Cost of Living -->
+          <div class="col-lg-3 col-md-6">
+            <div class="cg-info-card">
+              <div class="cg-info-icon">
+                <i class="bi bi-cash-stack"></i>
+              </div>
+              <h3>Cost of Living</h3>
+              <p>Planning realistic personal finances, statutory sovereign proof-of-funds criteria, mandatory tuition deposits, and first-year living reserves.</p>
+              <a href="pricing.html" class="cg-info-link">View Cost Estimates <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <!-- Pillar 3: Employment Opportunities -->
+          <div class="col-lg-3 col-md-6">
+            <div class="cg-info-card">
+              <div class="cg-info-icon">
+                <i class="bi bi-graph-up-arrow"></i>
+              </div>
+              <h3>Employment Outlook</h3>
+              <p>Navigating sovereign skill shortage lists, credential conversion (ECA, ACS, VETASSESS), employer sponsorship, and local hiring culture.</p>
+              <a href="services.html" class="cg-info-link">Explore Job Sectors <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <!-- Pillar 4: Lifestyle & Culture -->
+          <div class="col-lg-3 col-md-6">
+            <div class="cg-info-card">
+              <div class="cg-info-icon">
+                <i class="bi bi-sun-fill"></i>
+              </div>
+              <h3>Lifestyle & Culture</h3>
+              <p>Preparing for local climate differences, neighborhood safety, healthcare enrollment, public transit networks, and schooling for children.</p>
+              <a href="about.html" class="cg-info-link">Read Settlement Guide <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         SECTION 6: POPULAR COUNTRY GUIDES (3 EDITORIAL CARDS)
+         ======================================================== -->
+    <section class="cg-editorial-section">
+      <div class="container">
+        <div class="heading text-center">
+          <span class="eyebrow">EXPERT EDITORIAL BRIEFINGS</span>
+          <h2>Popular <em>Country Guides.</em></h2>
+          <p class="lead-copy">Comprehensive, attorney-reviewed relocation handbooks exploring educational institutions, labor markets, and settlement steps.</p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Guide 1: Canada -->
+          <div class="col-lg-4 col-md-6">
+            <article class="cg-editorial-card">
+              <div class="cg-editorial-img-wrap">
+                <img src="https://images.unsplash.com/photo-1503614472-8c93d56e92ce?auto=format&fit=crop&w=800&q=80" alt="Studying in Canada" class="cg-editorial-img">
+                <span class="cg-editorial-badge">ðŸ‡¨ðŸ‡¦ Destination Focus</span>
+                <span class="cg-editorial-time"><i class="bi bi-clock me-1"></i> 6 Min Read</span>
+              </div>
+              <div class="cg-editorial-body">
+                <span class="cg-editorial-country">Canada Education & PR</span>
+                <h3 class="cg-editorial-title">Your Complete Guide to Studying in Canada</h3>
+                <p class="cg-editorial-desc">Everything international students need to know: Designated Learning Institutions (DLIs), provincial study caps, cost of living, and transitioning to a 3-year PGWP.</p>
+                <a href="javascript:void(0)" class="cg-editorial-link" onclick="openCountrySnapshot('canada')">
+                  <span>Read Country Guide</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Guide 2: Australia -->
+          <div class="col-lg-4 col-md-6">
+            <article class="cg-editorial-card">
+              <div class="cg-editorial-img-wrap">
+                <img src="https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?auto=format&fit=crop&w=800&q=80" alt="Living in Australia" class="cg-editorial-img">
+                <span class="cg-editorial-badge">ðŸ‡¦ðŸ‡º Career & PR</span>
+                <span class="cg-editorial-time"><i class="bi bi-clock me-1"></i> 8 Min Read</span>
+              </div>
+              <div class="cg-editorial-body">
+                <span class="cg-editorial-country">Australia Skilled Migration</span>
+                <h3 class="cg-editorial-title">Working and Living in Australia</h3>
+                <p class="cg-editorial-desc">A deep dive into General Skilled Migration points, Subclass 189/190 state sponsorship draws, high minimum wages, and permanent settlement across Melbourne and Sydney.</p>
+                <a href="javascript:void(0)" class="cg-editorial-link" onclick="openCountrySnapshot('australia')">
+                  <span>Read Country Guide</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Guide 3: UK -->
+          <div class="col-lg-4 col-md-6">
+            <article class="cg-editorial-card">
+              <div class="cg-editorial-img-wrap">
+                <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=800&q=80" alt="UK Skilled Worker" class="cg-editorial-img">
+                <span class="cg-editorial-badge">ðŸ‡¬ðŸ‡§ Corporate Mobility</span>
+                <span class="cg-editorial-time"><i class="bi bi-clock me-1"></i> 7 Min Read</span>
+              </div>
+              <div class="cg-editorial-body">
+                <span class="cg-editorial-country">United Kingdom Sponsorship</span>
+                <h3 class="cg-editorial-title">Understanding UK Skilled Worker Visa Options</h3>
+                <p class="cg-editorial-desc">How to navigate Home Office sponsor licenses, Certificate of Sponsorship (CoS) requirements, revised salary thresholds, and your 5-year journey toward Indefinite Leave to Remain.</p>
+                <a href="javascript:void(0)" class="cg-editorial-link" onclick="openCountrySnapshot('uk')">
+                  <span>Read Country Guide</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         SECTION 7: IMMIGRATION SUCCESS CTA
+         ======================================================== -->
+    <section class="cg-cta-section pt-0">
+      <div class="container">
+        <div class="cg-cta-banner text-center">
+          <div class="position-relative w-100" style="z-index: 2;">
+            <span class="eyebrow light mb-3 d-inline-block"><i class="bi bi-compass"></i> PERSONALISED DESTINATION MAPPING</span>
+            <h2>Not Sure Which Country Is Right for You?</h2>
+            <p>Our immigration experts can help you explore suitable destinations, compare points criteria, and choose a pathway that matches your personal and career goals.</p>
+            <div class="d-flex flex-wrap justify-content-center gap-3">
+              <a href="contact.html#consultation" class="btn white btn-lg">Book a Consultation </a>
+              <a href="services.html" class="btn outline-white btn-lg">Explore Our Services <i class="bi bi-arrow-right ms-1"></i></a>
+            </div>
+            <div class="d-flex flex-wrap justify-content-center gap-4 mt-4 pt-3 border-top border-white border-opacity-10 text-white-50 small">
+              <span><i class="bi bi-patch-check-fill text-warning me-1"></i> RCIC & MARA Regulated</span>
+              <span><i class="bi bi-shield-lock-fill text-info me-1"></i> 100% Confidential Dossiers</span>
+              <span><i class="bi bi-globe2 text-white me-1"></i> 25+ Global Jurisdictions</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         SECTION 8: FREQUENTLY ASKED QUESTIONS (ACCORDION)
+         ======================================================== -->
+    <section class="section">
+      <div class="container" style="max-width: 900px;">
+        <div class="heading text-center">
+          <span class="eyebrow">FREQUENTLY ASKED QUESTIONS</span>
+          <h2>Clear Answers to Your <em>Destination Questions.</em></h2>
+          <p class="lead-copy">Direct guidance on country selection, eligibility benchmarking, and international relocation.</p>
+        </div>
+
+        <div class="accordion" id="countryFaqAccordion">
+          <!-- FAQ 1 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faqHeading1">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse1" aria-expanded="true" aria-controls="faqCollapse1">
+                Which country is best for studying abroad?
+              </button>
+            </h2>
+            <div id="faqCollapse1" class="accordion-collapse collapse show" aria-labelledby="faqHeading1" data-bs-parent="#countryFaqAccordion">
+              <div class="accordion-body">
+                The ideal destination depends on your academic goals, budget, and long-term residency plans. <strong>Canada</strong> and <strong>Australia</strong> offer the most structured post-study work permits (up to 3 to 4 years) with direct pathways to permanent residency. <strong>Germany</strong> provides tuition-free education at public universities with an 18-month job seeker visa. The <strong>UK</strong> offers prestigious 1-year Master's programs coupled with a 2-year Graduate Route work visa, while the <strong>US</strong> leads in STEM OPT opportunities extending up to 3 years.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faqHeading2">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
+                What documents are generally required for immigration?
+              </button>
+            </h2>
+            <div id="faqCollapse2" class="accordion-collapse collapse" aria-labelledby="faqHeading2" data-bs-parent="#countryFaqAccordion">
+              <div class="accordion-body">
+                While each sovereign country enforces specific statutory checklists, standard relocation dossiers require:
+                <ul class="mt-2 mb-0 ps-3">
+                  <li>Valid international passport with at least 6 months validity beyond your planned stay.</li>
+                  <li>Academic credential assessment (e.g., WES for Canada, ACS/VETASSESS for Australia).</li>
+                  <li>Official language test scorecards (IELTS General/Academic, PTE, or TOEFL).</li>
+                  <li>Proof of financial solvency (unencumbered bank statements, sponsorship affidavits).</li>
+                  <li>National police clearance certificates and immigration medical examination reports.</li>
+                  <li>Detailed employment reference letters aligned to national NOC / ANZSCO occupation codes.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faqHeading3">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3">
+                Can I work while studying overseas?
+              </button>
+            </h2>
+            <div id="faqCollapse3" class="accordion-collapse collapse" aria-labelledby="faqHeading3" data-bs-parent="#countryFaqAccordion">
+              <div class="accordion-body">
+                <strong>Yes, in most major destinations.</strong> Australia permits international students to work up to 48 hours per fortnight during semesters and unlimited hours during breaks. The UK allows up to 20 hours per week during term time for degree-level students. Canada permits up to 24 hours per week off-campus during academic terms. Germany permits 140 full days or 280 half days of employment per year. The US allows on-campus work up to 20 hours per week, with Curricular Practical Training (CPT) for off-campus internships.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faqHeading4">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse4" aria-expanded="false" aria-controls="faqCollapse4">
+                How do I compare visa eligibility between countries?
+              </button>
+            </h2>
+            <div id="faqCollapse4" class="accordion-collapse collapse" aria-labelledby="faqHeading4" data-bs-parent="#countryFaqAccordion">
+              <div class="accordion-body">
+                Visa eligibility is primarily calculated through age, formal educational qualifications, certified language proficiency, and skilled work experience. Canada and Australia utilize transparent points-based grids (Comprehensive Ranking System for Canada, SkillSelect Points Test for Australia). European nations like Germany emphasize direct degree-recognition and job offers matching salary thresholds, while the UK requires Certificate of Sponsorship (CoS) from a licensed Home Office sponsor. You can use our interactive comparison tool above or schedule a comprehensive Vayora feasibility audit.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faqHeading5">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse5" aria-expanded="false" aria-controls="faqCollapse5">
+                How can Vayora help with my application?
+              </button>
+            </h2>
+            <div id="faqCollapse5" class="accordion-collapse collapse" aria-labelledby="faqHeading5" data-bs-parent="#countryFaqAccordion">
+              <div class="accordion-body">
+                Vayora delivers end-to-end legal and strategic guidance. We evaluate your profile against multiple destination options, guide credential assessments, conduct dual-tier compliance document audits, draft compelling letters of explanation (SOPs), and manage official sovereign submissions. Once your visa is granted, our team assists with pre-departure checklists, port-of-entry protocol, and initial settlement guidance.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Statutory Authority Separation & Regulatory Notice -->
+    <div class="legal-disclaimer-box">
+      <div class="container">
+        <p class="mb-0">
+          <i class="bi bi-shield-lock me-1"></i> <strong>Official Disclaimer:</strong> Vayora Global Advisory Services is an independent visa advisory and immigration documentation consulting firm. We are not an embassy, consulate, or sovereign immigration authority. We do not grant or guarantee visas; all final visa issuance decisions and entry approvals remain under the statutory jurisdiction of the respective government immigration departments.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <!-- ========================================================
+       FOOTER (Unified Brand Footer)
+       ======================================================== -->
+  <footer>
+    <div class="container">
+      <div class="row g-4">
+        <!-- Brand Column -->
+        <div class="col-lg-4 col-md-6">
+          <div class="footer-brand mb-3">
+            <a class="brand" href="index.html">
+              <span class="mark">V</span>
+              <span><b>VAYORA</b><small>IMMIGRATION & VISA</small></span>
+            </a>
+          </div>
+          <p class="footer-desc">
+            Vayora is a premier international immigration and visa advisory firm. We empower students, professionals, and families to navigate global migration pathways with transparent legal guidance and certified documentation audits.
+          </p>
+          <div class="footer-trust-badge">
+            <i class="bi bi-patch-check-fill"></i>
+            <span>Licensed Legal Standards • Dual-Tier Dossier Audit</span>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-lg-2 col-6">
+          <h6>Quick Links</h6>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="home2.html">Home 2 (Cinematic)</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services & Visas</a></li>
+            <li><a href="country-guides.html">Destination Guides</a></li>
+            <li><a href="pricing.html">Pricing & Packages</a></li>
+            <li><a href="blog.html">Immigration Blog</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Immigration Services -->
+        <div class="col-lg-3 col-6">
+          <h6>Visa Pathways</h6>
+          <ul class="footer-links">
+            <li><a href="service-details.html?type=student">Student Visa Assistance</a></li>
+            <li><a href="service-details.html?type=work">Skilled Worker Visas</a></li>
+            <li><a href="service-details.html?type=tourist">Tourist & Visitor Visas</a></li>
+            <li><a href="service-details.html?type=business">Business & Investor Visas</a></li>
+            <li><a href="services.html">Permanent Residency (PR)</a></li>
+            <li><a href="services.html">Family Sponsorships</a></li>
+          </ul>
+        </div>
+
+        <!-- Support & Contact Details -->
+        <div class="col-lg-3 col-md-6">
+          <h6>Support & Advisory Desk</h6>
+          <ul class="footer-contact-list">
+            <li class="footer-contact-item">
+              <i class="bi bi-envelope-fill"></i>
+              <div>
+                <small class="d-block text-secondary">Email Inquiries</small>
+                <a href="mailto:hello@vayora.com">hello@vayora.com </a>
+              </div>
+            </li>
+            <li class="footer-contact-item">
+              <i class="bi bi-telephone-fill"></i>
+              <div>
+                <small class="d-block text-secondary">Direct Advisory Hotline</small>
+                <a href="tel:+919840012345">+91 98400 12345</a>
+              </div>
+            </li>
+            <li class="footer-contact-item">
+              <i class="bi bi-clock-fill"></i>
+              <div>
+                <small class="d-block text-secondary">Working Hours</small>
+                <span>Mon – Sat: 9:00 AM – 6:00 PM</span>
+              </div>
+            </li>
+            <li class="footer-contact-item">
+              <i class="bi bi-geo-alt-fill"></i>
+              <div>
+                <small class="d-block text-secondary">Headquarters</small>
+                <span>Financial District, Suite 402</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footerbottom">
+        <p>© 2026 Vayora Immigration & Visa Consultancy. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Service</a>
+          <a href="faq.html">FAQ</a>
+          <a href="support.html">Support</a>
+          <a href="disclaimer.html">Legal Disclaimer</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================
+       INTERACTIVE COUNTRY QUICK-SNAPSHOT MODAL
+       ======================================================== -->
+  <div class="modal fade" id="countrySnapshotModal" tabindex="-1" aria-labelledby="modalCountryTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content cg-modal-content">
+        <div class="cg-modal-header" id="modalHeaderBg">
+          <div class="cg-modal-header-content">
+            <span class="cg-modal-flag-badge" id="modalFlagBadge">ðŸ‡¨ðŸ‡¦ Destination Dossier</span>
+            <h2 class="h3 fw-bold mb-1 text-white" id="modalCountryTitle">Canada</h2>
+            <p class="text-white-50 small mb-0" id="modalCountrySub">North America • Express Entry & Provincial Nomination</p>
+          </div>
+          <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-4" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="cg-modal-body">
+          <div class="row g-3 mb-4">
+            <div class="col-sm-4">
+              <div class="cg-modal-stat-card">
+                <small>Average Processing</small>
+                <strong id="modalMetricTime">4 to 6 Months</strong>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="cg-modal-stat-card">
+                <small>Post-Study Work</small>
+                <strong id="modalMetricPsw">Up to 3 Years</strong>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="cg-modal-stat-card">
+                <small>PR Potential</small>
+                <strong id="modalMetricPr" class="text-success">High (Points-Based)</strong>
+              </div>
+            </div>
+          </div>
+
+          <h5 class="cg-modal-section-title">Overview & Relocation Advantages</h5>
+          <p class="cg-modal-overview-text" id="modalCountryDesc">
+            Canada remains one of the world's most sought-after immigration destinations, welcoming over 450,000 new permanent residents annually across Federal Express Entry, Provincial Nominee Programs (PNPs), and international graduate pathways.
+          </p>
+
+          <h5 class="cg-modal-section-title">Popular Visa Categories & Eligibility</h5>
+          <ul class="cg-modal-visa-list" id="modalVisaList">
+            <li class="cg-modal-visa-item">
+              <i class="bi bi-patch-check-fill"></i>
+              <div><strong>Express Entry (Federal Skilled Worker):</strong> Points-based selection evaluated on age, education (ECA), IELTS CLB 7+, and continuous skilled experience.</div>
+            </li>
+            <li class="cg-modal-visa-item">
+              <i class="bi bi-patch-check-fill"></i>
+              <div><strong>Provincial Nominee Program (PNP):</strong> 600 bonus CRS points nominated by provinces like Ontario, BC, and Alberta matching local labor market demands.</div>
+            </li>
+            <li class="cg-modal-visa-item">
+              <i class="bi bi-patch-check-fill"></i>
+              <div><strong>Post-Graduation Work Permit (PGWP):</strong> Open work permit granted for 1 to 3 years following graduation from a Canadian Designated Learning Institution.</div>
+            </li>
+          </ul>
+
+          <div class="cg-modal-footer">
+            <button type="button" class="cg-modal-close-btn" data-bs-dismiss="modal">Close</button>
+            <a href="contact.html#consultation" class="btn primary">Book Free Assessment for This Country </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+  <script>
+    // Master Country Data Structure for Real-Time Comparison and Modal Snaphots
+    const countryData = {
+      canada: {
+        name: 'Canada',
+        flag: 'ðŸ‡¨ðŸ‡¦',
+        region: 'North America • Express Entry & PNP',
+        heroImg: 'https://images.unsplash.com/photo-1503614472-8c93d56e92ce?auto=format&fit=crop&w=800&q=80',
+        visa: 'Express Entry (FSW / CEC) & PNP',
+        time: '4 to 6 Months',
+        psw: 'Up to 3 Years (PGWP Open Work)',
+        cost: '$1,200 – $1,800 CAD / mo',
+        lang: 'IELTS CLB 7+ / CELPIP 7+',
+        pr: '<span class="status-pill status-high"><i class="bi bi-check-circle-fill me-1"></i> Direct Points Selection</span>',
+        health: 'Universal Medicare & Open Spousal Work',
+        desc: 'Canada remains one of the world\'s most progressive immigration destinations, welcoming over 450,000 new permanent residents annually across Express Entry, Provincial Nominees (PNP), and graduate pathways.',
+        visas: [
+          '<strong>Express Entry (FSW / CEC):</strong> Points-based selection based on age, education (ECA), language scores, and foreign work experience.',
+          '<strong>Provincial Nominee Program (PNP):</strong> Provincial nominations providing 600 bonus CRS points for in-demand occupations.',
+          '<strong>Post-Graduation Work Permit (PGWP):</strong> Open work authorization up to 3 years after graduating from a recognized DLI.'
+        ]
+      },
+      australia: {
+        name: 'Australia',
+        flag: 'ðŸ‡¦ðŸ‡º',
+        region: 'Oceania • Subclass 189/190/491 General Skilled',
+        heroImg: 'https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?auto=format&fit=crop&w=800&q=80',
+        visa: 'Subclass 189 / 190 General Skilled',
+        time: '5 to 8 Months',
+        psw: '2 to 4 Years (Subclass 485)',
+        cost: '$1,500 – $2,200 AUD / mo',
+        lang: 'IELTS 6.0–7.0 / PTE 50–65',
+        pr: '<span class="status-pill status-high"><i class="bi bi-check-circle-fill me-1"></i> Transparent EOI Grid</span>',
+        health: 'Medicare Access & Full Spousal Work',
+        desc: 'Australia combines an enviable lifestyle, high national minimum wages, clean modern cities, and transparent points-tested skilled immigration through SkillSelect.',
+        visas: [
+          '<strong>Subclass 189 / 190 Skilled:</strong> Permanent resident visas allowing you to live and work indefinitely anywhere in Australia.',
+          '<strong>Subclass 482 TSS Work Visa:</strong> Employer-sponsored visa for occupations listed on the Short-term or Medium-term skills lists.',
+          '<strong>Global Talent Visa (GTI):</strong> Fast-tracked permanent residency for exceptionally talented individuals in target tech sectors.'
+        ]
+      },
+      uk: {
+        name: 'United Kingdom',
+        flag: 'ðŸ‡¬ðŸ‡§',
+        region: 'Europe • Points-Based Home Office System',
+        heroImg: 'https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=800&q=80',
+        visa: 'Skilled Worker Visa (CoS Sponsorship)',
+        time: '3 to 8 Weeks',
+        psw: '2 Years (3 Years for PhD)',
+        cost: 'Â£1,100 – Â£1,700 GBP / mo',
+        lang: 'IELTS B2 Level (5.5+ each) / SELT',
+        pr: '<span class="status-pill status-med"><i class="bi bi-clock me-1"></i> 5-Year Continuous ILR</span>',
+        health: 'NHS Access (via IHS) & Dependent Visas',
+        desc: 'The UK is a premier global destination offering world-renowned universities, financial capitals in London and Edinburgh, and a merit-based Skilled Worker migration framework.',
+        visas: [
+          '<strong>Skilled Worker Visa:</strong> Requires a valid Certificate of Sponsorship (CoS) from a licensed UK employer meeting median salary thresholds.',
+          '<strong>Graduate Route Visa:</strong> Unsponsored 2-year work permit allowing degree graduates to work or look for work in the UK.',
+          '<strong>Innovator Founder Route:</strong> For entrepreneurs with viable, scalable business concepts endorsed by approved UK bodies.'
+        ]
+      },
+      usa: {
+        name: 'United States',
+        flag: 'ðŸ‡ºðŸ‡¸',
+        region: 'North America • STEM OPT, H-1B, L-1, EB-2',
+        heroImg: 'https://images.unsplash.com/photo-1485738422979-f5c462d49f74?auto=format&fit=crop&w=800&q=80',
+        visa: 'F-1 STEM OPT, H-1B & EB-2 / NIW',
+        time: '2 to 6 Months',
+        psw: 'Up to 3 Years (STEM OPT)',
+        cost: '$1,800 – $2,800 USD / mo',
+        lang: 'TOEFL 80–100 / IELTS 6.5–7.5',
+        pr: '<span class="status-pill status-high"><i class="bi bi-check-circle-fill me-1"></i> EB-2 / NIW Green Card</span>',
+        health: 'Employer Health Insurance & Dependent Visas',
+        desc: 'The world\'s largest economy offering unmatched technological innovation, Ivy League universities, top corporate salaries, and employment-based green card pathways.',
+        visas: [
+          '<strong>F-1 Student & STEM OPT:</strong> Up to 36 months of practical training authorization for STEM graduates in US companies.',
+          '<strong>H-1B Specialty Occupation:</strong> Dual-intent work visa for professionals holding a bachelor\'s degree or higher.',
+          '<strong>EB-2 National Interest Waiver (NIW):</strong> Self-petitioned permanent residency for professionals with advanced degrees of national merit.'
+        ]
+      },
+      germany: {
+        name: 'Germany',
+        flag: 'ðŸ‡©ðŸ‡ª',
+        region: 'Europe • Opportunity Card & EU Blue Card',
+        heroImg: 'https://images.unsplash.com/photo-1560969184-10fe8719e047?auto=format&fit=crop&w=800&q=80',
+        visa: 'EU Blue Card & Chancenkarte (Opportunity)',
+        time: '4 to 10 Weeks',
+        psw: '18 Months Job Seeker',
+        cost: 'â‚¬950 – â‚¬1,400 EUR / mo',
+        lang: 'German B1/B2 or English C1',
+        pr: '<span class="status-pill status-high"><i class="bi bi-check-circle-fill me-1"></i> Fast-Track 21–27 Mos</span>',
+        health: 'Statutory Universal Health & Free Childcare',
+        desc: 'Germany features zero-tuition state universities, world-class automotive and tech industries, and newly modernized immigration laws allowing direct fast-track settlement.',
+        visas: [
+          '<strong>EU Blue Card:</strong> Work permit for university graduates with an eligible employment contract, leading to PR in just 21–27 months.',
+          '<strong>Chancenkarte (Opportunity Card):</strong> Points-based 1-year job seeker visa allowing holders to search for work in Germany.',
+          '<strong>Student Visa:</strong> Study at top universities with legal right to work 140 full days per year and 18-month post-study visa.'
+        ]
+      },
+      newzealand: {
+        name: 'New Zealand',
+        flag: 'ðŸ‡³ðŸ‡¿',
+        region: 'Oceania • Green List Straight to PR',
+        heroImg: 'https://images.unsplash.com/photo-1507699622108-4be3abd695ad?auto=format&fit=crop&w=800&q=80',
+        visa: 'Green List Straight to PR & SMC',
+        time: '3 to 6 Months',
+        psw: 'Up to 3 Years',
+        cost: '$1,400 – $2,000 NZD / mo',
+        lang: 'IELTS 6.5+ / PTE 58+',
+        pr: '<span class="status-pill status-high"><i class="bi bi-check-circle-fill me-1"></i> Green List Direct Track</span>',
+        health: 'Public Healthcare System & Spousal Work',
+        desc: 'New Zealand offers pristine natural beauty, high safety rankings, balanced working cultures, and direct permanent residence for occupations on its official Green List.',
+        visas: [
+          '<strong>Green List Straight to Residence:</strong> Fast-track permanent residency for tier 1 in-demand occupations like doctors, engineers, and ICT leads.',
+          '<strong>Skilled Migrant Category (SMC):</strong> 6-point system evaluating qualifications, occupational registration, and income.',
+          '<strong>Accredited Employer Work Visa (AEWV):</strong> Temporary work visa supporting skilled foreign workers with accredited local employers.'
+        ]
+      }
+    };
+
+    // 1. Live Country Search Functionality
+    function executeCountrySearch() {
+      const query = (document.getElementById('countrySearchInput').value || '').trim().toLowerCase();
+      const cards = document.querySelectorAll('.dest-grid-col');
+      let visibleCount = 0;
+
+      cards.forEach(card => {
+        const text = card.textContent.toLowerCase();
+        const country = card.getAttribute('data-country').toLowerCase();
+        if (text.includes(query) || country.includes(query)) {
+          card.classList.remove('d-none');
+          visibleCount++;
+        } else {
+          card.classList.add('d-none');
+        }
+      });
+
+      const noResult = document.getElementById('noDestinationsAlert');
+      if (visibleCount === 0) {
+        noResult.classList.remove('d-none');
+      } else {
+        noResult.classList.add('d-none');
+      }
+
+      // Smooth scroll to results
+      const section = document.getElementById('destinationsGridSection');
+      if (section && query.length > 0) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    // Attach real-time input listener for instant filtering
+    document.getElementById('countrySearchInput').addEventListener('input', function() {
+      executeCountrySearch();
+    });
+
+    // 2. Goal / Category Filter Pills Functionality
+    const pillButtons = document.querySelectorAll('#goalFilterPills .cg-hero-pill');
+    pillButtons.forEach(btn => {
+      btn.addEventListener('click', function() {
+        pillButtons.forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        const filter = this.getAttribute('data-filter');
+        applyGoalFilter(filter);
+      });
+    });
+
+    function applyGoalFilter(filter) {
+      const cards = document.querySelectorAll('.dest-grid-col');
+      let visibleCount = 0;
+
+      cards.forEach(card => {
+        const goals = card.getAttribute('data-goals') || '';
+        if (filter === 'all' || goals.includes(filter)) {
+          card.classList.remove('d-none');
+          visibleCount++;
+        } else {
+          card.classList.add('d-none');
+        }
+      });
+
+      const noResult = document.getElementById('noDestinationsAlert');
+      if (visibleCount === 0) {
+        noResult.classList.remove('d-none');
+      } else {
+        noResult.classList.add('d-none');
+      }
+    }
+
+    function filterByGoal(goalKey) {
+      const pill = document.querySelector(`#goalFilterPills .cg-hero-pill[data-filter="${goalKey}"]`);
+      if (pill) {
+        pillButtons.forEach(b => b.classList.remove('active'));
+        pill.classList.add('active');
+        applyGoalFilter(goalKey);
+        document.getElementById('destinationsGridSection').scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    function resetFilters() {
+      document.getElementById('countrySearchInput').value = '';
+      pillButtons.forEach(b => b.classList.remove('active'));
+      document.querySelector('#goalFilterPills .cg-hero-pill[data-filter="all"]').classList.add('active');
+      applyGoalFilter('all');
+    }
+
+    // 3. Dynamic Country Comparison Table Updates
+    function updateComparisonTable() {
+      const c1 = document.getElementById('selectCountry1').value;
+      const c2 = document.getElementById('selectCountry2').value;
+      const c3 = document.getElementById('selectCountry3').value;
+
+      const d1 = countryData[c1];
+      const d2 = countryData[c2];
+      const d3 = countryData[c3];
+
+      if (!d1 || !d2 || !d3) return;
+
+      // Update Table Headers
+      document.getElementById('thCountry1').innerHTML = `<span class="fs-5">${d1.flag}</span> <strong class="d-block fs-6">${d1.name}</strong>`;
+      document.getElementById('thCountry2').innerHTML = `<span class="fs-5">${d2.flag}</span> <strong class="d-block fs-6">${d2.name}</strong>`;
+      document.getElementById('thCountry3').innerHTML = `<span class="fs-5">${d3.flag}</span> <strong class="d-block fs-6">${d3.name}</strong>`;
+
+      // Update Rows
+      document.getElementById('cmp_visa_1').textContent = d1.visa;
+      document.getElementById('cmp_visa_2').textContent = d2.visa;
+      document.getElementById('cmp_visa_3').textContent = d3.visa;
+
+      document.getElementById('cmp_time_1').innerHTML = `<span class="badge bg-light text-dark border">${d1.time}</span>`;
+      document.getElementById('cmp_time_2').innerHTML = `<span class="badge bg-light text-dark border">${d2.time}</span>`;
+      document.getElementById('cmp_time_3').innerHTML = `<span class="badge bg-light text-dark border">${d3.time}</span>`;
+
+      document.getElementById('cmp_psw_1').textContent = d1.psw;
+      document.getElementById('cmp_psw_2').textContent = d2.psw;
+      document.getElementById('cmp_psw_3').textContent = d3.psw;
+
+      document.getElementById('cmp_cost_1').textContent = d1.cost;
+      document.getElementById('cmp_cost_2').textContent = d2.cost;
+      document.getElementById('cmp_cost_3').textContent = d3.cost;
+
+      document.getElementById('cmp_lang_1').textContent = d1.lang;
+      document.getElementById('cmp_lang_2').textContent = d2.lang;
+      document.getElementById('cmp_lang_3').textContent = d3.lang;
+
+      document.getElementById('cmp_pr_1').innerHTML = d1.pr;
+      document.getElementById('cmp_pr_2').innerHTML = d2.pr;
+      document.getElementById('cmp_pr_3').innerHTML = d3.pr;
+
+      document.getElementById('cmp_health_1').textContent = d1.health;
+      document.getElementById('cmp_health_2').textContent = d2.health;
+      document.getElementById('cmp_health_3').textContent = d3.health;
+    }
+
+    // 4. Interactive Quick-Snapshot Modal
+    function openCountrySnapshot(countryKey) {
+      const data = countryData[countryKey];
+      if (!data) return;
+
+      document.getElementById('modalCountryTitle').textContent = data.name;
+      document.getElementById('modalFlagBadge').innerHTML = `${data.flag} Destination Dossier`;
+      document.getElementById('modalCountrySub').textContent = data.region;
+      document.getElementById('modalMetricTime').textContent = data.time;
+      document.getElementById('modalMetricPsw').textContent = data.psw;
+      document.getElementById('modalMetricPr').innerHTML = data.pr;
+      document.getElementById('modalCountryDesc').textContent = data.desc;
+
+      const headerBg = document.getElementById('modalHeaderBg');
+      headerBg.style.backgroundImage = `url('${data.heroImg}')`;
+
+      const list = document.getElementById('modalVisaList');
+      list.innerHTML = '';
+      data.visas.forEach(v => {
+        const li = document.createElement('li');
+        li.className = 'cg-modal-visa-item';
+        li.innerHTML = `<i class="bi bi-patch-check-fill"></i><div>${v}</div>`;
+        list.appendChild(li);
+      });
+
+      const modalEl = document.getElementById('countrySnapshotModal');
+      const bsModal = new bootstrap.Modal(modalEl);
+      bsModal.show();
+    }
+
+    // 5. Auto-open modal if ?country=... is present in URL
+    window.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const countryParam = urlParams.get('country');
+      if (countryParam) {
+        const cleanKey = countryParam.toLowerCase().replace(/[^a-z]/g, '');
+        if (countryData[cleanKey]) {
+          setTimeout(() => {
+            openCountrySnapshot(cleanKey);
+          }, 350);
+        }
+      }
+    });
+  </script>
+</body>
+</html>
+
